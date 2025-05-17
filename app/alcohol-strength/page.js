@@ -1,7 +1,7 @@
 "use client";
 import "./alcohol.css";
 import TopForm from "../components/TopForm";
-import HeaderModal from "../components/HeaderModal";
+import HeaderModal from "../components/NewModal";
 import Footer from "../components/Footer";
 import { useState } from "react";
 import Contents from "../components/Contents";

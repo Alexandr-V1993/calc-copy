@@ -1,666 +1,349 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import HeaderModal from "../components/HeaderModal";
+
+import HeaderModal from "../components/NewModal";
 import TopForm from "../components/TopForm";
 import Contents from "../components/Contents";
 import Footer from "../components/Footer";
+
 import CalorieForm from "./CalorieForm";
 import "./stag.css";
 
-const brickSizes = [
-  {
-    name: "Одинарный 1НФ",
-    length: 250,
-    width: 120,
-    height: 65,
-    lwh: "250x120x65",
-    weight: 3.6,
-  },
-  {
-    name: "Полуторный 1,4НФ",
-    length: 250,
-    width: 120,
-    height: 88,
-    lwh: "250x120x88",
-    weight: 4.3,
-  },
-  {
-    name: "Двойной 2,1НФ",
-    length: 250,
-    width: 120,
-    height: 140,
-    lwh: "250x120x140",
-    weight: 7.2,
-  },
-  {
-    name: "Евро",
-    length: 250,
-    width: 85,
-    height: 65,
-    lwh: "250x85x65",
-    weight: 2.5,
-  },
-  {
-    name: "Модульный",
-    length: 288,
-    width: 138,
-    height: 65,
-    lwh: "288x138x65",
-    weight: 4.7,
-  },
-  {
-    name: "Силикатный",
-    length: 250,
-    width: 120,
-    height: 138,
-    lwh: "250x120x138",
-    weight: 5.9,
-  },
-  {
-    name: "Свои размеры",
-    lwh: false,
-    weight: 5.9,
-  },
-];
-
-const brickBonds = [
-  {
-    name: "Половина кирпича",
-    value: 0.5,
-  },
-  {
-    name: "в 1 кирпич",
-    value: 1,
-  },
-  {
-    name: "в 1.5 кирпича",
-    value: 1.5,
-  },
-  {
-    name: "в 2 кирпича",
-    value: 2,
-  },
-  {
-    name: "в 2.5 кирпича",
-    value: 2.5,
-  },
-];
-
 function Compound() {
-  const [initial, setInitial] = useState({
-    brickLength: 250,
-    brickWidth: 120,
-    brickHeight: 65,
-    wallLength: 10,
-    wallHeight: 3,
-    masonryThickness: 0.5,
-    mortarThickness: 10,
-    masonryGrid: 4,
-    brickPrice: "",
-    brickWeight: 3.6,
-  });
+  const [selectedTab, setSelectedTab] = useState("tab1");
+  const [initial, setInitial] = useState({});
 
-  const handleBrickSizeChange = (event) => {
-    const selectedOption = event.target.value;
-    const selectedBrick = brickSizes.find(
-      (brick) => `${brick.name} (${brick.lwh})` === selectedOption
-    );
+  const handleTabClick = (tab) => {
+    setSelectedTab(tab);
+  };
 
-    if (selectedBrick) {
-      setInitial((prevState) => ({
-        ...prevState,
-        brickLength: selectedBrick.length || "",
-        brickWidth: selectedBrick.width || "",
-        brickHeight: selectedBrick.height || "",
-        brickWeight: selectedBrick.weight,
-      }));
+  useEffect(() => {
+    let newInitial;
+    if (selectedTab === "tab1") {
+      newInitial = {
+        density: 1500,
+        type: "volume",
+        volume: 10,
+      };
+    } else if (selectedTab === "tab2") {
+      newInitial = {
+        density: 1500,
+        type: "dimension",
+        depth: 1,
+        length: 10,
+        width: 2,
+      };
+    } else if (selectedTab === "tab3") {
+      newInitial = {
+        area: 10,
+        density: 1500,
+        depth: 1,
+        type: "area",
+      };
     }
-  };
+    setInitial(newInitial);
+  }, [selectedTab]);
 
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-    // Сохраняем значение как строку в состоянии, а при использовании преобразуем в число
-    setInitial((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+  const handleChange = (e) => {
+    let value = e.target.value;
+    // Заменяем запятую на точку и удаляем все символы, кроме цифр и точки
+    value = value.replace(/,/g, ".").replace(/[^\d.]/g, "");
+    // Удаляем лишние точки, оставляя только первую
+    const parts = value.split(".");
+    if (parts.length > 2) {
+      value = parts[0] + "." + parts.slice(1).join("");
+    }
 
-  // Функция для получения числового значения из состояния
-  const getNumericValue = (value) => {
-    if (value === "") return "";
-    const num = parseFloat(value);
-    return isNaN(num) ? "" : num;
+    setInitial({
+      ...initial,
+      [e.target.name]: value === "" ? "" : value,
+    });
   };
 
   return (
     <>
       <HeaderModal />
+
       <TopForm
         title={"Калькулятор "}
         description={
-          "Калькулятор кирпича предназначен для точного расчета количества строительного и облицовочного кирпича, необходимого для дома и цоколя. Он также учитывает важные параметры и материалы, такие как объем кладочного раствора, количество сетки и гибких связей."
+          "Калькулятор перевода песка из м³ в тонны и обратно – это удобный онлайн инструмент для мгновенного преобразования объема песка из кубических метров в тонны и наоборот."
         }
-        span={"кирпича"}
+        span={"песка"}
       >
         <CalorieForm
-          wall={getNumericValue(initial.wallLength)}
-          obj={{
-            ...initial,
-            brickLength: getNumericValue(initial.brickLength),
-            brickWidth: getNumericValue(initial.brickWidth),
-            brickHeight: getNumericValue(initial.brickHeight),
-            wallLength: getNumericValue(initial.wallLength),
-            wallHeight: getNumericValue(initial.wallHeight),
-            masonryThickness: getNumericValue(initial.masonryThickness),
-            mortarThickness: getNumericValue(initial.mortarThickness),
-            masonryGrid: getNumericValue(initial.masonryGrid),
-            brickPrice:
-              initial.brickPrice === ""
-                ? 0
-                : getNumericValue(initial.brickPrice),
-            brickWeight: getNumericValue(initial.brickWeight),
-          }}
-          url={"https://calcoffee.ru/api/calculate/brick"}
+          selectedTab={selectedTab}
+          obj={initial}
+          url={"https://calcoffee.ru/api/calculate/sand"}
         >
           <div className="test-input">
+            <div className="tabs">
+              <span
+                className={selectedTab === "tab1" ? "active" : "noact"}
+                onClick={() => handleTabClick("tab1")}
+              >
+                Объем
+              </span>
+              <span
+                className={selectedTab === "tab2" ? "active" : "noact"}
+                onClick={() => handleTabClick("tab2")}
+              >
+                Длина, ширина и глубина
+              </span>
+              <span
+                className={selectedTab === "tab3" ? "active" : "noact"}
+                onClick={() => handleTabClick("tab3")}
+              >
+                Площадь и глубина
+              </span>
+            </div>
+
             <div className="content">
+              {selectedTab === "tab1" && (
+                <h3>Рассчитать песок, используя объем</h3>
+              )}
+              {selectedTab === "tab2" && (
+                <h3>Рассчитать песок, используя размеры</h3>
+              )}
+              {selectedTab === "tab3" && (
+                <h3>Рассчитать песок, используя площадь и глубину</h3>
+              )}
+
               <label className="numrange">
-                <span>Вид кирпича</span>
+                <span>Тип песка</span>
                 <select
+                  name="density"
                   className="calc-inp w-100"
-                  onChange={handleBrickSizeChange}
+                  value={initial.density}
+                  onChange={handleChange}
                 >
-                  {brickSizes.map((brick, index) => (
-                    <option key={index}>
-                      {brick.name} {brick.lwh && `(${brick.lwh})`}
-                    </option>
-                  ))}
+                  <option value="1500">Строительный (1500)</option>
+                  <option value="1440">Строительный сухой рыхлый (1440)</option>
+                  <option value="1680">
+                    Строительный сухой утрамбованный (1680)
+                  </option>
+                  <option value="1920">Строительный мокрый (1920)</option>
+                  <option value="2545">
+                    Строительный мокрый утрамбованный (2545)
+                  </option>
+                  <option value="1710">Формовочный ГОСТ 2138-91 (1710)</option>
+                  <option value="1630">Речной (1630)</option>
+                  <option value="1500">Речной мытый (1500)</option>
+                  <option value="1590">Речной утрамбованный (1590)</option>
+                  <option value="1650">Кварцевый (1650)</option>
+                  <option value="1500">Кварцевый сухой (1500)</option>
+                  <option value="1650">Кварцевый утрамбованный (1650)</option>
+                  <option value="1500">Карьерный (1500)</option>
+                  <option value="1800">Карьерный мелкозернистый (1800)</option>
+                  <option value="1400">Овражный (1400)</option>
+                  <option value="1540">Горный (1540)</option>
+                  <option value="1620">Морской (1620)</option>
+                  <option value="1700">Гравелистый (1700)</option>
+                  <option value="1600">Пылеватый (1600)</option>
+                  <option value="3100">Водонасыщенный (3100)</option>
                 </select>
               </label>
-              <label className="numrange top-num">
-                <span>
-                  Размеры кирпича <span className="bolt">(ДxШxВ)</span>
-                </span>
+              <label className="numrange">
+                <span>Плотность насыпи (кг/м3)</span>
+                <input
+                  type="text"
+                  className="input"
+                  name="density"
+                  value={initial.density}
+                  onChange={handleChange}
+                />
               </label>
-              <div className="row-row">
+              {selectedTab === "tab1" && (
                 <label className="numrange">
-                  <span>Длина</span>
+                  <span>Объем</span>
                   <input
-                    type="number"
+                    min={0}
+                    max={9999}
+                    type="text"
                     className="input"
-                    name="brickLength"
-                    value={initial.brickLength}
-                    onChange={handleInputChange}
-                    step="any"
-                  />
-                  <div className="notation notation-m">мм</div>
-                </label>
-                <span className="five">x</span>
-                <label className="numrange">
-                  <span>Ширина</span>
-                  <input
-                    type="number"
-                    className="input"
-                    name="brickWidth"
-                    value={initial.brickWidth}
-                    onChange={handleInputChange}
+                    name="volume"
+                    value={initial.volume}
+                    onChange={handleChange}
                     required
-                    step="any"
                   />
-                  <div className="notation notation-m">мм</div>
+                  <div className="notation">м3</div>
                 </label>
-                <span className="five">x</span>
-                <label className="numrange">
-                  <span>Высота</span>
-                  <input
-                    type="number"
-                    className="input"
-                    name="brickHeight"
-                    value={initial.brickHeight}
-                    onChange={handleInputChange}
-                    required
-                    step="any"
-                  />
-                  <div className="notation notation-m">мм</div>
-                </label>
-              </div>
-              <label className="numrange num-tops">
-                <span>Общая длина всех стен</span>
-                <input
-                  type="number"
-                  className="input"
-                  name="wallLength"
-                  value={initial.wallLength}
-                  onChange={handleInputChange}
-                  required
-                  step="any"
-                />
-                <div className="notation">м</div>
-              </label>
-              <label className="numrange">
-                <span>Высота стен по углам</span>
-                <input
-                  type="number"
-                  className="input"
-                  name="wallHeight"
-                  value={initial.wallHeight}
-                  onChange={handleInputChange}
-                  required
-                  step="any"
-                />
-                <div className="notation">м</div>
-              </label>
-              <label className="numrange">
-                <span>Толщина стен</span>
-                <select
-                  className="calc-inp w-100"
-                  name="masonryThickness"
-                  value={initial.masonryThickness}
-                  onChange={handleInputChange}
-                >
-                  {brickBonds.map((bond, index) => (
-                    <option key={index} value={bond.value}>
-                      {bond.name}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <label className="numrange">
-                <span>Толщина раствора в кладке</span>
-                <input
-                  type="number"
-                  className="input"
-                  name="mortarThickness"
-                  value={initial.mortarThickness}
-                  onChange={handleInputChange}
-                  required
-                  step="any"
-                />
-                <div className="notation">мм</div>
-              </label>
-              <label className="numrange">
-                <span>Кладочная сетка</span>
-                <select
-                  className="calc-inp w-100"
-                  name="masonryGrid"
-                  value={initial.masonryGrid}
-                  onChange={handleInputChange}
-                >
-                  <option value={0}>не укладывать</option>
-                  <option value={2}>каждый ряд</option>
-                  <option value={3}>через 2 ряда</option>
-                  <option value={4}>через 3 ряда</option>
-                  <option value={5}>через 4 ряда</option>
-                </select>
-              </label>
-              <label className="numrange">
-                <span>Цена за 1шт.</span>
-                <input
-                  type="number"
-                  className="input"
-                  name="brickPrice"
-                  value={initial.brickPrice}
-                  onChange={handleInputChange}
-                  step="any"
-                />
-              </label>
+              )}
+
+              {selectedTab === "tab2" && (
+                <>
+                  <label className="numrange">
+                    <span>Длина</span>
+                    <input
+                      type="text"
+                      className="input"
+                      required
+                      name="length"
+                      value={initial.length}
+                      onChange={handleChange}
+                    />
+                    <div className="notation">м</div>
+                  </label>
+                  <label className="numrange">
+                    <span>Ширина</span>
+                    <input
+                      type="text"
+                      className="input"
+                      required
+                      name="width"
+                      value={initial.width}
+                      onChange={handleChange}
+                    />
+                    <div className="notation">м</div>
+                  </label>
+                  <label className="numrange">
+                    <span>Глубина</span>
+                    <input
+                      type="text"
+                      className="input"
+                      required
+                      name="depth"
+                      value={initial.depth}
+                      onChange={handleChange}
+                    />
+                    <div className="notation">м</div>
+                  </label>
+                </>
+              )}
+              {selectedTab === "tab3" && (
+                <>
+                  <label className="numrange">
+                    <span>Площадь</span>
+                    <input
+                      type="text"
+                      className="input"
+                      required
+                      name="area"
+                      value={initial.area}
+                      onChange={handleChange}
+                    />
+                    <div className="notation">м2</div>
+                  </label>
+                  <label className="numrange">
+                    <span>Глубина</span>
+                    <input
+                      type="text"
+                      className="input"
+                      required
+                      name="depth"
+                      value={initial.depth}
+                      onChange={handleChange}
+                    />
+                    <div className="notation">м</div>
+                  </label>
+                </>
+              )}
             </div>
           </div>
         </CalorieForm>
         <Contents>
-          <h2 className="blue">
-            Калькулятор расчёта кирпича на кладку: Все, что нужно знать
-          </h2>
+          <h2>Что такое калькулятор песка из м³ в тонны и наоборот?</h2>
           <p>
-            В современном строительстве важным аспектом является точное
-            планирование и расчёт необходимых материалов. Один из таких
-            материалов – кирпич. Для того чтобы избежать перерасхода и
-            оптимизировать процесс закупки, используют калькуляторы расчёта
-            кирпича. Эти инструменты помогают не только определить точное
-            количество кирпичей для кладки, но и учесть параметры, такие как
-            размеры кирпича, толщина шва и площадь кладки. Благодаря этому
-            строители могут заранее планировать свои ресурсы и избегать лишних
-            затрат.
-          </p>
-          <h2>Правильный выбор кирпича</h2>
-          <p>
-            Выбор правильного типа кирпича играет важную роль в строительстве.
-            Он зависит от назначения здания, климатических условий и
-            архитектурных требований. Лицевой кирпич подходит для внешней
-            отделки, так как он имеет эстетичный вид и устойчив к атмосферным
-            воздействиям. Обыкновенный кирпич часто используется для внутренних
-            стен, так как он дешевле и не требует высокого качества внешней
-            отделки.
+            Калькулятор перевода песка из м³ в тонны и обратно — это онлайн
+            инструмент, который позволяет быстро и легко преобразовать объем
+            песка из кубических метров в тонны и наоборот.
           </p>
 
-          <h2>Зачем нужен калькулятор расчёта кирпича?</h2>
+          <h2>Зачем нужен калькулятор песка из м³ в тонны?</h2>
           <p>
-            Калькулятор расчёта кирпича позволяет быстро и точно определить
-            необходимое количество кирпичей для строительства. Это важно, чтобы
-            избежать перерасхода материалов и дополнительных затрат. Кроме того,
-            правильный расчёт помогает планировать доставку и хранение
-            стройматериалов.
+            Этот калькулятор полезен, когда необходимо узнать, сколько тонн
+            песка содержится в определенном объеме, выраженном в кубических
+            метрах. Конвертация зависит от плотности песка, которая может
+            варьироваться в зависимости от его состава и влажности.
           </p>
 
-          <h2>Основные параметры для расчёта</h2>
+          <h2>Как перевести объем песка из м³ в тонны и наоборот?</h2>
           <p>
-            При использовании калькулятора расчёта кирпича необходимо учитывать
-            несколько ключевых параметров:
+            Для перевода объема песка из кубических метров в метрические тонны
+            нужно знать плотность песка. Обычно плотность песка составляет около
+            1,5 тонн на кубический метр. Формула для перевода объема песка из
+            кубических метров в метрические тонны:
+          </p>
+
+          <p className="formula">
+            Вес песка (т) = Объем песка (м³) × Плотность песка (т/м³)
+          </p>
+
+          <p>Например, чтобы перевести 5 кубических метров песка в тонны:</p>
+
+          <p className="formula">5 м³ × 1,5 т/м³ = 7,5 тонн песка</p>
+
+          <p>
+            Для перевода тонн песка в кубические метры используется формула:
+          </p>
+
+          <p className="formula">
+            Объем песка (м³) = Вес песка (т) / Плотность песка (т/м³)
+          </p>
+          <p>Например, чтобы перевести 10 тонн песка в кубические метры:</p>
+
+          <p className="formula">10 тонн / 1,5 т/м³ = 6,67 м³ песка</p>
+
+          <p>
+            Для точных результатов рекомендуется уточнить плотность песка в
+            зависимости от его состава и влажности.
+          </p>
+
+          <h2>От чего зависит плотность песка?</h2>
+          <p>
+            Плотность песка зависит от нескольких факторов, включая его состав,
+            размер и форму зерен, а также влажность:
           </p>
           <ul>
             <li>
-              <strong>Размеры кирпича:</strong> стандартные размеры могут
-              варьироваться, что влияет на итоговое количество кирпичей.
+              <strong>Состав:</strong> Песок может состоять из различных
+              материалов (кварц, гранит, песчаник и др.), каждый из которых
+              имеет свою плотность.
             </li>
             <li>
-              <strong>Толщина шва:</strong> обычно толщина шва составляет около
-              10 мм, но может изменяться в зависимости от требований проекта.
+              <strong>Размер и форма зерен:</strong> Чем больше зерна, тем
+              меньше их количество в единице объема, что приводит к уменьшению
+              плотности. Форма зерен также влияет на плотность.
             </li>
             <li>
-              <strong>Площадь кладки:</strong> общая площадь стен, которая будет
-              выложена кирпичом.
+              <strong>Влажность:</strong> Влажный песок плотнее сухого, так как
+              вода заполняет промежутки между зернами.
             </li>
           </ul>
 
-          <h2>Пример расчёта кирпича на кладку</h2>
+          <h2>Виды песка и их использование</h2>
           <p>
-            Для наглядности рассмотрим пример расчёта кирпича. Допустим, нам
-            нужно выложить стену площадью 20 м², используя стандартный кирпич
-            размером 250x120x65 мм и толщиной шва 10 мм.
+            Существует множество различных видов песка, каждый из которых
+            используется в зависимости от своих свойств:
           </p>
-          <div className="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>Параметр</th>
-                  <th>Значение</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Размер кирпича</td>
-                  <td>250x120x65 мм</td>
-                </tr>
-                <tr>
-                  <td>Толщина шва</td>
-                  <td>10 мм</td>
-                </tr>
-                <tr>
-                  <td>Площадь кладки</td>
-                  <td>20 м²</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h2>Расчёт количества кирпича</h2>
+          <ul>
+            <li>
+              <strong>Речной песок:</strong> Используется для строительства
+              дорог, железных дорог, аэропортов, а также для производства бетона
+              и кирпичей.
+            </li>
+            <li>
+              <strong>Карьерный песок:</strong> Применяется для производства
+              бетона, стекла, керамики, а также для асфальтирования дорог и
+              создания спортивных площадок.
+            </li>
+            <li>
+              <strong>Морской песок:</strong> Имеет меньшую плотность и
+              используется в качестве утеплителя и для создания пляжей.
+            </li>
+            <li>
+              <strong>Пустынный песок:</strong> Используется для создания
+              звуконепроницаемых стен и производства стекла.
+            </li>
+            <li>
+              <strong>Фильтровальный песок:</strong> Применяется для очистки
+              воды и фильтрации жидкостей.
+            </li>
+          </ul>
           <p>
-            Для расчёта количества кирпичей нужно сначала определить площадь
-            одного кирпича с учётом шва. Затем разделить общую площадь кладки на
-            площадь одного кирпича.
+            Кроме того, существуют специализированные виды песка для различных
+            задач, например, песок для детских песочниц или для литья металла.
           </p>
-          <p className="formula">
-            Площадь одного кирпича с учётом шва: (0.25 м + 0.01 м) * (0.065 м +
-            0.01 м) = 0.01785 м²
-          </p>
-          <p className="formula">
-            Количество кирпичей: 20 м² / 0.01785 м² ≈ 1120 кирпичей
-          </p>
-
-          <h2>Корректировки и запасы</h2>
-          <p>
-            В реальной строительной практике всегда следует учитывать запас
-            материалов на случай боев и подрезки кирпича. Рекомендуется
-            добавлять около 5-10% к полученному количеству кирпичей.
-          </p>
-
-          <h2>Использование таблиц для упрощения расчётов</h2>
-          <p>
-            Для удобства и ускорения процесса расчёта часто используются
-            таблицы, в которых уже указаны примерные значения количества кирпича
-            для различных площадей и размеров кирпича. Такие таблицы позволяют
-            быстро ориентироваться и вносить необходимые корректировки.
-          </p>
-          <div className="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>Площадь кладки (м²)</th>
-                  <th>Количество кирпичей (шт)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>10</td>
-                  <td>560</td>
-                </tr>
-                <tr>
-                  <td>20</td>
-                  <td>1120</td>
-                </tr>
-                <tr>
-                  <td>30</td>
-                  <td>1680</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h2>Онлайн-калькуляторы и их преимущества</h2>
-          <p>
-            В интернете можно найти множество онлайн-калькуляторов, которые
-            автоматически учитывают все параметры и выдают готовый результат.
-            Это особенно удобно для тех, кто не хочет тратить время на ручные
-            расчёты и хочет получить точный результат с минимальными усилиями.
-          </p>
-
-          <h2>Типы кирпича по назначению</h2>
-          <p>
-            Кирпичи могут различаться не только по размеру и материалу, но и по
-            назначению. В зависимости от цели использования можно выделить
-            несколько основных типов кирпича:
-          </p>
-          <div className="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>Тип кирпича</th>
-                  <th>Описание</th>
-                  <th>Примерное применение</th>
-                  <th>Основные преимущества</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <strong>Обыкновенный</strong>
-                  </td>
-                  <td>
-                    Используется для возведения внутренних и внешних стен, не
-                    требующих специальной обработки.
-                  </td>
-                  <td>Внутренние стены, перегородки</td>
-                  <td>Доступность, простота использования</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Лицевой</strong>
-                  </td>
-                  <td>
-                    Применяется для облицовки фасадов зданий, имеет высокую
-                    эстетическую ценность.
-                  </td>
-                  <td>Фасады зданий, декоративные элементы</td>
-                  <td>
-                    Эстетичный внешний вид, устойчивость к погодным условиям
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Клинкерный</strong>
-                  </td>
-                  <td>
-                    Характеризуется высокой прочностью и устойчивостью к внешним
-                    воздействиям, подходит для мощения.
-                  </td>
-                  <td>Мощение дорог, тротуаров</td>
-                  <td>Высокая прочность, долговечность</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Шамотный</strong>
-                  </td>
-                  <td>
-                    Изготавливается из огнеупорной глины, используется в печах и
-                    каминах.
-                  </td>
-                  <td>Печи, камины, дымоходы</td>
-                  <td>Огнеупорность, термостойкость</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Силикатный</strong>
-                  </td>
-                  <td>
-                    Производится из песка и извести, отличается хорошей
-                    звукоизоляцией и морозостойкостью.
-                  </td>
-                  <td>Жилые дома, промышленные здания</td>
-                  <td>Хорошая звукоизоляция, морозостойкость</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Керамический</strong>
-                  </td>
-                  <td>
-                    Наиболее распространенный тип, изготавливается из глины и
-                    применяется в строительстве стен.
-                  </td>
-                  <td>Все виды строительства</td>
-                  <td>Универсальность, прочность</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h2>Сколько кирпичей в 1 м² и 1 м³ кладки?</h2>
-          <p>
-            Для расчёта количества кирпичей в кладке необходимо учитывать не
-            только размеры кирпича, но и толщину швов. В таблице ниже приведены
-            приблизительные значения для стандартных типов кирпича:
-          </p>
-          <div className="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>Тип кирпича</th>
-                  <th>Размер кирпича (мм)</th>
-                  <th>Количество кирпичей в 1 м² кладки (шт)</th>
-                  <th>Количество кирпичей в 1 м³ кладки (шт)</th>
-                  <th>Вес одного кирпича (кг)</th>
-                  <th>Примерный вес 1 м³ кладки (кг)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    <strong>Одинарный</strong>
-                  </td>
-                  <td>250x120x65</td>
-                  <td>51</td>
-                  <td>512</td>
-                  <td>3.5</td>
-                  <td>1792</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Полуторный</strong>
-                  </td>
-                  <td>250x120x88</td>
-                  <td>38</td>
-                  <td>378</td>
-                  <td>4.2</td>
-                  <td>1588</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Двойной</strong>
-                  </td>
-                  <td>250x120x138</td>
-                  <td>26</td>
-                  <td>256</td>
-                  <td>6.6</td>
-                  <td>1689</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Силикатный</strong>
-                  </td>
-                  <td>250x120x88</td>
-                  <td>38</td>
-                  <td>378</td>
-                  <td>4.1</td>
-                  <td>1549</td>
-                </tr>
-                <tr>
-                  <td>
-                    <strong>Керамический</strong>
-                  </td>
-                  <td>250x120x65</td>
-                  <td>51</td>
-                  <td>512</td>
-                  <td>3.4</td>
-                  <td>1741</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h2>Преимущества использования качественного кирпича</h2>
-          <p>
-            Качественный кирпич обеспечивает долговечность и прочность здания.
-            Он устойчив к воздействию влаги, перепадам температур и механическим
-            повреждениям. Использование качественного кирпича также снижает
-            расходы на ремонт и обслуживание здания в будущем, что делает его
-            выгодным вложением в долгосрочной перспективе.
-          </p>
-
-          <h2>Рекомендации по выбору калькулятора</h2>
-          <p>
-            При выборе калькулятора расчёта кирпича важно обратить внимание на
-            его функционал и точность. Хороший калькулятор должен учитывать все
-            необходимые параметры, быть удобным в использовании и предоставлять
-            возможность корректировки исходных данных.
-          </p>
-
-          <p>
-            <a href="/">Выбрать другой калькулятор</a>
-          </p>
-
-          <style jsx>{`
-            .table-container {
-              overflow-x: auto;
-            }
-            table {
-              width: 100%;
-              border-collapse: collapse;
-            }
-            th,
-            td {
-              border: 1px solid #ddd;
-              padding: 8px;
-            }
-            th {
-              background-color: #f2f2f2;
-              text-align: left;
-            }
-            .formula {
-              font-style: italic;
-              color: #333;
-            }
-          `}</style>
-
           <p>
             <a href="/">Выбрать другой калькулятор</a>
           </p>

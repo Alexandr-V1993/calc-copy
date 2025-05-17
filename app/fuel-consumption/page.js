@@ -2,7 +2,7 @@
 
 import { useReducer } from "react";
 import FuelCostForm from "./FuelCostForm";
-import HeaderModal from "../components/HeaderModal";
+import HeaderModal from "../components/NewModal";
 import TopForm from "../components/TopForm";
 import Contents from "../components/Contents";
 import Footer from "../components/Footer";

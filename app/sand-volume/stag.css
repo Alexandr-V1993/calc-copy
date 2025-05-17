@@ -511,12 +511,7 @@ h3 {
   border-bottom: 1px solid #369;
   font-weight: 700;
 }
-.red {
-  color: red;
-}
-.t-width {
-  width: 100%;
-}
+
 @media only screen and (max-width: 540px) {
   .numrange .notation {
     position: absolute;
@@ -532,47 +527,4 @@ h3 {
     width: 10px;
     font-weight: 700;
   }
-}
-.row-row {
-  display: flex;
-  gap: 5px;
-
-  align-items: center;
-}
-
-.bolt {
-  font-weight: 700;
-  color: black;
-}
-.top-num {
-  margin-top: 20px;
-  display: block;
-}
-.five {
-  font-weight: 400;
-  padding-top: 40px;
-}
-.res-un {
-  text-decoration: underline;
-  font-weight: 500;
-}
-.num-tops {
-  display: block;
-  margin-top: 20px;
-}
-.numrange {
-  margin-top: 10px;
-}
-table {
-  width: 100%;
-}
-
-@media only screen and (max-width: 768px) {
-  .five {
-    font-weight: 400;
-    padding-top: 20px;
-  }
-}
-h2 {
-  margin-top: 20px;
 }

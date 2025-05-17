@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 
-import HeaderModal from "../components/HeaderModal";
+import HeaderModal from "../components/NewModal";
 import TopForm from "../components/TopForm";
 import Footer from "../components/Footer";
 import Contents from "../components/Contents";

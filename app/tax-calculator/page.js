@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import HeaderModal from "../components/HeaderModal";
+import HeaderModal from "../components/NewModal";
 import Footer from "../components/Footer";
 import "./nds.css";
 import Contents from "../components/Contents";

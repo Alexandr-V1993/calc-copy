@@ -3,7 +3,7 @@ import "./HeaderModal.css";
 import { useState } from "react";
 import SimpleModal from "./SimpleModal/SimpleModal";
 
-function HeaderModal() {
+function NewModal() {
   const [open, setOpen] = useState(false);
   const [dateOpen, setDateOpen] = useState(false);
 
@@ -271,4 +271,4 @@ function HeaderModal() {
   );
 }
 
-export default HeaderModal;
+export default NewModal;

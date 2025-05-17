@@ -1,7 +1,7 @@
 // pages/zodiac-calculator.js
 "use client";
 import React, { useState } from "react";
-import HeaderModal from "../components/HeaderModal";
+import HeaderModal from "../components/NewModal";
 import TopForm from "../components/TopForm";
 import Footer from "../components/Footer";
 import ZodiacForm from "./ZodiacForm";

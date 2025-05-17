@@ -1,5 +1,5 @@
 "use client";
-import HeaderModal from "../components/HeaderModal";
+import HeaderModal from "../components/NewModal";
 import Footer from "../components/Footer";
 function Doks() {
   return (

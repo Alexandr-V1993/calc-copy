@@ -1,6 +1,6 @@
 "use client";
 import TopForm from "../components/TopForm";
-import HeaderModal from "../components/HeaderModal";
+import HeaderModal from "../components/NewModal";
 import Footer from "../components/Footer";
 import Form from "../components/Form";
 import { useState } from "react";

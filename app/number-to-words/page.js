@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import HeaderModal from "../components/HeaderModal";
+import HeaderModal from "../components/NewModal";
 import Footer from "../components/Footer";
 import Contents from "../components/Contents";
 import "./summ.css";

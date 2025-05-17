@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import HeaderModal from "@/app/components/HeaderModal";
+import HeaderModal from "@/app/components/NewModal";
 import TopForm from "@/app/components/TopForm";
 import Contents from "@/app/components/Contents";
 import Footer from "@/app/components/Footer";

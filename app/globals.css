@@ -1964,14 +1964,11 @@ form.inlinecalculator {
 
 .numrange span,
 label.row-2 > span {
-  font-weight: 600;
   color: white;
 }
 .btns {
   background-color: rgb(18, 168, 90);
   color: white;
-
-  font-weight: 600;
 }
 .calculators-section {
   padding-left: 20px;

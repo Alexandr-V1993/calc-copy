@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import "./stag.css";
-import HeaderModal from "../components/HeaderModal";
+import HeaderModal from "../components/NewModal";
 import TopForm from "../components/TopForm";
 import Contents from "../components/Contents";
 import Footer from "../components/Footer";
