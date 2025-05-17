@@ -1951,25 +1951,7 @@ section.listsection {
 .calculators-grid {
   gap: 2rem;
 }
-form.inlinecalculator {
-  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
-    inset 0 0 15px rgba(255, 255, 255, 0.05);
 
-  color: #fff;
-  backdrop-filter: blur(5px);
-}
-
-.numrange span,
-label.row-2 > span {
-  color: white;
-}
-.btns {
-  background-color: rgb(18, 168, 90);
-  color: white;
-}
 .calculators-section {
   padding-left: 20px;
   padding-right: 20px;
