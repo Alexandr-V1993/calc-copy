@@ -1,17 +1,18 @@
 {
-  "theme_color": "#d7e0e4",
-  "background_color": "#d7e0e4",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "Calcoffee",
-  "short_name": "ccfee",
-  "description": "\u041a\u0430\u0442\u0430\u043b\u043e\u0433 \u043e\u043d\u043b\u0430\u0439\u043d \u043a\u0430\u043b\u044c\u043a\u0443\u043b\u044f\u0442\u043e\u0440\u043e\u0432 \u043f\u043e \u0440\u0430\u0437\u043b\u0438\u0447\u043d\u044b\u043c \u0442\u0435\u043c\u0430\u0442\u0438\u043a\u0430\u043c",
+  "name": "BoxCalculators",
+  "short_name": "BoxCalc",
+  "description": "Онлайн-калькуляторы для любых расчётов: финансовые, строительные, медицинские, IT и другие",
   "icons": [
     {
       "src": "/icon-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/icon-256x256.png",
@@ -26,7 +27,25 @@
     {
       "src": "/icon-512x512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
-  ]
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "categories": ["utilities", "productivity"],
+  "orientation": "portrait-primary",
+  "lang": "ru-RU"
 }

@@ -15,7 +15,7 @@ function HeaderModal() {
     <div>
       <header>
         <a href="/">
-          <img src="/logo.svg" alt="логотип" />
+          <img src="/logo.png" alt="логотип" />
         </a>
         <div className="topright">
           <div className="toprightmenu" onClick={() => setOpen(true)}>

@@ -101,20 +101,23 @@ function Footer() {
 
   return (
     <footer>
-      <div className="wrapper">
-        <div className="fmenu">
-          <a className="fmenuitem" href="/doks">
+      <div className="footer-wrapper">
+        <div className="footer-menu">
+          <a className="footer-menu-item" href="/privacy">
             Политика конфиденциальности
           </a>
-          <a className="fmenuitem" href="/contacts">
+          <a className="footer-menu-item" href="/contacts">
             Контакты
           </a>
+          <a className="footer-menu-item" href="/feedback">
+            Обратная связь
+          </a>
         </div>
-        <div className="fmenu firstletterlogo">
-          <a href="/">
-            <span>calcoffee.ru</span>
-          </a>{" "}
-          © 2025
+        <div className="footer-brand">
+          <a href="/" className="footer-logo-link">
+            <span className="footer-logo-text">boxcalculators.ru</span>
+          </a>
+          <span className="footer-copyright">© 2025 Все права защищены</span>
         </div>
       </div>
     </footer>

@@ -8,47 +8,55 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Онлайн-калькуляторы: самые простые и удобные | calcoffee",
+  title: "BoxCalculators — онлайн-калькуляторы для любых расчётов",
   description:
-    "Онлайн-калькуляторы по различным тематикам: финансовые, валютные, математические, медицинские, строительные, для IT и даже самогонные. Быстрые и точные расчеты онлайн.",
+    "Бесплатные онлайн-калькуляторы: финансовые, строительные, медицинские, IT и другие. Точные расчёты в один клик!",
   keywords:
-    "онлайн калькулятор, калькулятор онлайн, финансовый калькулятор, валютный калькулятор, математический калькулятор, строительный калькулятор, медицинский калькулятор, IT калькулятор",
+    "онлайн калькулятор, калькулятор кредита, строительный калькулятор, ИМТ калькулятор, IT калькуляторы, конвертер единиц, boxcalculators",
   themeColor: "#ffffff",
   alternates: {
-    canonical: "https://calcoffee.ru",
+    canonical: "https://boxcalculators.ru",
   },
   openGraph: {
-    title: "Онлайн-калькуляторы: самые простые и удобные | calcoffee",
+    title: "BoxCalculators — онлайн-калькуляторы для любых расчётов",
     description:
-      "Онлайн-калькуляторы по различным тематикам: финансовые, валютные, математические, медицинские, строительные, для IT и даже самогонные. Быстрые и точные расчеты онлайн.",
-    url: "https://calcoffee.ru",
-    siteName: "calcoffee.ru",
+      "Бесплатные онлайн-калькуляторы: финансовые, строительные, медицинские, IT и другие. Точные расчёты в один клик!",
+    url: "https://boxcalculators.ru",
+    siteName: "boxcalculators.ru",
     locale: "ru_RU",
     type: "website",
     images: [
       {
-        url: "https://calcoffee.ru/icon.png",
+        url: "https://boxcalculators.ru/icon-512x512.png",
         width: 512,
         height: 512,
-        alt: "Онлайн-калькуляторы | calcoffee",
+        alt: "BoxCalculators — онлайн-калькуляторы",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Онлайн-калькуляторы: самые простые и удобные | calcoffee",
+    title: "BoxCalculators — онлайн-калькуляторы для любых расчётов",
     description:
-      "Онлайн-калькуляторы по различным тематикам: финансовые, валютные, математические, медицинские, строительные, для IT и даже самогонные. Быстрые и точные расчеты онлайн.",
-    images: ["https://calcoffee.ru/icon.png"],
+      "Бесплатные онлайн-калькуляторы: финансовые, строительные, медицинские, IT и другие. Точные расчёты в один клик!",
+    images: ["https://boxcalculators.ru/icon-512x512.png"],
   },
   icons: {
-    icon: "/icon.png",
-    apple: "/icon.png",
+    icon: [
+      { url: "/icon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      // Используем имеющуюся иконку 192x192 для apple-touch-icon
+      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
   },
   manifest: "/manifest.json",
   verification: {
-    google: "zrWuXGrFe1nNpT-Wz1rpNtK7C3IIwpevUkjvVJ7VwRo",
-    yandex: "836455e10ae70847",
+    google: "ваш_google_verification_code",
+    yandex: "ваш_yandex_verification_code",
   },
 };
 
@@ -59,14 +67,30 @@ export default function RootLayout({ children }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
-        <meta name="author" content="calcoffee.ru" />
-        <meta name="copyright" content="calcoffee.ru" />
+        <meta name="author" content="boxcalculators.ru" />
+        <meta name="copyright" content="boxcalculators.ru" />
         <meta name="theme-color" content="#ffffff" />
-        <meta name="yandex-verification" content="836455e10ae70847" />
+        {/* Замените на свои коды верификации */}
+        <meta
+          name="yandex-verification"
+          content="ваш_yandex_verification_code"
+        />
         <meta
           name="google-site-verification"
-          content="zrWuXGrFe1nNpT-Wz1rpNtK7C3IIwpevUkjvVJ7VwRo"
+          content="ваш_google_verification_code"
         />
+
+        {/* Дополнительные link-теги для иконок */}
+        <link rel="shortcut icon" href="/icon-32x32.png" />
+        {/* Используем имеющуюся иконку 192x192 для apple-touch-icon с версией для кеша */}
+        <link
+          rel="apple-touch-icon"
+          href="/icon-192x192.png?v=2"
+          sizes="192x192"
+        />
+        {/* Предзагрузка основных иконок */}
+        <link rel="preload" href="/icon-192x192.png" as="image" />
+        <link rel="preload" href="/icon-512x512.png" as="image" />
       </head>
       <body className={montserrat.className}>{children}</body>
     </html>

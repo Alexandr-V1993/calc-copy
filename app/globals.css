@@ -1791,3 +1791,351 @@ section.listsection {
 .firstletterlogo {
   margin-right: -700px; /* Небольшой отступ справа */
 }
+
+.calculators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.calculator-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 12px;
+  padding: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  text-decoration: none;
+  color: inherit;
+  min-height: 150px;
+
+  border: 2px solid rgb(43, 80, 134);
+}
+
+.calculator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: rgb(43, 80, 134);
+}
+
+.calculator-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #4f46e5;
+  transition: width 0.3s ease;
+}
+
+.calculator-card:hover::before {
+  width: 6px;
+}
+
+.card-content {
+  flex: 1;
+}
+
+.calculator-card h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+
+  color: #111827;
+}
+
+.calculator-card p {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.card-arrow {
+  display: flex;
+  justify-content: flex-end;
+  color: #9ca3af;
+  transition: color 0.2s ease;
+}
+
+.calculator-card:hover .card-arrow {
+  color: #4f46e5;
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.no-results h3 {
+  font-size: 1.5rem;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.no-results p {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* Category colors */
+.calculator-card[data-category="finance"]::before {
+  background: #4f46e5;
+}
+
+.calculator-card[data-category="health"]::before {
+  background: #10b981;
+}
+
+.calculator-card[data-category="construction"]::before {
+  background: #f59e0b;
+}
+
+.calculator-card[data-category="education"]::before {
+  background: #3b82f6;
+}
+
+.calculator-card[data-category="conversion"]::before {
+  background: #8b5cf6;
+}
+
+.calculator-card[data-category="lifestyle"]::before {
+  background: #ec4899;
+}
+
+@media (max-width: 768px) {
+  .calculators-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .calculators-section {
+    padding: 3rem 0;
+  }
+
+  .calculators-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.card-content h3 {
+  margin: 5px;
+}
+.card-content p {
+  font-weight: 400;
+  color: #914da1;
+  font-weight: 700;
+}
+.card-content {
+  max-height: 100px;
+}
+.card-content {
+  max-height: 100px;
+}
+
+.calculator-card {
+  max-height: 30%;
+  background-color: #dee8ec;
+  border: none;
+  transition: all 0.2s ease-in;
+  border-radius: 20px;
+  text-align: left;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.calculators-grid {
+  gap: 2rem;
+}
+form.inlinecalculator {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5),
+    inset 0 0 15px rgba(255, 255, 255, 0.05);
+
+  color: #fff;
+  backdrop-filter: blur(5px);
+}
+
+.numrange span,
+label.row-2 > span {
+  font-weight: 600;
+  color: white;
+}
+.btns {
+  background-color: rgb(18, 168, 90);
+  color: white;
+
+  font-weight: 600;
+}
+.calculators-section {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.centre span {
+  color: #0f3460;
+}
+.icon-wrapper svg {
+  fill: currentColor; /* Меняет цвет вместе с родителем */
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover svg {
+  transform: scale(1.1);
+}
+.calculators-section,
+section.articlewrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.seo-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #1a365d;
+}
+
+.seo-content h3 {
+  font-size: 1.4rem;
+  margin: 1.5rem 0 1rem;
+  color: #2c5282;
+}
+
+.seo-content p {
+  margin-bottom: 1rem;
+}
+
+.cta-block {
+  background: #f7fafc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+  border-left: 4px solid #4299e1;
+}
+
+@media (max-width: 768px) {
+  .seo-content {
+    padding: 1rem;
+  }
+}
+/* Футер - глобальные стили */
+footer {
+  background: #1a202c;
+  color: white;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 3rem;
+}
+
+.footer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-menu-item {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-menu-item:hover {
+  color: #fbbf24;
+}
+
+.footer-brand {
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-logo-link {
+  text-decoration: none;
+}
+
+.footer-logo-text {
+  font-weight: 700;
+  color: white;
+  font-size: 1.1rem;
+  position: relative;
+  padding-right: 0.5rem;
+}
+
+.footer-logo-text::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60%;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.footer-copyright {
+  margin-left: 0.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-menu {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer-logo-text::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 1.5rem 0;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+.c-tp {
+  text-align: center;
+  margin-top: 0;
+}
+.con-bigs {
+  margin-top: 0;
+}
+header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.calculators-section {
+  padding-top: 40px;
+}
