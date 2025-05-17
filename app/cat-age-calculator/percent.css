@@ -1,0 +1,390 @@
+.inlinecalculator {
+  padding-right: 25px;
+  max-width: 500px;
+  padding-bottom: 20px;
+  min-height: 0px;
+}
+h3,
+h4 {
+  text-align: center;
+}
+.w-cat {
+  font-weight: 700;
+}
+.f-cat {
+  display: flex;
+  gap: 20px;
+}
+.f-cat label {
+  display: block;
+  width: 1005px;
+}
+.label-select {
+  margin-top: 10px;
+  max-width: 30%;
+}
+.bold {
+  font-weight: 700;
+  margin-left: 5px;
+}
+.cursive {
+  font-style: italic;
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Скрывает внешние и внутренние кнопки управления только для веб-кит браузеров (например, Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.test-res {
+  width: 100%;
+  padding-top: 5px;
+}
+.resultstring {
+  display: flex;
+  line-height: 80%;
+  justify-content: space-between;
+}
+.resultstring > span {
+  font-size: 18px;
+}
+#rw {
+  font-size: 18px;
+}
+div#res {
+  width: 100%;
+}
+
+.row-res {
+  padding-top: 17px;
+  width: 100%;
+}
+div.label-row {
+  max-width: 100%;
+}
+.row-vans-bottom {
+  width: 100%;
+}
+.van {
+  max-width: 100%;
+}
+.row-select {
+  display: grid;
+  grid-template-columns: 45% 51.5%;
+  column-gap: 20px;
+}
+.label-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+.btn-top {
+  width: 100%;
+  padding-top: 20px;
+}
+.bst {
+  width: 100%;
+}
+.van {
+  margin-bottom: 10px;
+}
+#res {
+  background-color: #fff;
+  border-radius: 10px;
+}
+p.resultstring {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+#resultimt {
+  font-size: 20px;
+  line-height: 120%;
+}
+.notation {
+  bottom: 0px;
+  position: absolute;
+}
+label > span,
+.label > span {
+  display: block;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.topInput label:last-child .notation {
+  display: none;
+}
+.notation {
+  display: none;
+}
+@media screen and (max-width: 540px) {
+  .row-res {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 540px) {
+  .row-res {
+    padding-top: 0;
+  }
+  .row-select {
+    grid-template-columns: 45% 51%;
+  }
+  .inlinecalculator {
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .row-res {
+    padding-top: 0;
+  }
+  .row-select {
+    grid-template-columns: 1fr;
+  }
+  .inlinecalculator {
+    padding-right: 15px;
+  }
+}
+.vsize {
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 0px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.notation {
+  top: 35px;
+}
+.row-select span {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+}
+label > span {
+  display: block;
+  font-size: 15px;
+}
+.align-end {
+  padding-left: 5px;
+  min-height: 50.5px;
+}
+p.resultstring {
+  padding-top: 0;
+}
+span#resultimt {
+  font-size: 25px;
+}
+div#res {
+  margin-top: 10px;
+  min-height: 100px;
+}
+section.articlewrap {
+  padding-top: 20px;
+  margin-top: 0;
+}
+
+.list-formula {
+  list-style: none;
+  padding-left: 0;
+}
+@media screen and (max-width: 768px) {
+  .inlinecalculator {
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .inlinecalculator {
+    padding-right: 15px;
+    max-width: 580px;
+    padding-bottom: 20px;
+    min-height: 0px;
+  }
+}
+label > span {
+  font-weight: 700;
+}
+.red {
+  color: red;
+}
+.body-shape-table {
+  width: 100%;
+  border: 1px solid #ddd; /* добавляем рамку */
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.body-shape-table th,
+.body-shape-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.body-shape-table th {
+  background-color: #f2f2f2;
+  color: #333;
+  border-top: 1px solid #ddd; /* добавляем верхнюю рамку для заголовков */
+}
+
+.body-shape-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.body-shape-table tbody tr:hover {
+  background-color: #e0e0e0;
+}
+.body-shape-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.body-shape-table th,
+.body-shape-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.body-shape-table th {
+  background-color: #f2f2f2;
+}
+
+@media only screen and (max-width: 768px) {
+  .body-shape-table {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .body-shape-table {
+    font-size: 12px;
+  }
+}
+h2 {
+  margin-top: 0;
+}
+img.img-body {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  object-fit: cover; /* сохранить пропорции и обрезать, если необходимо */
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.one-rm-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  background: white;
+}
+
+.one-rm-table th {
+  background-color: #2c3e50;
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.one-rm-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.one-rm-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.one-rm-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.one-rm-table th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.one-rm-table th:last-child {
+  border-top-right-radius: 8px;
+}
+
+.one-rm-table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.one-rm-table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
+}
+section.articlewrap {
+  margin-bottom: 0;
+}
+/* Стили для таблицы соответствия возрастов */
+.age-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  font-family: inherit;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.age-table th {
+  background-color: #4a6fa5;
+  color: white;
+  padding: 12px 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.age-table td {
+  padding: 10px 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.age-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.age-table tr:hover {
+  background-color: #f1f3f5;
+}
+
+.age-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 600px) {
+  .age-table {
+    font-size: 14px;
+  }
+
+  .age-table th,
+  .age-table td {
+    padding: 8px 10px;
+  }
+}

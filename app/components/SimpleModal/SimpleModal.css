@@ -1,0 +1,68 @@
+.close {
+  position: absolute;
+  top: 14px;
+  right: 96px;
+  cursor: pointer;
+}
+.topmenu .topmenulink {
+  display: block;
+  font-size: 14px;
+  padding: 0;
+  margin: 0 auto;
+  font-weight: 400;
+  text-align: left;
+  width: 100%;
+  max-width: 450px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1980px) {
+  .close,
+  .close-modal {
+    position: absolute;
+    top: 20px;
+
+    cursor: pointer;
+  }
+  .close > img {
+    height: 35px;
+    width: 35px;
+  }
+  .topmenuwrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media screen and (max-width: 1300px) {
+  .topmenuwrap {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .close,
+  .close-modal {
+    right: 52px;
+  }
+  .topmenuwrap {
+    padding-top: 150px;
+    padding-right: 200px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .topmenuwrap {
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 120px;
+  }
+  .close,
+  .close-modal {
+    right: 12px;
+    top: 5px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .topmenuwrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .close,
+  .close-modal {
+    right: 12px;
+    top: 5px;
+  }
+}

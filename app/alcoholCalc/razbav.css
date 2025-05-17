@@ -1,0 +1,19 @@
+.four {
+  width: 100%;
+}
+.five {
+  min-width: 40%;
+  display: block;
+}
+.inlinecalculator {
+  min-width: 800px;
+  max-height: 370px;
+}
+.centre-top {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.fives {
+  min-width: 100%;
+}

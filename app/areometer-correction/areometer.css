@@ -1,0 +1,175 @@
+.inlinecalculator {
+  max-width: 750px;
+  min-height: 280px;
+  padding-bottom: 0;
+}
+.centre-top {
+  display: flex;
+  flex-wrap: wrap;
+}
+.top-alco {
+  margin-bottom: 20px;
+}
+.articleBody > p {
+  text-align: left;
+}
+ol > li {
+  margin-left: 50px;
+}
+.b-centre {
+  width: 200px;
+}
+.resultstring {
+  text-align-last: left;
+  background-color: none;
+}
+#resultimt {
+  font-size: 20px;
+  display: block;
+}
+
+.notation {
+  color: grey;
+}
+.van {
+  width: 100%;
+  padding-bottom: 10px;
+  margin: 0;
+}
+#result {
+  display: flex;
+  align-items: flex-start;
+  width: 45%;
+}
+.two {
+  width: 100%;
+  padding-bottom: 10px;
+  margin: 0;
+}
+.btns.bst {
+  height: 45px;
+  margin: 0;
+  width: 100%;
+}
+.btn-top {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.centre-top {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  #result {
+    display: block;
+    display: flex;
+    align-items: center;
+    width: 40%;
+  }
+  .van {
+    width: 100%;
+  }
+  .two {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  #result {
+    display: block;
+    display: flex;
+    align-items: center;
+    width: 40%;
+  }
+  .van {
+    width: 94%;
+  }
+  .two {
+    width: 94%;
+  }
+}
+@media screen and (min-width: 912px) {
+  #result {
+    display: block;
+    display: flex;
+    align-items: center;
+    width: 45%;
+  }
+  .van {
+    width: 100%;
+  }
+  .two {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #result {
+    display: block;
+    display: flex;
+    align-items: center;
+    width: 42%;
+  }
+  .van {
+    width: 100%;
+  }
+  .two {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .inlinecalculator {
+    padding-top: 20px;
+  }
+  #result {
+    top: 273px;
+    left: -5px;
+    width: 100%;
+  }
+  .top-deluting {
+    padding-top: 140px;
+  }
+  .top-alco {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #result {
+    top: 273px;
+    left: -5px;
+  }
+  .top-alco {
+    padding-top: 100px;
+  }
+}
+
+#result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 580px) {
+  .topmenu,
+  .active {
+    width: 100%;
+    padding-left: 200px;
+  }
+  .top-deluting {
+    padding-top: 0;
+  }
+  .alcohol-list {
+    padding-top: 120px;
+  }
+  .top-alco {
+    padding-top: 0;
+  }
+  .articleBody {
+    padding-top: 140px;
+  }
+  .alcohol-list {
+    padding-top: 10px;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+  }
+}

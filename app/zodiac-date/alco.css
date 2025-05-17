@@ -1,0 +1,762 @@
+.formula > sup {
+  font-size: 17px;
+}
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+ol > li > h3 {
+  text-align: left;
+}
+.row-res {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #e1ecf3;
+  width: 100%;
+  padding-right: 20px;
+}
+.alls {
+  display: flex;
+  gap: 20px;
+}
+.all {
+  display: flex;
+  gap: 20px;
+}
+.inlinecalculators {
+  max-width: 510px;
+  box-sizing: border-box;
+  padding: 5px 0px 10px 24px;
+  margin: 0px auto;
+  position: relative;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  background: #e1ecf3;
+  min-height: 170px;
+  padding-right: 4px;
+}
+#res {
+  border-radius: 10px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  text-align: center;
+  background-color: #fff;
+  max-width: 100%;
+  padding-top: 20px;
+}
+
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
+label > span {
+  font-size: 15px;
+}
+#rw {
+  font-size: 10px;
+}
+.topInput-select > .select {
+  max-width: 30%;
+}
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topInput-select {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+.bottom-select {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+.bottom-select > .select {
+  max-width: 40%;
+}
+.bst {
+  margin-top: 20px;
+  width: 100%;
+}
+.input-seredina {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+label .notation {
+  top: 40px;
+}
+.resultstring {
+  display: flex;
+  line-height: 80%;
+  justify-content: space-between;
+}
+.resultstring > span {
+  font-size: 18px;
+}
+#rw {
+  font-size: 18px;
+}
+div#res {
+  width: 100%;
+}
+.canvas-test {
+  border-top: 5px solid #e1ecf3;
+  border-bottom: 5px solid #e1ecf3;
+  padding-bottom: 10px;
+}
+.canvas-test canvas {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+span#rw {
+  font-size: 16px;
+  background: none;
+  -webkit-text-fill-color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+@media screen and (max-width: 540px) {
+  .input-seredina {
+    flex-direction: column;
+  }
+
+  .row-res {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  div#res {
+    width: 100%;
+    padding-top: 5px;
+  }
+
+  .test-res {
+    width: 100%;
+  }
+
+  .btn-top {
+    margin-top: 15px;
+    width: 100%; /* Кнопка занимает всю доступную ширину */
+  }
+
+  label {
+    width: 100%;
+  }
+  .topInput-select > .select {
+    max-width: 50%;
+  }
+  .bottom-select {
+    flex-direction: column;
+  }
+  .bottom-select > .select {
+    max-width: 100%;
+  }
+  .row-check {
+    width: 20%;
+  }
+  .row-res {
+    padding-top: 20px;
+  }
+  .resultstring {
+    display: flex;
+    line-height: 59%;
+    flex-direction: column;
+  }
+  .resultstring > span {
+    font-size: 16px;
+  }
+  #rw {
+    font-size: 17px;
+  }
+  div.test-res {
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+  }
+  .test-res {
+    padding-bottom: 15px;
+  }
+  .row-res {
+    padding-right: 0px;
+  }
+  .inlinecalculators {
+    padding-left: 17px;
+    padding-right: 14px;
+  }
+  .testcentre {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 375px) {
+  div.topInput-select {
+    column-gap: 10px;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .row-res {
+    padding-right: 10px;
+  }
+  .inlinecalculators {
+    padding-left: 15px;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+h2 {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+th,
+td {
+  padding: 5px;
+  text-align: left;
+}
+td.year-cell {
+  padding-left: 0;
+}
+td.amount-cell {
+  padding-left: 0;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.year-cell {
+  font-weight: bold;
+}
+
+.amount-cell {
+  white-space: nowrap;
+}
+th,
+td {
+  font-size: 14px;
+}
+th {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.topInput-selects {
+  display: flex;
+  gap: 20px;
+}
+.topInput-selects .label-tops {
+  width: 100%;
+}
+.del {
+  color: red;
+  font-size: 25px;
+}
+.button-del {
+  padding: 0;
+  border: none;
+  background: none;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.add-new-button {
+  color: #0d6efd;
+  border: none;
+  background-color: #ecf0f1;
+  background: none;
+  font-size: 17px;
+  padding-left: 0;
+  cursor: pointer;
+}
+.print-none > span {
+  color: #0d6efd;
+  border: none;
+  background-color: #ecf0f1;
+  background: none;
+  font-size: 25px;
+  display: inline-block;
+}
+.print-none {
+  background: none;
+
+  display: flex;
+  cursor: pointer;
+  align-items: flex-end;
+}
+.row-vans-bottom {
+  display: flex;
+  flex-direction: column;
+}
+.button-del {
+  margin-top: 0;
+  align-self: flex-end;
+}
+span.del {
+  font-size: 35px;
+}
+.nap-span {
+  display: block;
+  margin-top: 10px;
+  color: rgba(0, 0, 0, 0.6);
+}
+@media only screen and (max-width: 600px) {
+  th,
+  td {
+    font-size: 12px;
+  }
+  th {
+    font-weight: 400;
+    font-size: 12px;
+  }
+  form.inlinecalculators {
+    padding-left: 15px;
+  }
+}
+div.notation {
+  top: 35px;
+}
+
+.test-2 {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  margin: 0;
+  padding: 0px 10px;
+  padding-bottom: 10px;
+}
+@media only screen and (max-width: 540px) {
+  h2 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  .alls {
+    flex-direction: column;
+    gap: 0px;
+  }
+  .btn-top {
+    margin-top: 0px;
+  }
+  .test-2 {
+    flex-direction: column;
+    padding: 0;
+  }
+  small {
+    margin-bottom: 10px;
+    display: block;
+    padding-top: 20px;
+  }
+  p {
+    padding-bottom: 10px;
+  }
+  .row-vans-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 0px;
+  }
+  .nap-span {
+    margin-top: 0px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .button-del {
+    margin-top: 0px;
+  }
+  span.del {
+    font-size: 35px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  form.inlinecalculators {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .row-res {
+    padding-right: 0px;
+  }
+}
+.my_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.my_table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.my_table select,
+.my_table input[type="text"],
+.my_table input[type="button"] {
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.my_table input[type="button"] {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+.my_table input[type="button"]:hover {
+  background-color: #45a049;
+}
+
+.my_table input[type="text"]:focus,
+.my_table select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.my_table input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+.my_table input[type="text"][name="year"] {
+  width: 70px;
+}
+
+.my_table input[type="text"][name="dw"] {
+  width: 120px;
+}
+
+.my_table select {
+  width: 100px;
+}
+
+.my_table td:first-child {
+  width: 60px;
+}
+
+.my_table td:nth-child(2),
+.my_table td:nth-child(4),
+.my_table td:nth-child(6) {
+  width: 100px;
+}
+
+.my_table td:nth-child(7) {
+  width: 110px;
+}
+
+.label-row {
+  display: flex;
+  align-items: center;
+}
+
+.nap-span {
+  margin-right: 20px;
+}
+
+.numrange {
+  display: flex;
+  align-items: center;
+}
+
+.numrange .input {
+  width: 60px;
+  margin-right: 10px;
+}
+
+.notation {
+  font-size: 14px;
+  color: #555;
+}
+label > span {
+  font-weight: 700;
+}
+h2 {
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+}
+p {
+  margin-top: 10px;
+}
+.inlinecalculators {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.row-res {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.centre-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.centre-top div {
+  margin: 10px;
+}
+
+.btn-top {
+  margin-top: 20px;
+}
+
+.btns {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btns:hover {
+  background-color: #0056b3;
+}
+
+.resultstring {
+  margin: 0;
+}
+
+#resultimt {
+  font-weight: bold;
+}
+.inlinecalculators {
+  display: grid;
+  grid-template-columns: 1fr; /* Одна колонка */
+  gap: 10px; /* Пространство между элементами */
+  max-width: 400px; /* Максимальная ширина формы */
+  margin: 0 auto; /* Центрирование формы */
+}
+
+.centre-top {
+  display: grid;
+  grid-template-columns: 1fr; /* Одна колонка */
+  gap: 10px; /* Пространство между инпутами */
+}
+
+.btn-top {
+  text-align: center; /* Выравнивание кнопки по центру */
+}
+
+.btns {
+  width: 100%;
+  margin: 0 auto; /* Центрирование кнопки */
+}
+
+#res {
+  text-align: center; /* Выравнивание результата по центру */
+}
+
+.test-res {
+  width: 100%;
+}
+
+.resultstring {
+  width: 100%;
+}
+.centre-top {
+  width: 100%;
+}
+form div {
+  margin: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.resultstring {
+  display: flex;
+  flex-direction: column;
+}
+div#res {
+  padding-top: 20px;
+  padding-top: 5px;
+}
+div.row-row {
+  display: flex;
+  text-align-last: left;
+  justify-content: space-between;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #333;
+  font-family: Arial, sans-serif;
+}
+
+th,
+td {
+  border: 1px solid #333;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+  background-color: #e6e6e6;
+}
+
+tr:hover {
+  background-color: #d9d9d9;
+}
+
+th span,
+td span {
+  display: inline-block;
+}
+
+th strong,
+td strong {
+  display: block;
+}
+h3 {
+  margin-top: 40px;
+}
+h2 {
+  margin-bottom: 20px;
+}
+/* Общие стили для таблицы */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Стили для ячеек и заголовков */
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Стили для четных строк */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Медиа-запросы для адаптивности */
+@media only screen and (max-width: 600px) {
+  /* Сделаем таблицу отзывчивой для маленьких устройств */
+  table,
+  thead,
+  tbody,
+  tr,
+  td,
+  th {
+    display: block;
+  }
+
+  /* Спрячем заголовок */
+  thead tr:first-child {
+    display: none;
+  }
+
+  /* Стили для каждой ячейки */
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+  }
+
+  /* Добавим маркеры заголовков перед каждой ячейкой */
+  td:before {
+    position: absolute;
+    left: 6px;
+    content: attr(data-label);
+    font-weight: bold;
+  }
+
+  /* Добавим маркеры для знака Зодиака перед каждым символом */
+  td:first-child:before {
+    content: "Знак: " attr(data-label);
+  }
+
+  /* Добавим маркеры для символа Зодиака перед каждым символом */
+  td:nth-child(2):before {
+    content: "Символ: " attr(data-label);
+  }
+
+  /* Добавим маркеры для Западной астрологии перед каждой датой */
+  td:nth-child(3):before {
+    content: "Западная астрология: " attr(data-label);
+  }
+
+  /* Добавим маркеры для Индийской астрологии перед каждой датой */
+  td:nth-child(4):before {
+    content: "Индийская астрология: " attr(data-label);
+  }
+
+  /* Добавим маркеры для даты пребывания Солнца перед каждой датой */
+  /* CSS для мобильных устройств */
+  @media only screen and (max-width: 600px) {
+    td:nth-child(5):before {
+      content: "Даты пребывания Солнца" attr(data-label);
+      white-space: normal; /* Позволим переносить текст, если он не помещается */
+      display: block; /* Это заставит текст начать новую строку */
+    }
+    td span {
+      margin-left: 20px;
+    }
+    b {
+      margin-left: 20px;
+    }
+  }
+
+  tr.d-none {
+    display: none;
+  }
+  span.sp-block {
+    display: block;
+  }
+}
+/* CSS для мобильных устройств */
+p.right span {
+  margin-left: auto;
+}
+div.row-row {
+  padding: 10px;
+  padding-bottom: 0;
+}
+span#rw {
+  font-weight: 500;
+  line-height: 2;
+}
+span#resultimt {
+  line-height: 2;
+}
+ol {
+  padding-left: 10px;
+}

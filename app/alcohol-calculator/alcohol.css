@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.alcohol-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.alcohol-item {
+  width: 220px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(233, 236, 241);
+  padding: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: all 0.4s;
+  cursor: pointer;
+  height: 80%;
+}
+.alcohol-item:hover {
+  background-color: rgb(210, 222, 224);
+  transform: scale(1.1);
+}
+.alcohol-item > p {
+  font-size: 14px;
+  color: rgb(56, 54, 54);
+  text-align: center;
+}
+h5 {
+  padding: 0;
+  text-align: center;
+  margin-bottom: 10px;
+  color: rgb(34, 33, 33);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.row-res {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #e1ecf3;
+  width: 100%;
+  padding-right: 24px;
+}
+span.r-d {
+  margin: -15px;
+}
+.inlinecalculators {
+  max-width: 480px;
+  box-sizing: border-box;
+  padding: 5px 0px 10px 24px;
+  margin: 0px auto;
+  position: relative;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  background: #e1ecf3;
+  min-height: 280px;
+  padding-right: 10px;
+  padding-left: 30px;
+}
+label.five {
+  max-width: 100%;
+}
+div.testcentre {
+  max-width: 100%;
+}
+.label-row {
+  width: 100%;
+}
+.input {
+  max-width: 100%;
+}
+.res {
+  border-radius: 10px;
+  margin-top: 5px;
+  text-align: center;
+  padding-top: 20px;
+  background-color: #fff;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+#resultimt {
+  line-height: 70%;
+}
+.resultstring {
+  line-height: 10%;
+}
+.five {
+  width: 100%;
+}
+.smesh-left {
+  width: 100%;
+}
+.btn-top {
+  max-width: 100%;
+  padding-top: 20px;
+}
+.vsizes {
+  background: linear-gradient(22.75deg, #f00 -42.47%, #4021ff 134.19%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+.resultstring {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+p.resultstring {
+  margin-bottom: 5px;
+}
+.greys {
+  margin-top: 0;
+}
+@media screen and (max-width: 375px) {
+  .vsizes {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .alcohol-list {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+@media screen and (min-width: 769px) {
+  .alcohol-list {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+article.articleBody p {
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .inlinecalculators {
+    padding-right: 10px;
+    justify-content: center;
+    padding-left: 30px;
+  }
+  span#resultimt {
+    line-height: 70%;
+    word-wrap: normal;
+    text-align: center;
+  }
+}
+.but {
+  text-decoration: underline;
+}

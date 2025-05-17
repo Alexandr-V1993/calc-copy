@@ -1,0 +1,328 @@
+.row-res {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #e1ecf3;
+  width: 100%;
+  padding-right: 24px;
+}
+textarea {
+  resize: vertical;
+  height: 50px;
+  display: block;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+div#res {
+  word-wrap: break-word;
+  max-width: 100%; /* Добавлено */
+}
+.pre-top {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 700;
+}
+.row-check {
+  margin-top: 0;
+}
+.inlinecalculators {
+  max-width: 510px;
+  box-sizing: border-box;
+  padding: 5px 0px 10px 24px;
+  margin: 0px auto;
+  position: relative;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  background: #e1ecf3;
+  min-height: 170px;
+  padding-right: 4px;
+}
+#res {
+  border-radius: 10px;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  text-align: center;
+  background-color: #fff;
+  max-width: 100%; /* Изменено на 100% */
+  padding-top: 20px;
+}
+p.resultstring {
+  max-width: 100%; /* Изменено на 100% */
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  word-wrap: break-word;
+}
+
+div#res {
+  gap: 10px;
+  padding-bottom: 20px;
+}
+#res > p {
+  line-height: 45%;
+}
+.btn-top {
+  width: 100%;
+  padding-top: 20px;
+}
+.bst {
+  width: 100%;
+}
+.topInput {
+  display: flex;
+  gap: 20px;
+}
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
+label > span {
+  font-size: 15px;
+}
+.label-row-top {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+}
+.checkbox {
+  padding-top: 10px;
+}
+.span {
+  font-weight: 600;
+}
+.password-end {
+  cursor: pointer;
+}
+.copied {
+  color: rgb(150, 240, 162);
+}
+.copy-message {
+  color: rgb(150, 240, 162);
+  display: block;
+}
+.copy > img {
+  font-size: 2px;
+  cursor: pointer;
+}
+.copy > img {
+  padding-left: 10px;
+}
+
+div#res {
+  padding-top: 0;
+}
+.span-title {
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 700;
+}
+.test-res {
+  padding: 10px;
+}
+.copy > img:hover {
+  filter: brightness(50%);
+}
+.title-p {
+  display: flex;
+  flex-direction: column;
+}
+.copied,
+.copy-message {
+  color: #28a745; /* Темно зеленый цвет */
+  user-select: all; /* Разрешить выделение текста */
+}
+.span-el {
+  background-color: #fbfcfc;
+  border: 1px solid #dde5e7;
+  border-radius: 5px;
+  color: #333;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0.5rem 1rem 0.5rem 0;
+  min-width: 60px;
+  padding: 10px 10px;
+  position: relative;
+  text-align: center;
+}
+.tops-content {
+  margin-top: 15px;
+}
+h2 {
+  margin-top: 15px;
+}
+h3 {
+  margin-top: 15px;
+}
+p {
+  margin-top: 10px;
+}
+section.articlewrap {
+  margin-bottom: 0px;
+}
+.span-waight > span {
+  font-weight: 700;
+}
+@media screen and (max-width: 540px) {
+  .inlinecalculators {
+    padding-top: 15px;
+    padding-left: 26px;
+  }
+}
+@media screen and (max-width: 390px) {
+  .topInput {
+    display: flex;
+  }
+  label.numrange,
+  .van {
+    width: 55%;
+  }
+  .btn-top {
+    max-width: 100%;
+  }
+  .btns,
+  .bst {
+    width: 100%;
+  }
+  .inlinecalculators {
+    padding-top: 15px;
+    padding-right: 25px;
+    padding-left: 16px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .topInput {
+    display: flex;
+    gap: 10px;
+  }
+  label.numrange,
+  .van {
+    width: 47%;
+  }
+  .btn-top {
+    max-width: 97%;
+  }
+  .btns,
+  .bst {
+    width: 100%;
+  }
+  .inlinecalculators {
+    padding-top: 15px;
+    padding-right: 25px;
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  label > span {
+    font-size: 14px;
+  }
+}
+.label-row-tops {
+  margin-top: 20px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.label-row-tops span {
+  font-weight: 700;
+}
+.row-label {
+}
+.checkboxs {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+label.label-row-top {
+  display: flex;
+  flex-direction: column;
+}
+.checkboxs {
+  flex-direction: column;
+  align-items: flex-start;
+}
+label.label-row-tops {
+  display: flex;
+  flex-direction: row;
+}
+.label-row-tops {
+  margin-top: 0;
+}
+.label-row-topss {
+  margin-top: 20px;
+  display: flex;
+}
+.label-row-topss span {
+  font-weight: 700;
+}
+@media screen and (max-width: 420px) {
+  .checkboxs {
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+  }
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  margin-top: 40px;
+}
+h2 {
+  margin-top: 10px;
+  font-size: 30px;
+}
+@media screen and (max-width: 375px) {
+  div.row-res {
+    padding-right: 0;
+  }
+  .inlinecalculators {
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .btn-top {
+    max-width: 100%;
+  }
+}
+.label-row-top input[type="number"]::-webkit-inner-spin-button,
+.label-row-top input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.label-row-top input[type="number"] {
+  -moz-appearance: textfield;
+}
+.label-row-top input[type="number"] {
+  -moz-appearance: textfield;
+}
+.copying {
+  display: none;
+}

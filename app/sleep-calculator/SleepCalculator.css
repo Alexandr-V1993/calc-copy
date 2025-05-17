@@ -1,0 +1,261 @@
+.inlinecalculator {
+  padding-right: 25px;
+  max-width: 600px;
+  padding-bottom: 20px;
+}
+.row-res {
+  padding-top: 17px;
+}
+.row-select {
+  display: grid;
+  grid-template-columns: 45% 51.5%;
+  column-gap: 20px;
+}
+.label-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+.btn-top {
+  width: 100%;
+  padding-top: 20px;
+}
+.bst {
+  width: 100%;
+}
+#res {
+  background-color: #fff;
+  border-radius: 10px;
+}
+p.resultstring {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 20px;
+  justify-content: center;
+}
+#resultimt {
+  font-size: 20px;
+  line-height: 120%;
+}
+.notation {
+  bottom: 0px;
+  position: absolute;
+}
+@media screen and (max-width: 540px) {
+  .row-res {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 540px) {
+  .row-res {
+    padding-top: 0;
+  }
+  .row-select {
+    grid-template-columns: 45% 51%;
+  }
+  .inlinecalculator {
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .row-res {
+    padding-top: 0;
+  }
+  .row-select {
+    grid-template-columns: 1fr;
+  }
+  .inlinecalculator {
+    padding-right: 15px;
+  }
+}
+.notation {
+  top: 35px;
+}
+.row-select span {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+}
+label > span {
+  display: block;
+  font-size: 15px;
+}
+.align-end {
+  padding-left: 5px;
+  min-height: 50.5px;
+}
+.tops-content {
+  margin-top: 20px;
+}
+.row-select {
+  display: flex;
+  flex-direction: row;
+}
+
+.row-res,
+.testcentre,
+.row-select,
+.unit-container {
+  width: 100%;
+}
+.row-c {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+select {
+  margin-bottom: 10px;
+}
+.result-container {
+  background-color: #fff;
+  padding: 20px;
+}
+.result-container p {
+  margin-top: 0;
+  font-weight: 600;
+}
+/* Основные стили для контейнера */
+.SleepCalculator {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для заголовков */
+.title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.title.first {
+  margin-top: 25px;
+}
+
+/* Стили для строк с выбором времени */
+.row-wake_up,
+.row-sleep {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+select {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #dfe6e9;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Стили для блока с результатом */
+.script-place {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: #ecf5ff;
+  border-radius: 8px;
+  border: 1px solid #3498db;
+}
+
+.row-result {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3498db;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.row-desc {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 10px;
+}
+
+/* Стили для ссылки "Рассчитать снова" */
+a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #3498db;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Стили для содержимого */
+.tops-content {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.bottom-s {
+  margin-bottom: 0;
+}
+ul {
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+strong {
+  color: #2c3e50;
+}
+h2.tops-content {
+  margin-top: 0;
+}

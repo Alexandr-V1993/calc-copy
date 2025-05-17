@@ -1,0 +1,275 @@
+.row-res {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #e1ecf3;
+  width: 100%;
+  padding-right: 24px;
+}
+
+.inlinecalculators {
+  max-width: 500px;
+  box-sizing: border-box;
+  padding: 5px 0px 10px 24px;
+  margin: 0px auto;
+  position: relative;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  background: #e1ecf3;
+  min-height: 280px;
+}
+#res {
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+
+  background-color: #fff;
+  max-width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: center;
+  word-break: break-all;
+  padding: 10px;
+}
+p.resultstring {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+div#res {
+  gap: 10px;
+  padding-bottom: 20px;
+}
+#res > p {
+  line-height: 45%;
+}
+.five {
+  width: 100%;
+}
+p.resultstring {
+  margin: 0;
+}
+#resultimt {
+  font-size: 20px;
+  word-wrap: break-word;
+  line-height: 11%;
+}
+.btn-top {
+  width: 100%;
+  padding-top: 20px;
+}
+.bst {
+  width: 100%;
+}
+h3 {
+  text-align: center;
+}
+span#rw {
+  font-size: 16px;
+  -webkit-text-fill-color: grey;
+  font-weight: 400;
+}
+.colored {
+  -webkit-text-fill-color: grey;
+  font-weight: 400;
+  font-size: 16px;
+}
+.row-select {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.topInput {
+  display: flex;
+  gap: 10px;
+}
+input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+}
+.row-vans-bottom {
+  display: flex;
+  gap: 5px;
+}
+.row-2 {
+  width: 100%;
+}
+.date {
+  width: 50%;
+}
+.notation {
+  top: 35px;
+}
+label > span {
+  font-size: 15px;
+}
+#res {
+  gap: 20px;
+}
+#rw {
+  padding-top: 5px;
+}
+.test {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#resultimt {
+  font-size: 17px;
+  padding-top: 4px;
+}
+.resultstring {
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.rs {
+  display: flex;
+  flex-direction: column;
+}
+.rs-span {
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+  row-gap: 20px;
+  align-items: flex-start;
+}
+.rs-span span {
+  color: grey;
+}
+.days-centre {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+span#resultimt {
+  background: linear-gradient(22.75deg, #f00 -42.47%, #4021ff 134.19%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: 600;
+}
+@media screen and (max-width: 768px) {
+  .inlinecalculators {
+    padding-right: 10px;
+    justify-content: center;
+    padding-left: 30px;
+    max-width: 500px;
+  }
+  .row-vans-bottom {
+    flex-direction: column;
+  }
+  p.resultstring {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .inlinecalculators {
+    padding-right: 10px;
+    justify-content: center;
+    padding-left: 40px;
+    max-width: 500px;
+  }
+  .row-vans-bottom {
+    flex-direction: column;
+  }
+  p.resultstring {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .topInput {
+    flex-direction: column;
+  }
+
+  #resultimt {
+    font-size: 16px;
+  }
+  .days-centre {
+    gap: 4px;
+  }
+  .row-2 {
+    width: 100%;
+  }
+  .row-vans-top {
+    flex-direction: column;
+    column-gap: 0px;
+  }
+
+  .pribav-row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+  }
+  span#resultimt {
+    text-align: right;
+  }
+  p.resultstring {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.test2 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+  margin: 0 auto;
+  table-layout: fixed;
+}
+
+th,
+td {
+  border: 1px solid gray;
+  padding: 3px; /* Уменьшение размера внутренних отступов */
+  width: calc(100% / 3);
+  text-align: center;
+  background-color: #fbfcfc;
+  border: 1px solid #ecf0f1;
+  padding: 7px;
+}
+
+th:first-child,
+td:first-child {
+  width: 20%;
+  background-color: #fbfcfc;
+  border: 1px solid #ecf0f1;
+  padding: 7px;
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+tbody {
+  vertical-align: top;
+}
+
+#res {
+  width: 95%;
+}
+.tops-content {
+  margin-top: 20px;
+  margin-top: 20px;
+}

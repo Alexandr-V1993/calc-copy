@@ -1,0 +1,204 @@
+.inlinecalculator {
+  padding-right: 25px;
+  max-width: 500px;
+  padding-bottom: 20px;
+  min-height: 0px;
+}
+
+.label-select {
+  margin-top: 10px;
+  max-width: 30%;
+}
+.bold {
+  font-weight: 700;
+  margin-left: 5px;
+}
+.cursive {
+  font-style: italic;
+  display: block;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+/* Скрывает внешние и внутренние кнопки управления только для веб-кит браузеров (например, Chrome, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.test-res {
+  width: 100%;
+  padding-top: 5px;
+}
+.resultstring {
+  display: flex;
+  line-height: 80%;
+  justify-content: space-between;
+}
+.resultstring > span {
+  font-size: 18px;
+}
+#rw {
+  font-size: 18px;
+}
+div#res {
+  width: 100%;
+}
+
+.row-res {
+  padding-top: 17px;
+  width: 100%;
+}
+div.label-row {
+  max-width: 100%;
+}
+.row-vans-bottom {
+  width: 100%;
+}
+.van {
+  max-width: 100%;
+}
+.row-select {
+  display: grid;
+  grid-template-columns: 45% 51.5%;
+  column-gap: 20px;
+}
+.label-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+.btn-top {
+  width: 100%;
+  padding-top: 20px;
+}
+.bst {
+  width: 100%;
+}
+.van {
+  margin-bottom: 10px;
+}
+#res {
+  background-color: #fff;
+  border-radius: 10px;
+}
+p.resultstring {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+#resultimt {
+  font-size: 20px;
+  line-height: 120%;
+}
+.notation {
+  bottom: 0px;
+  position: absolute;
+}
+label > span,
+.label > span {
+  display: block;
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.topInput label:last-child .notation {
+  display: none;
+}
+.notation {
+  display: none;
+}
+@media screen and (max-width: 540px) {
+  .row-res {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 540px) {
+  .row-res {
+    padding-top: 0;
+  }
+  .row-select {
+    grid-template-columns: 45% 51%;
+  }
+  .inlinecalculator {
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .row-res {
+    padding-top: 0;
+  }
+  .row-select {
+    grid-template-columns: 1fr;
+  }
+  .inlinecalculator {
+    padding-right: 15px;
+  }
+}
+.vsize {
+  text-align: center;
+  padding-top: 10px;
+  margin-top: 0px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.notation {
+  top: 35px;
+}
+.row-select span {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+}
+label > span {
+  display: block;
+  font-size: 15px;
+}
+.align-end {
+  padding-left: 5px;
+  min-height: 50.5px;
+}
+p.resultstring {
+  padding-top: 0;
+}
+span#resultimt {
+  font-size: 25px;
+}
+div#res {
+  margin-top: 10px;
+  min-height: 100px;
+}
+section.articlewrap {
+  padding-top: 20px;
+  margin-top: 0;
+}
+
+.list-formula {
+  list-style: none;
+  padding-left: 0;
+}
+@media screen and (max-width: 768px) {
+  .inlinecalculator {
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .inlinecalculator {
+    padding-right: 15px;
+    max-width: 580px;
+    padding-bottom: 20px;
+    min-height: 0px;
+  }
+}
