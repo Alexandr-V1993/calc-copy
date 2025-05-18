@@ -8,19 +8,22 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор расхода топлива: онлайн расчет затрат",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор расхода топлива | Расчет затрат и экономии",
   description:
-    "Рассчитайте расход топлива и оптимизируйте затраты с помощью нашего онлайн калькулятора. Узнайте точное потребление топлива и получите рекомендации для экономии на транспортных расходах.",
+    "Онлайн калькулятор расхода топлива от BoxCalculators. Рассчитайте потребление топлива, стоимость поездки и узнайте, как сэкономить на транспортных расходах.",
   keywords: [
     "калькулятор расхода топлива",
     "онлайн расчет топлива",
-    "топливный расход",
-    "экономия топлива",
-    "транспортные расходы",
+    "топливный калькулятор",
+    "экономия на топливе",
+    "расход топлива автомобиля",
+    "стоимость поездки",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/fuel-cost-calculator",
+    canonical: "/fuel-consumption",
   },
   robots: {
     index: true,
@@ -32,25 +35,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор расхода топлива: онлайн расчет затрат",
+    title: "Калькулятор расхода топлива | BoxCalculators",
     description:
-      "Рассчитайте расход топлива и оптимизируйте затраты с помощью нашего онлайн калькулятора. Узнайте точное потребление топлива и получите рекомендации для экономии на транспортных расходах.",
-    url: "/fuel-cost-calculator",
+      "Рассчитайте расход топлива и затраты на поездку онлайн. Получите рекомендации по снижению топливных расходов и оптимизации бюджета на автомобиль.",
+    url: "/fuel-consumption",
     type: "website",
     images: [
       {
         url: "/images/fuel-cost-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор расхода топлива: онлайн расчет затрат",
+        alt: "Калькулятор расхода топлива от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор расхода топлива: онлайн расчет затрат",
+    title: "Калькулятор расхода топлива | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета расхода топлива и оптимизации затрат. Получите точные данные о потреблении топлива и сэкономьте на транспортных расходах.",
+      "Бесплатный инструмент для расчёта расхода топлива, стоимости поездки и анализа эффективности вашего автомобиля.",
     images: ["/images/fuel-cost-calculator-twitter.jpg"],
   },
 };
@@ -61,41 +64,42 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор расхода топлива",
-              url: "http://calcoffee.ru/fuel-cost-calculator",
+              url: "https://boxcalculators.ru/fuel-consumption ",
               description:
-                "Онлайн инструмент для расчета расхода топлива и оптимизации затрат. Получите точные данные о потреблении топлива и сэкономьте на транспортных расходах.",
+                "Онлайн инструмент для расчёта расхода топлива, стоимости поездки и анализа эффективности использования автомобиля.",
               applicationCategory: "TransportationApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет расхода топлива",
-                "Оптимизация затрат",
+                "Расчёт расхода топлива на 100 км",
+                "Определение стоимости поездки",
+                "Анализ экономии топлива",
                 "Мгновенный результат",
-                "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/fuel-cost-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/fuel-cost-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -105,12 +109,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

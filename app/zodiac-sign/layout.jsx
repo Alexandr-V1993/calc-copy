@@ -8,19 +8,22 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Определите Ваш Знак Зодиака онлайн",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор знака зодиака онлайн | Определите свой Знак",
   description:
-    "Узнайте свой знак Зодиака за считанные секунды. Введите дату рождения в наш калькулятор и откройте астрологические тайны вашего знака.",
+    "Определите свой знак зодиака по дате рождения. Онлайн калькулятор BoxCalculators рассчитает ваш Зодиак и покажет основные характеристики вашего знака.",
   keywords: [
-    "знак Зодиака",
-    "астрология",
-    "калькулятор знака Зодиака",
-    "определение знака Зодиака",
-    "онлайн астрология",
+    "знак зодиака онлайн",
+    "определение знака зодиака",
+    "калькулятор зодиака",
+    "астрологический калькулятор",
+    "знак по дате рождения",
+    "ваш зодиакальный знак",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/zodiac-date",
+    canonical: "/zodiac-sign",
   },
   robots: {
     index: true,
@@ -32,25 +35,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Определите Ваш Знак Зодиака онлайн",
+    title: "Калькулятор знака зодиака онлайн | BoxCalculators",
     description:
-      "Узнайте свой знак Зодиака за считанные секунды. Введите дату рождения в наш калькулятор и откройте астрологические тайны вашего знака.",
-    url: "/zodiac-date",
+      "Узнайте свой знак зодиака за секунды. Введите дату рождения и получите информацию о вашем Зодиаке, его чертах характера и особенностях.",
+    url: "/zodiac-sign",
     type: "website",
     images: [
       {
         url: "/images/zodiac-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Определите Ваш Знак Зодиака онлайн",
+        alt: "Калькулятор знака зодиака от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Определите Ваш Знак Зодиака онлайн",
+    title: "Калькулятор знака зодиака онлайн | BoxCalculators",
     description:
-      "Онлайн калькулятор для определения знака Зодиака по дате рождения. Узнайте астрологические характеристики вашего знака.",
+      "Онлайн инструмент для определения вашего знака зодиака по дате рождения. Простой и удобный интерфейс для любителей астрологии.",
     images: ["/images/zodiac-calculator-twitter.jpg"],
   },
 };
@@ -61,42 +64,45 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <link rel="canonical" href="https://boxcalculators.ru/zodiac-sign " />
+
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
-              name: "Калькулятор знака Зодиака",
-              url: "http://calcoffee.ru/zodiac-date",
+              name: "Калькулятор знака зодиака",
+              url: "https://boxcalculators.ru/zodiac-sign ",
               description:
-                "Онлайн калькулятор для определения знака Зодиака по дате рождения. Узнайте астрологические характеристики вашего знака.",
+                "Инструмент для определения знака зодиака по дате рождения. Получите информацию о чертах характера, совместимости и других астрологических данных.",
               applicationCategory: "AstrologyApplication",
               operatingSystem: "Web",
               featureList: [
-                "Определение знака Зодиака по дате рождения",
+                "Определение знака зодиака по дате рождения",
                 "Астрологические характеристики",
                 "Мгновенный результат",
                 "Простой интерфейс",
-                "Рекомендации по знакам Зодиака",
+                "Совместимость по знакам",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/zodiac-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/zodiac-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -106,12 +112,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

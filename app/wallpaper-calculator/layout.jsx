@@ -8,10 +8,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор обоев | Точный расчет",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор обоев | Точный расчет количества рулонов онлайн",
   description:
-    "Онлайн калькулятор для точного расчета количества обоев, необходимых для вашего ремонта. Простое и удобное решение для планирования ваших отделочных работ.",
+    "Онлайн калькулятор для точного расчёта необходимого количества обоев с учетом площади стен, размеров рулонов и особенностей узора. Удобное планирование ремонта без перерасхода материалов.",
   keywords: [
     "калькулятор обоев",
     "расчет количества обоев",
@@ -20,7 +20,7 @@ export const metadata = {
     "планирование отделочных работ",
   ],
   alternates: {
-    canonical: "/wallpaper-online-calculator",
+    canonical: "/wallpaper-calculator",
   },
   robots: {
     index: true,
@@ -32,23 +32,23 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор обоев: точный расчет количества обоев онлайн",
+    title: "Калькулятор обоев: точный расчет количества рулонов онлайн",
     description:
-      "Онлайн калькулятор для точного расчета количества обоев, необходимых для вашего ремонта. Простое и удобное решение для планирования ваших отделочных работ.",
-    url: "/wallpaper-online-calculator",
+      "Онлайн калькулятор для точного расчёта необходимого количества обоев. Удобное решение для планирования отделки и ремонта в квартире или доме.",
+    url: "/wallpaper-calculator",
     type: "website",
     images: [
       {
         url: "/images/wallpaper-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор обоев: точный расчет количества обоев онлайн",
+        alt: "Калькулятор обоев: точный расчет количества рулонов онлайн",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор обоев: точный расчет количества обоев онлайн",
+    title: "Калькулятор обоев: точный расчет количества рулонов онлайн",
     description:
       "Онлайн инструмент для точного расчета количества обоев. Удобное решение для планирования отделочных работ и ремонта.",
     images: ["/images/wallpaper-calculator-twitter.jpg"],
@@ -61,20 +61,20 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор обоев",
-              url: "http://calcoffee.ru/wallpaper-online-calculator",
+              url: "https://boxcalculators.ru/wallpaper-calculator ",
               description:
                 "Онлайн инструмент для точного расчета количества обоев. Удобное решение для планирования отделочных работ и ремонта.",
               applicationCategory: "HomeApplication",
@@ -87,16 +87,17 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/wallpaper-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/wallpaper-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -106,12 +107,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

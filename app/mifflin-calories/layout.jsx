@@ -8,10 +8,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор калорий по Миффлину-Сан Жеора | точный расчет",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор калорий по Миффлину-Сан Жеора | Точный расчет онлайн",
   description:
-    "Онлайн калькулятор калорий по формуле Миффлина-Сан Жеора. Рассчитайте свою суточную потребность в калориях, белках, жирах и углеводах за пару кликов.",
+    "Онлайн-калькулятор для расчёта суточной потребности в калориях по формуле Миффлина-Сан Жеора. Подходит для мужчин и женщин, с разными уровнями активности.",
   keywords: [
     "калькулятор калорий миффлин",
     "формула миффлина-сан жеора",
@@ -22,7 +22,7 @@ export const metadata = {
     "онлайн калькулятор вес",
   ],
   alternates: {
-    canonical: "/calculator-mifflin-st-jeor",
+    canonical: "/mifflin-calories",
   },
   robots: {
     index: true,
@@ -34,25 +34,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор калорий (Миффлин-Сан Жеора) | CalCoffee",
+    title: "Калькулятор калорий по Миффлину-Сан Жеора | BoxCalculators",
     description:
-      "Точный расчет суточной потребности в калориях по формуле Миффлина-Сан Жеора. Подходит как для мужчин, так и для женщин.",
-    url: "/calculator-mifflin-st-jeor",
+      "Точный расчет дневной нормы калорий на основе ваших параметров: возраст, вес, рост, пол и уровень активности. Используется популярная формула Миффлина-Сан Жеора.",
+    url: "/mifflin-calories",
     type: "website",
     images: [
       {
         url: "/images/mifflin-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор калорий по Миффлину-Сан Жеора",
+        alt: "Калькулятор калорий по Миффлину-Сан Жеора | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор калорий по Миффлину-Сан Жеора | CalCoffee",
+    title: "Калькулятор калорий по Миффлину-Сан Жеора | BoxCalculators",
     description:
-      "Рассчитайте суточную норму калорий по самой популярной формуле — Миффлина-Сан Жеора. Просто введите свои параметры и получите результат.",
+      "Узнайте свою суточную норму калорий с помощью калькулятора, основанного на формуле Миффлина-Сан Жеора. Просто введите свои данные и получите точный результат.",
     images: ["/images/mifflin-calculator-twitter.jpg"],
   },
 };
@@ -63,20 +63,20 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор калорий (Миффлин-Сан Жеора)",
-              url: "http://calcoffee.ru/calculator-mifflin-st-jeor",
+              url: "https://boxcalculators.ru/mifflin-calories ",
               description:
                 "Интерактивный инструмент для расчёта дневной потребности в калориях по формуле Миффлина-Сан Жеора. Поддерживает разные цели: похудение, набор массы, поддержание веса.",
               applicationCategory: "HealthApplication",
@@ -86,19 +86,20 @@ export default function RootLayout({ children }) {
                 "Поддержка разных полов",
                 "Выбор уровня активности",
                 "Цель: похудение, сохранение, набор мышечной массы",
-                "Результат: БЖУ + КБЖУ",
+                "Результат: КБЖУ",
               ],
-              softwareVersion: "1.0.0",
-              image: "http://calcoffee.ru/images/mifflin-calculator-og.jpg",
+              softwareVersion: "1.0",
+              image:
+                "https://boxcalculators.ru/images/mifflin-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -111,9 +112,7 @@ export default function RootLayout({ children }) {
           suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

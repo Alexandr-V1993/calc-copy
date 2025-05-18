@@ -56,22 +56,22 @@ function AlcoCalc() {
 
   let url;
   if (select === "type1") {
-    url = "https://calcoffee.ru/api/calculate/alcohol-water-dilution";
+    url = "https://boxcalculators.ru/api/calculate/alcohol-water-dilution";
   }
   if (select === "type2") {
-    url = "https://calcoffee.ru/api/calculate/alcohol-sugar-braga";
+    url = "https://boxcalculators.ru/api/calculate/alcohol-sugar-braga";
     delete obj.strengthAfter;
     delete obj.strengthBefore;
   }
   if (select === "type3") {
-    url = "https://calcoffee.ru/api/calculate/alcohol-mixing";
+    url = "https://boxcalculators.ru/api/calculate/alcohol-mixing";
     delete obj.strengthAfter;
     delete obj.strengthBefore;
     delete obj.volume;
     delete obj.weight;
   }
   if (select === "type4") {
-    url = "https://calcoffee.ru/api/calculate/areometer-correction";
+    url = "https://boxcalculators.ru/api/calculate/areometer-correction";
     delete obj.strengthAfter;
     delete obj.strengthBefore;
     delete obj.volume;
@@ -82,7 +82,8 @@ function AlcoCalc() {
     delete obj.strength2;
   }
   if (select === "type5") {
-    url = "https://calcoffee.ru/api/calculate/absolute-alcohol-head-selection";
+    url =
+      "https://boxcalculators.ru/api/calculate/absolute-alcohol-head-selection";
     (obj.volume = Number(volume) * 1000), delete obj.strengthAfter;
     delete obj.strengthBefore;
     delete obj.weight;
@@ -93,7 +94,7 @@ function AlcoCalc() {
     delete obj.temperature;
   }
   if (select === "type6") {
-    url = "https://calcoffee.ru/api/calculate/glucose-sugar-replacement";
+    url = "https://boxcalculators.ru/api/calculate/glucose-sugar-replacement";
 
     delete (obj.volume = Number(volume) * 1000), delete obj.strengthAfter;
     delete obj.strengthBefore;
@@ -108,7 +109,8 @@ function AlcoCalc() {
     delete obj.volume;
   }
   if (select === "type7") {
-    url = "https://calcoffee.ru/api/calculate/second-fractional-distillation";
+    url =
+      "https://boxcalculators.ru/api/calculate/second-fractional-distillation";
     delete obj.weight;
     delete obj.strengthAfter;
     delete obj.strengthBefore;
@@ -176,7 +178,7 @@ function AlcoCalc() {
       <TopForm
         title={"Калькулятор"}
         description={
-          "Рассчитайте важные для самогоноварения параметры. Этот сервис будет полезен как опытным, так начинающим винокурам. Он экономит время, избавляя от необходимости делать вычисления вручную."
+          "Онлайн калькулятор самогонщика: рассчитайте крепость, объем, пропорции браги и другие важные параметры. Полезен как для опытных, так и для начинающих самогонщиков."
         }
         span={"самогонщика"}
       >
@@ -274,64 +276,65 @@ function AlcoCalc() {
 
         <Contents>
           <p>
-            Создание качественных домашних алкогольных напитков сопряжено с
-            множеством расчетов, самостоятельное выполнение которых отнимает
-            много времени и чревато ошибками. Чтобы быстро выполнить все
-            необходимые расчеты и исключить любые сомнения в их точности,
-            воспользуйтесь калькулятором самогонщика.
+            Производство домашних алкогольных напитков требует точности и
+            внимательности, особенно на этапах расчёта крепости, разведения
+            спирта, составления браги и отбора фракций. Наш калькулятор
+            самогонщика поможет выполнить все необходимые вычисления быстро и
+            без ошибок.
           </p>
+
           <ul className="alcohol-list">
             <Link href={"/diluting-alcohol"} className="underline">
               <li className="alcohol-item">
-                <h5>Онлайн калькулятор разбавление самогона водой</h5>
+                <h5>Разбавление самогона водой</h5>
                 <p>
-                  Вычислите сколько воды необходимо добавить для разбавления
-                  продукта,чтобы получить напиток желаемой крепости.
+                  Узнайте, сколько воды нужно добавить, чтобы понизить крепость
+                  до нужного уровня.
                 </p>
               </li>
             </Link>
             <Link href={"/sugar-braga"} className="underline">
               <li className="alcohol-item">
-                <h5>Калькулятор расчет сахарной браги</h5>
+                <h5>Расчёт сахарной браги</h5>
                 <p>
-                  Чтобы получить нужный обьем раствора и нужную крепость,найдите
-                  идеальное соотношение между сахаром и водой.
+                  Определите оптимальное соотношение сахара и воды для получения
+                  желаемого выхода и крепости.
                 </p>
               </li>
             </Link>
             <Link href={"/areometer-correction"} className="underline">
               <li className="alcohol-item">
-                <h5>Калькулятор коррекции показаний ареометра</h5>
+                <h5>Коррекция показаний ареометра</h5>
                 <p>
-                  Расчитайте реальную крепость самогона при температуре больше
-                  или меньше 20°С.
+                  Рассчитайте реальную крепость при температуре, отличной от
+                  20°C.
                 </p>
               </li>
             </Link>
             <Link href={"/head-selection"} className="underline">
               <li className="alcohol-item">
-                <h5>Калькулятор абсолютного спирта и отбора голов</h5>
+                <h5>Абсолютный спирт и отбор голов</h5>
                 <p>
-                  Расчитайте,сколько абсолютного спирта содержится в полученном
-                  спирте-сырце и обьем голов,которые необходимо отобрать.
+                  Вычислите объём абсолютного спирта в вашем сырце и количество
+                  голов, которые необходимо отобрать.
                 </p>
               </li>
             </Link>
             <Link href={"/replacement-sugar"} className="underline">
               <li className="alcohol-item">
-                <h5>Калькулятор замены сахара глюкозой</h5>
+                <h5>Замена сахара глюкозой</h5>
                 <p>
-                  Расчитайте,сколько вам потребуется глюкозы для замены
-                  сахара,чтобы приготовить продукт без потери крепости
+                  Подберите правильное количество глюкозы вместо сахара,
+                  сохранив вкус и крепость напитка.
                 </p>
               </li>
             </Link>
             <Link href={"/moonshiner-calculator"} className="underline">
               <li className="alcohol-item">
-                <h5>Калькулятор смешивания спиртов</h5>
+                <h5>Смешивание спиртов разной крепости</h5>
                 <p>
-                  Поможет определить крепость алкогольных напитков при
-                  смешивании жидкостей разной крепости и обьема.
+                  Определите итоговую крепость после смешивания жидкостей с
+                  разным содержанием алкоголя.
                 </p>
               </li>
             </Link>
@@ -340,27 +343,34 @@ function AlcoCalc() {
               className="underline"
             >
               <li className="alcohol-item">
-                <h5>
-                  Калькулятор второй перегонки спирта сырца и отбора голов и
-                  хвостов
-                </h5>
+                <h5>Вторая перегонка и отбор голов/хвостов</h5>
                 <p>
-                  Поможет определить крепость алкогольных напитков при
-                  смешивании жидкостей разной крепости и обьема.
+                  Рассчитайте крепость и объём готового продукта после второй
+                  дистилляции.
                 </p>
               </li>
             </Link>
           </ul>
+
           <p>
-            Калькулятор удобен в использовании, работает в режиме онлайн и не
-            требует установки на компьютер или любое другое устройство. Наши
-            онлайн-инструменты помогут определить пропорции ингредиентов для
-            сусла, правильно разбавить самогон, определить крепость продукта
-            после смешивания двух спиртосодержащих жидкостей, а также рассчитать
-            количество абсолютного спирта, голов и хвостов при второй перегонке.
-            Калькулятор самогонщика проводит онлайн расчеты алкоголя за
-            считанные секунды, а его использование совершенно бесплатно.
+            Все калькуляторы работают онлайн, не требуют установки и доступны
+            бесплатно. Они помогут вам:
           </p>
+
+          <ul>
+            <li>точно рассчитать пропорции для браги;</li>
+            <li>развести самогон до нужной крепости;</li>
+            <li>определить объём голов и хвостов;</li>
+            <li>скорректировать показания ареометра;</li>
+            <li>смешать спирты разной концентрации.</li>
+          </ul>
+
+          <p>
+            Используя наш калькулятор самогонщика, вы экономите время, избегаете
+            ошибок и получаете качественный результат. Программа выполняет
+            расчёты за секунды — всё, что вам нужно, это ввести исходные данные.
+          </p>
+
           <p>
             <a className="but" href="/">
               Выбрать другой калькулятор

@@ -8,10 +8,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор ковролина | Расчет количества и стоимости",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор ковролина | Расчет количества и стоимости онлайн",
   description:
-    "Рассчитайте необходимое количество ковролина и его стоимость онлайн. Учитывайте площадь помещения, ширину рулона и подрезку. Идеальный инструмент для ремонта и отделки помещений!",
+    "Онлайн калькулятор для точного расчета количества ковролина, необходимого для укладки в вашей комнате. Учитывайте ширину рулона, площадь помещения и запас на подрезку.",
   keywords: [
     "калькулятор ковролина",
     "расчет ковролина",
@@ -33,9 +33,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор ковролина - Точный расчет количества и стоимости",
+    title: "Калькулятор ковролина онлайн | BoxCalculators",
     description:
-      "Профессиональный расчет необходимого количества ковролина с учетом всех параметров. Узнайте точную стоимость покрытия перед покупкой!",
+      "Удобный инструмент для расчёта количества ковролина с учетом площади помещения, ширины рулона и направления ворса. Получите точное количество и стоимость за секунды.",
     url: "/carpet-calculator",
     type: "website",
     images: [
@@ -43,15 +43,15 @@ export const metadata = {
         url: "/images/carpet-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор ковролина - Профессиональный расчет",
+        alt: "Калькулятор ковролина онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор ковролина - Точный расчет количества и стоимости",
+    title: "Калькулятор ковролина онлайн | BoxCalculators",
     description:
-      "Рассчитайте сколько нужно ковролина для вашего помещения с учетом всех особенностей укладки. Быстро, точно, удобно!",
+      "Рассчитайте необходимое количество ковролина для вашего помещения. Простой и понятный интерфейс для ремонта и отделки полов.",
     images: ["/images/carpet-calculator-twitter.jpg"],
   },
 };
@@ -62,20 +62,20 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Структурированные данные для калькулятора ковролина */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор ковролина",
-              url: "http://calcoffee.ru/carpet-calculator",
+              url: "https://boxcalculators.ru/carpet-calculator ",
               description:
                 "Онлайн инструмент для расчета необходимого количества ковролина и его стоимости с учетом всех параметров укладки.",
               applicationCategory: "HomeImprovementApplication",
@@ -88,16 +88,17 @@ export default function RootLayout({ children }) {
                 "Простой интуитивный интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/carpet-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/carpet-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {

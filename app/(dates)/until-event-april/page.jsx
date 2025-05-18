@@ -66,8 +66,8 @@ const AprilCountdownTimer = () => {
           <div className="label-row">
             <div className="row-vans-bottom">
               <span className="top-adress">
-                <a href="https://calcoffee.ru/">Calcoffee.ru</a> / Сколько дней
-                осталось до апреля
+                <a href="https://boxcalculators.ru/">boxcalculators.ru</a> /
+                Сколько дней осталось до апреля
               </span>
               <div className="d-flex align-items-start mb-4 calc-form">
                 <div className="calc-frow">

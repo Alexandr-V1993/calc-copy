@@ -8,16 +8,17 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
+  metadataBase: new URL("https://boxcalculators.ru"),
   title: "Калькулятор замены сахара | Глюкоза, фруктоза, декстроза",
   description:
-    "Рассчитайте, сколько глюкозы, фруктозы или декстрозы нужно для замены сахара в рецептах и напитках. Поддержите крепость и улучшите свойства вашего продукта.",
+    "Онлайн-инструмент для точного расчета объема глюкозы, фруктозы или декстрозы при замене сахара в рецептах, напитках и самогоноварении.",
   keywords: [
     "калькулятор замены сахара",
     "глюкоза вместо сахара",
     "фруктоза замена сахара",
-    "декстроза для замены сахара",
+    "декстроза вместо сахара",
     "расчет глюкозы фруктозы декстрозы",
+    "рецепты с заменой сахара",
   ],
   alternates: {
     canonical: "/replacement-sugar",
@@ -32,9 +33,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор замены сахара | Глюкоза, фруктоза, декстроза",
+    title: "Калькулятор замены сахара онлайн | BoxCalculators",
     description:
-      "Рассчитайте, сколько глюкозы, фруктозы или декстрозы нужно для замены сахара в рецептах и напитках. Поддержите крепость и улучшите свойства вашего продукта.",
+      "Рассчитайте, сколько глюкозы, фруктозы или декстрозы нужно использовать вместо сахара. Точный и удобный инструмент для кулинаров, самогонщиков и производителей напитков.",
     url: "/replacement-sugar",
     type: "website",
     images: [
@@ -42,15 +43,15 @@ export const metadata = {
         url: "/images/replacement-sugar-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор замены сахара | Глюкоза, фруктоза, декстроза",
+        alt: "Калькулятор замены сахара онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор замены сахара | Глюкоза, фруктоза, декстроза",
+    title: "Калькулятор замены сахара онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета замены сахара на глюкозу, фруктозу или декстрозу. Улучшите вкус и свойства ваших продуктов.",
+      "Определите нужное количество глюкозы, фруктозы или декстрозы для замены сахара в ваших рецептах. Простой и понятный интерфейс для точных результатов.",
     images: ["/images/replacement-sugar-twitter.jpg"],
   },
 };
@@ -61,22 +62,22 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор замены сахара",
-              url: "http://calcoffee.ru/replacement-sugar",
+              url: "https://boxcalculators.ru/replacement-sugar ",
               description:
-                "Онлайн инструмент для расчета замены сахара на глюкозу, фруктозу или декстрозу. Улучшите вкус и свойства ваших продуктов.",
+                "Онлайн инструмент для расчёта эквивалентной замены сахара на глюкозу, фруктозу или декстрозу. Улучшите вкус и свойства ваших продуктов.",
               applicationCategory: "FoodApplication",
               operatingSystem: "Web",
               featureList: [
@@ -87,16 +88,17 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/replacement-sugar-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/replacement-sugar-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -106,12 +108,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

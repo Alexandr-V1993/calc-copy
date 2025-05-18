@@ -8,22 +8,25 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор калорий | Точный расчет",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор калорий онлайн | Расчет суточной нормы",
   description:
-    "Калькулятор калорий определяет суточную потребность в белках, жирах и углеводах, основываясь на формулах Харриса-Бенедикта и Миффлина-Сан Жеора, чтобы помочь достичь желаемых весовых результатов.",
+    "Рассчитайте свою ежедневную потребность в калориях, белках, жирах и углеводах. Формулы Миффлина-Сан Жеора и Харриса-Бенедикта для похудения, набора массы или сохранения веса.",
   keywords: [
     "калькулятор калорий",
     "расчет калорий",
-    "суточная потребность",
-    "белки",
-    "жиры",
-    "углеводы",
-    "Харрис-Бенедикт",
-    "Миффлин-Сан Жеор",
+    "суточная потребность в калориях",
+    "формула Миффлина-Сан Жеора",
+    "формула Харриса-Бенедикта",
+    "белки жиры углеводы",
+    "здоровое питание",
+    "похудение",
+    "набор массы",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/calorie-calculator",
+    canonical: "/daily-calories",
   },
   robots: {
     index: true,
@@ -35,25 +38,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор калорий | Calcoffee",
+    title: "Калькулятор калорий онлайн | BoxCalculators",
     description:
-      "Калькулятор калорий определяет суточную потребность в белках, жирах и углеводах, основываясь на формулах Харриса-Бенедикта и Миффлина-Сан Жеора, чтобы помочь достичь желаемых весовых результатов.",
-    url: "/calorie-calculator",
+      "Определите свою суточную норму калорий с учётом целей: похудение, набор массы или поддержание веса. Поддерживаются формулы Миффлина-Сан Жеора и Харриса-Бенедикта.",
+    url: "/daily-calories",
     type: "website",
     images: [
       {
         url: "/images/calorie-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор калорий | Calcoffee",
+        alt: "Калькулятор калорий онлайн от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор калорий | Calcoffee",
+    title: "Калькулятор калорий онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета суточной потребности в калориях, белках, жирах и углеводах. Используйте формулы Харриса-Бенедикта и Миффлина-Сан Жеора для достижения целей по весу.",
+      "Онлайн инструмент для расчёта суточной нормы калорий, белков, жиров и углеводов. Точные формулы и простой интерфейс для достижения ваших целей.",
     images: ["/images/calorie-calculator-twitter.jpg"],
   },
 };
@@ -64,42 +67,48 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <link
+          rel="canonical"
+          href="https://boxcalculators.ru/daily-calories "
+        />
+
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор калорий",
-              url: "http://calcoffee.ru/calorie-calculator",
+              url: "https://boxcalculators.ru/daily-calories ",
               description:
-                "Онлайн инструмент для расчета суточной потребности в калориях, белках, жирах и углеводах. Используйте формулы Харриса-Бенедикта и Миффлина-Сан Жеора для достижения целей по весу.",
+                "Онлайн инструмент для расчета суточной потребности в калориях, белках, жирах и углеводах. Поддерживает формулы Миффлина-Сан Жеора и Харриса-Бенедикта.",
               applicationCategory: "HealthApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет суточной потребности в калориях",
-                "Поддержка формул Харриса-Бенедикта и Миффлина-Сан Жеора",
-                "Определение белков, жиров и углеводов",
+                "Расчёт суточных калорий",
+                "Поддержка формул Миффлина-Сан Жеора и Харриса-Бенедикта",
+                "Определение БЖУ",
                 "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/calorie-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/calorie-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -109,12 +118,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

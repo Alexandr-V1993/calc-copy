@@ -8,28 +8,23 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://calcoffee.ru"),
-  title:
-    "Калькулятор среднего балла аттестата онлайн | Расчет для 9 и 11 класса",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор среднего балла аттестата | Онлайн расчет успеваемости",
   description:
-    "Быстрый и точный расчет среднего балла аттестата за 9 и 11 класс. Удобный инструмент для школьников, родителей и учителей. Подходит для подачи документов в колледжи и вузы.",
+    "Онлайн калькулятор среднего балла аттестата за 9 или 11 класс. Точный инструмент для школьников, родителей и преподавателей при подготовке к поступлению.",
   keywords: [
-    "калькулятор среднего балла",
-    "средний балл аттестата",
-    "расчет баллов аттестата",
-    "аттестат 9 класс",
-    "аттестат 11 класс",
-    "оценки в аттестате",
-    "как посчитать средний балл",
-    "калькулятор оценок",
-    "успеваемость ученика",
+    "калькулятор среднего балла аттестата",
+    "средний балл 9 класс",
+    "баллы аттестата онлайн",
+    "расчет оценок аттестата",
     "поступление в колледж",
-    "поступление в вуз",
+    "балл для поступления в вуз",
     "школьный аттестат",
-    "балл для поступления",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/attestation-calculator",
+    canonical: "/certificate-grade",
   },
   robots: {
     index: true,
@@ -41,27 +36,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title:
-      "Калькулятор среднего балла аттестата онлайн | Расчет для 9 и 11 класса",
+    title: "Калькулятор среднего балла аттестата | BoxCalculators",
     description:
-      "Рассчитайте средний балл аттестата быстро и точно. Незаменимый инструмент для школьников при подаче документов в колледжи и вузы.",
-    url: "/attestation-calculator",
+      "Рассчитайте средний балл аттестата за 9 или 11 класс онлайн. Простой и точный калькулятор для школьников, родителей и педагогов.",
+    url: "/certificate-grade",
     type: "website",
     images: [
       {
         url: "/images/attestation-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор среднего балла аттестата",
+        alt: "Калькулятор среднего балла аттестата от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Калькулятор среднего балла аттестата онлайн | Расчет для 9 и 11 класса",
+    title: "Калькулятор среднего балла аттестата | BoxCalculators",
     description:
-      "Бесплатный онлайн-калькулятор для точного расчета среднего балла школьного аттестата. Помощь в подготовке к поступлению.",
+      "Бесплатный онлайн-инструмент для расчёта среднего балла аттестата за 9 или 11 класс. Подходит для поступления в колледжи и вузы.",
     images: ["/images/attestation-calculator-twitter.jpg"],
   },
 };
@@ -72,41 +65,47 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <link
+          rel="canonical"
+          href="https://boxcalculators.ru/certificate-grade "
+        />
+
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор среднего балла аттестата",
-              url: "https://calcoffee.ru/attestation-calculator",
+              url: "https://boxcalculators.ru/certificate-grade ",
               description:
-                "Онлайн инструмент для расчета среднего балла школьного аттестата за 9 и 11 класс. Удобен для школьников, родителей и учителей.",
+                "Онлайн инструмент для расчёта среднего балла школьного аттестата. Подходит для выпускников 9 и 11 класса, абитуриентов, родителей и педагогов.",
               applicationCategory: "EducationalApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет среднего балла аттестата",
+                "Расчёт среднего балла аттестата",
                 "Поддержка 9 и 11 классов",
-                "Онлайн-расчет",
+                "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "https://calcoffee.ru/images/attestation-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/attestation-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "https://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -116,12 +115,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

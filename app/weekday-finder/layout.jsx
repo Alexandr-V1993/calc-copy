@@ -8,19 +8,21 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Определение дня недели по дате рождения онлайн",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор дня недели | Определите день по дате онлайн",
   description:
-    "Узнайте, в какой день недели вы родились, и определите день недели для любой даты. Наш инструмент поможет вам быстро получить нужную информацию.",
+    "Узнайте, какой день недели был в указанную дату. Введите любую дату рождения или событие — и мгновенно получите день недели.",
   keywords: [
-    "день недели по дате рождения",
     "калькулятор дня недели",
-    "определение дня недели",
-    "онлайн инструмент день недели",
-    "день недели для даты",
+    "определение дня недели по дате",
+    "день рождения по дате",
+    "онлайн калькулятор дня недели",
+    "день недели по дате рождения",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/birthday",
+    canonical: "/weekday-finder",
   },
   robots: {
     index: true,
@@ -32,25 +34,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Определение дня недели по дате рождения онлайн",
+    title: "Калькулятор дня недели | BoxCalculators",
     description:
-      "Узнайте, в какой день недели вы родились, и определите день недели для любой даты. Наш инструмент поможет вам быстро получить нужную информацию.",
-    url: "/birthday",
+      "Онлайн инструмент для определения дня недели по любой дате. Простой и быстрый способ узнать, в какой день недели вы родились или произошло важное событие.",
+    url: "/weekday-finder",
     type: "website",
     images: [
       {
         url: "/images/birthday-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Определение дня недели по дате рождения онлайн",
+        alt: "Калькулятор дня недели от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Определение дня недели по дате рождения онлайн",
+    title: "Калькулятор дня недели | BoxCalculators",
     description:
-      "Онлайн инструмент для определения дня недели по дате рождения или любой другой дате. Простой и удобный интерфейс.",
+      "Бесплатный онлайн-инструмент для расчёта дня недели по дате рождения или любого события. Простой интерфейс и мгновенный результат.",
     images: ["/images/birthday-twitter.jpg"],
   },
 };
@@ -61,41 +63,46 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <link
+          rel="canonical"
+          href="https://boxcalculators.ru/weekday-finder "
+        />
+
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
-              name: "Определение дня недели по дате рождения",
-              url: "http://calcoffee.ru/birthday",
+              name: "Калькулятор дня недели",
+              url: "https://boxcalculators.ru/weekday-finder ",
               description:
-                "Онлайн инструмент для определения дня недели по дате рождения или любой другой дате. Простой и удобный интерфейс.",
+                "Инструмент для определения дня недели по дате рождения или любого события. Подходит для личного использования, планирования и исторических исследований.",
               applicationCategory: "LifestyleApplication",
               operatingSystem: "Web",
               featureList: [
                 "Определение дня недели по дате",
-                "Поддержка любых дат",
+                "Поддержка прошлых и будущих дат",
                 "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/birthday-og.jpg",
+              image: "https://boxcalculators.ru/images/birthday-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -105,12 +112,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

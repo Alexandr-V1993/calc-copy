@@ -8,21 +8,24 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор ИМТ: онлайн расчет индекса массы тела",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор ИМТ | Онлайн расчет индекса массы тела",
   description:
-    "Проверьте свой вес с помощью нашего калькулятора ИМТ. Он подходит для всех: мужчин, женщин, подростков и детей. Узнайте, находитесь ли вы в пределах нормы или есть риск ожирения.",
+    "Онлайн калькулятор индекса массы тела от BoxCalculators. Проверьте свой вес быстро и точно. Подходит для мужчин, женщин, подростков и детей. Узнайте, соответствует ли ваш вес норме или есть риски для здоровья.",
   keywords: [
     "калькулятор ИМТ",
     "расчет индекса массы тела",
-    "индекс массы тела",
     "ИМТ онлайн",
+    "индекс массы тела",
     "ИМТ для мужчин",
     "ИМТ для женщин",
     "ИМТ для детей",
+    "здоровый вес",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/imt",
+    canonical: "/bmi-calculator",
   },
   robots: {
     index: true,
@@ -34,26 +37,26 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор ИМТ: онлайн расчет индекса массы тела",
+    title: "Калькулятор ИМТ | BoxCalculators",
     description:
-      "Проверьте свой вес с помощью нашего калькулятора ИМТ. Он подходит для всех: мужчин, женщин, подростков и детей. Узнайте, находитесь ли вы в пределах нормы или есть риск ожирения.",
-    url: "/imt",
+      "Онлайн инструмент для расчёта индекса массы тела (ИМТ). Подходит для всех возрастов и полов. Бесплатно и удобно проверьте свой вес и уровень здоровья.",
+    url: "/bmi-calculator",
     type: "website",
     images: [
       {
-        url: "/images/imt-calculator-og.jpg",
+        url: "/images/bmi-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор ИМТ: онлайн расчет индекса массы тела",
+        alt: "Калькулятор ИМТ от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор ИМТ: онлайн расчет индекса массы тела",
+    title: "Калькулятор ИМТ | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета индекса массы тела (ИМТ). Подходит для мужчин, женщин, подростков и детей. Проверьте, находитесь ли вы в пределах нормы.",
-    images: ["/images/imt-calculator-twitter.jpg"],
+      "Бесплатный онлайн-инструмент для расчёта индекса массы тела. Помогает определить здоровый вес у взрослых и детей. Простой интерфейс и точные результаты.",
+    images: ["/images/bmi-calculator-twitter.jpg"],
   },
 };
 
@@ -63,42 +66,42 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор ИМТ",
-              url: "http://calcoffee.ru/imt",
+              url: "https://boxcalculators.ru/bmi-calculator ",
               description:
-                "Онлайн инструмент для расчета индекса массы тела (ИМТ). Подходит для мужчин, женщин, подростков и детей. Проверьте, находитесь ли вы в пределах нормы.",
+                "Онлайн инструмент для расчёта индекса массы тела (ИМТ). Подходит для мужчин, женщин, подростков и детей. Проверьте, находитесь ли вы в пределах нормы.",
               applicationCategory: "HealthApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет ИМТ для мужчин",
-                "Расчет ИМТ для женщин",
+                "Расчёт ИМТ для мужчин",
+                "Расчёт ИМТ для женщин",
                 "Поддержка подростков и детей",
                 "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/imt-calculator-og.jpg",
+              image: "https://boxcalculators.ru/images/bmi-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -108,12 +111,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

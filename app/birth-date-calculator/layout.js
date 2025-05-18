@@ -8,10 +8,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://calcoffee.ru"),
-  title: "Калькулятор возраста онлайн | Расчет",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор возраста онлайн | Точный расчет по дате рождения",
   description:
-    "Бесплатный калькулятор возраста: расчет возраста в годах, месяцах, неделях, днях, часах, минутах и секундах для вашего планирования и воспоминаний.",
+    "Онлайн калькулятор возраста от BoxCalculators. Рассчитайте свой возраст в годах, месяцах, неделях, днях, часах, минутах и секундах. Подходит для планирования событий и анализа временных промежутков.",
   keywords: [
     "калькулятор возраста",
     "расчет возраста",
@@ -19,9 +19,13 @@ export const metadata = {
     "возраст в неделях",
     "возраст в годах",
     "онлайн калькулятор",
+    "дата рождения",
+    "точный возраст",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/age-calculator",
+    canonical: "/birth-date-calculator",
   },
   robots: {
     index: true,
@@ -33,25 +37,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор возраста онлайн | Расчет",
+    title: "Калькулятор возраста онлайн | BoxCalculators",
     description:
-      "Бесплатный калькулятор возраста: расчет возраста в годах, месяцах, неделях, днях, часах, минутах и секундах для вашего планирования и воспоминаний.",
-    url: "/age-calculator",
+      "Инструмент для точного расчёта возраста по дате рождения. Определите возраст в различных единицах времени: годы, месяцы, недели, дни, часы, минуты и секунды.",
+    url: "/birth-date-calculator",
     type: "website",
     images: [
       {
         url: "/images/age-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор возраста онлайн",
+        alt: "Калькулятор возраста онлайн от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор возраста онлайн | Расчет",
+    title: "Калькулятор возраста онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для точного расчета возраста в годах, месяцах, неделях, днях, часах, минутах и секундах. Простой и удобный интерфейс.",
+      "Узнайте свой возраст точно и быстро. Расчёт в годах, месяцах, неделях, днях и даже секундах. Простой и удобный интерфейс.",
     images: ["/images/age-calculator-twitter.jpg"],
   },
 };
@@ -62,40 +66,41 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор возраста онлайн",
-              url: "https://calcoffee.ru/age-calculator",
+              url: "https://boxcalculators.ru/birth-date-calculator ",
               description:
-                "Онлайн инструмент для точного расчета возраста в годах, месяцах, неделях, днях, часах, минутах и секундах. Простой и удобный интерфейс.",
+                "Онлайн инструмент для точного расчёта возраста по дате рождения. Показывает результат в годах, месяцах, неделях, днях, часах, минутах и секундах.",
               applicationCategory: "LifestyleApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет возраста в разных единицах времени",
+                "Расчёт возраста по дате рождения",
                 "Мгновенный результат",
+                "Поддержка прошлых и будущих дат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "https://calcoffee.ru/images/age-calculator-og.jpg",
+              image: "https://boxcalculators.ru/images/age-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "https://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -105,12 +110,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

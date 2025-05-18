@@ -8,16 +8,19 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Шифр Цезаря: онлайн шифрование и расшифровка текстов",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Шифр Цезаря онлайн | Шифрование и расшифровка текста",
   description:
-    "Используйте наш онлайн инструмент для шифрования и расшифровки текста методом Цезаря. Поддерживаются как русский, так и английский текст.",
+    "Онлайн инструмент для шифрования и расшифровки текста методом Цезаря. Поддерживает русский и английский языки. Простой и быстрый калькулятор шифрования.",
   keywords: [
-    "Шифр Цезаря",
-    "шифрование текста",
+    "шифр Цезаря",
+    "онлайн шифрование",
     "расшифровка текста",
-    "онлайн шифратор",
-    "Цезарь",
+    "шифр сдвига",
+    "криптография онлайн",
+    "код Цезаря",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
     canonical: "/caesar-cipher",
@@ -32,9 +35,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Шифр Цезаря: онлайн шифрование и расшифровка текстов",
+    title: "Шифр Цезаря онлайн | BoxCalculators",
     description:
-      "Используйте наш онлайн инструмент для шифрования и расшифровки текста методом Цезаря. Поддерживаются как русский, так и английский текст.",
+      "Инструмент для шифрования и расшифровки текста методом Цезаря. Подходит как для обучения, так и для простого кодирования сообщений на русском и английском языках.",
     url: "/caesar-cipher",
     type: "website",
     images: [
@@ -42,15 +45,15 @@ export const metadata = {
         url: "/images/caesar-cipher-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Шифр Цезаря: онлайн шифрование и расшифровка текстов",
+        alt: "Шифр Цезаря онлайн от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Шифр Цезаря: онлайн шифрование и расшифровка текстов",
+    title: "Шифр Цезаря онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для шифрования и расшифровки текста методом Цезаря. Простой и удобный интерфейс для работы с русским и английским текстом.",
+      "Бесплатный онлайн-инструмент для шифрования и расшифровки текста методом Цезаря. Идеально подходит для обучения криптографии и исторических задач.",
     images: ["/images/caesar-cipher-twitter.jpg"],
   },
 };
@@ -61,42 +64,44 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <link rel="canonical" href="https://boxcalculators.ru/caesar-cipher " />
+
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Шифр Цезаря",
-              url: "http://calcoffee.ru/caesar-cipher",
+              url: "https://boxcalculators.ru/caesar-cipher ",
               description:
-                "Онлайн инструмент для шифрования и расшифровки текста методом Цезаря. Простой и удобный интерфейс для работы с русским и английским текстом.",
+                "Онлайн инструмент для шифрования и расшифровки текста методом Цезаря. Подходит для учебных целей, исторического моделирования и базового кодирования.",
               applicationCategory: "SecurityApplication",
               operatingSystem: "Web",
               featureList: [
                 "Шифрование текста методом Цезаря",
-                "Расшифровка текста",
+                "Расшифровка текста по ключу",
                 "Поддержка русского и английского языков",
                 "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/caesar-cipher-og.jpg",
+              image: "https://boxcalculators.ru/images/caesar-cipher-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -106,12 +111,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

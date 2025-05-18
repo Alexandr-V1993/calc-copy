@@ -8,20 +8,23 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор НДС онлайн | Расчет и выделение",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор налогов онлайн | Расчет суммы и выделение",
   description:
-    "Онлайн Калькулятор НДС: быстрый расчет суммы с НДС. Введите сумму без НДС, выберите ставку (0%, 10%, 20%), и получите результат.",
+    "Онлайн калькулятор налогов от BoxCalculators: быстро рассчитайте сумму с налогом или выделите налог из общей суммы. Поддерживает ставки 0%, 10%, 20%. Простой и удобный инструмент для расчётов.",
   keywords: [
-    "калькулятор НДС",
-    "расчет НДС онлайн",
-    "выделение НДС",
-    "ставка НДС 20%",
-    "ставка НДС 10%",
-    "ставка НДС 0%",
+    "калькулятор налогов",
+    "расчет налога онлайн",
+    "выделение налога",
+    "ставка налога 20%",
+    "ставка налога 10%",
+    "ставка налога 0%",
+    "финансовые расчеты",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/nds",
+    canonical: "/tax-calculator",
   },
   robots: {
     index: true,
@@ -33,26 +36,26 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор НДС онлайн: расчет и выделение",
+    title: "Калькулятор налогов онлайн | BoxCalculators",
     description:
-      "Онлайн Калькулятор НДС: быстрый расчет суммы с НДС. Введите сумму без НДС, выберите ставку (0%, 10%, 20%), и получите результат.",
-    url: "/nds",
+      "Универсальный онлайн инструмент для расчёта налогов по разным ставкам. Введите сумму, выберите ставку и получите точный результат за секунду.",
+    url: "/tax-calculator",
     type: "website",
     images: [
       {
-        url: "/images/nds-calculator-og.jpg",
+        url: "/images/tax-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор НДС онлайн: расчет и выделение",
+        alt: "Калькулятор налогов онлайн от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор НДС онлайн: расчет и выделение",
+    title: "Калькулятор налогов онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета НДС по ставкам 0%, 10%, 20%. Быстро и точно определите сумму с НДС или выделите НДС из общей суммы.",
-    images: ["/images/nds-calculator-twitter.jpg"],
+      "Бесплатный калькулятор налогов. Рассчитывает сумму с налогом или выделяет налог по ставкам 0%, 10% и 20%. Идеально подходит для бизнеса и личных финансов.",
+    images: ["/images/tax-calculator-twitter.jpg"],
   },
 };
 
@@ -62,41 +65,41 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
-              name: "Калькулятор НДС",
-              url: "http://calcoffee.ru/nds",
+              name: "Калькулятор налогов",
+              url: "https://boxcalculators.ru/tax-calculator ",
               description:
-                "Онлайн инструмент для расчета НДС по ставкам 0%, 10%, 20%. Быстро и точно определите сумму с НДС или выделите НДС из общей суммы.",
+                "Онлайн инструмент для расчёта налогов по разным ставкам. Позволяет вычислить сумму с налогом или выделить налог из общей суммы.",
               applicationCategory: "FinanceApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет НДС по разным ставкам",
-                "Выделение НДС из общей суммы",
+                "Расчёт налога по ставкам 0%, 10%, 20%",
+                "Выделение налога из общей суммы",
                 "Мгновенный результат",
-                "Простой интерфейс",
+                "Простой и понятный интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/nds-calculator-og.jpg",
+              image: "https://boxcalculators.ru/images/tax-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -106,12 +109,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

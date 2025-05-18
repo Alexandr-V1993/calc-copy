@@ -8,20 +8,20 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
+  metadataBase: new URL("https://boxcalculators.ru"),
   title: "Калькулятор плитного фундамента онлайн – точный расчет параметров",
   description:
-    "Быстрый онлайн калькулятор для расчета плитного фундамента вашего дома, включая все необходимые параметры и характеристики для устройства бетонной плиты.",
+    "Онлайн калькулятор монолитной плиты фундамента для расчетов толщины, арматуры, опалубки и объема бетона. Быстрый и точный расчет для строительства.",
   keywords: [
     "калькулятор плитного фундамента",
-    "расчет фундамента",
+    "расчет монолитной плиты",
     "фундаментная плита",
-    "расчет бетона",
-    "строительство фундамента",
-    "онлайн калькулятор",
+    "расчет бетона для фундамента",
+    "строительный калькулятор",
+    "онлайн расчет фундамента",
   ],
   alternates: {
-    canonical: "/foundation-calculator",
+    canonical: "/slab-foundation",
   },
   robots: {
     index: true,
@@ -35,12 +35,12 @@ export const metadata = {
   openGraph: {
     title: "Калькулятор плитного фундамента онлайн – точный расчет параметров",
     description:
-      "Быстрый онлайн калькулятор для расчета плитного фундамента вашего дома, включая все необходимые параметры и характеристики для устройства бетонной плиты.",
-    url: "/foundation-calculator",
+      "Онлайн калькулятор монолитной плиты фундамента для расчетов толщины, арматуры, опалубки и объема бетона.",
+    url: "/slab-foundation",
     type: "website",
     images: [
       {
-        url: "/images/foundation-calculator-og.jpg",
+        url: "/images/slab-foundation-og.jpg",
         width: 1200,
         height: 630,
         alt: "Калькулятор плитного фундамента онлайн – точный расчет параметров",
@@ -51,8 +51,8 @@ export const metadata = {
     card: "summary_large_image",
     title: "Калькулятор плитного фундамента онлайн – точный расчет параметров",
     description:
-      "Онлайн инструмент для точного расчета плитного фундамента. Удобный интерфейс для строительства дома с учетом всех параметров бетонной плиты.",
-    images: ["/images/foundation-calculator-twitter.jpg"],
+      "Профессиональный инструмент для расчета монолитного плитного фундамента с учетом всех строительных параметров.",
+    images: ["/images/slab-foundation-twitter.jpg"],
   },
 };
 
@@ -62,9 +62,9 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
         {/* Добавление структурированных данных Schema.org */}
@@ -75,19 +75,19 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebApplication",
               name: "Калькулятор плитного фундамента",
-              url: "http://calcoffee.ru/foundation-calculator",
+              url: "https://boxcalculators.ru/slab-foundation",
               description:
-                "Онлайн инструмент для точного расчета плитного фундамента. Удобный интерфейс для строительства дома с учетом всех параметров бетонной плиты.",
+                "Профессиональный инструмент для расчета монолитного плитного фундамента с учетом всех строительных параметров.",
               applicationCategory: "ConstructionApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет плитного фундамента",
+                "Расчет монолитной плиты",
                 "Определение объема бетона",
-                "Мгновенный результат",
-                "Простой интерфейс",
+                "Расчет арматуры",
+                "Простое управление параметрами",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/foundation-calculator-og.jpg",
+              image: "https://boxcalculators.ru/images/slab-foundation-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -95,23 +95,21 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.6",
-                reviewCount: "95",
+                ratingValue: "4.8",
+                reviewCount: "112",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

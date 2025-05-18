@@ -8,10 +8,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор линолеума | Расчет количества и стоимости",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор линолеума | Расчет количества и стоимости онлайн",
   description:
-    "Рассчитайте необходимое количество линолеума и его стоимость онлайн. Учитывайте площадь помещения, ширину рулона и подрезку. Идеальный инструмент для ремонта и отделки помещений!",
+    "Онлайн калькулятор для точного расчёта необходимого количества линолеума и его стоимости с учетом площади помещения, ширины рулона и запаса на подрезку.",
   keywords: [
     "калькулятор линолеума",
     "расчет линолеума",
@@ -35,9 +35,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор линолеума - Точный расчет количества и стоимости",
+    title: "Калькулятор линолеума онлайн | BoxCalculators",
     description:
-      "Профессиональный расчет необходимого количества линолеума с учетом всех параметров. Узнайте точную стоимость покрытия перед покупкой!",
+      "Удобный инструмент для расчёта количества линолеума, необходимого для укладки в вашем помещении. Учитывайте ширину рулона, направление стыков и стоимость материала.",
     url: "/linoleum-calculator",
     type: "website",
     images: [
@@ -45,15 +45,15 @@ export const metadata = {
         url: "/images/linoleum-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор линолеума - Профессиональный расчет",
+        alt: "Калькулятор линолеума онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор линолеума - Точный расчет количества и стоимости",
+    title: "Калькулятор линолеума онлайн | BoxCalculators",
     description:
-      "Рассчитайте сколько нужно линолеума для вашего помещения с учетом всех особенностей укладки. Быстро, точно, удобно!",
+      "Рассчитайте необходимое количество линолеума для вашего помещения. Простой и понятный интерфейс для ремонта и отделки полов.",
     images: ["/images/linoleum-calculator-twitter.jpg"],
   },
 };
@@ -64,22 +64,22 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Структурированные данные для калькулятора линолеума */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор линолеума",
-              url: "http://calcoffee.ru/linoleum-calculator",
+              url: "https://boxcalculators.ru/linoleum-calculator ",
               description:
-                "Онлайн инструмент для расчета необходимого количества линолеума и его стоимости с учетом всех параметров укладки.",
+                "Онлайн инструмент для расчёта количества линолеума и его стоимости. Учитывает все параметры укладки, ширину рулона и возможные отходы при монтаже.",
               applicationCategory: "HomeImprovementApplication",
               operatingSystem: "Web",
               featureList: [
@@ -87,20 +87,21 @@ export default function RootLayout({ children }) {
                 "Учет ширины рулона линолеума",
                 "Расчет стоимости материала",
                 "Учет подрезки и отходов",
-                "Выбор типа линолеума (ПВХ, натуральный)",
-                "Простой интуитивный интерфейс",
+                "Выбор типа линолеума (бытовой, коммерческий)",
+                "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/linoleum-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/linoleum-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {

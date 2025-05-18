@@ -8,23 +8,26 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор НДФЛ | Расчет налога онлайн",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор налога на доход | Расчет онлайн",
   description:
-    "Калькулятор НДФЛ онлайн: расчет налога по разным ставкам (9%, 13%, 15%, 30%, 35%) за 2022-2024 годы. Получите точные результаты моментально!",
+    "Онлайн калькулятор налога на доход от BoxCalculators. Рассчитайте сумму по разным ставкам (9%, 13%, 15%, 30%, 35%). Подходит для НДФЛ и других налогов на личные доходы за 2022–2024 годы.",
   keywords: [
-    "калькулятор НДФЛ",
-    "расчет НДФЛ онлайн",
-    "налог на доходы",
-    "НДФЛ ставки",
+    "калькулятор налога на доход",
+    "расчет налога онлайн",
+    "НДФЛ",
+    "налоговые ставки",
     "9%",
     "13%",
     "15%",
     "30%",
     "35%",
+    "финансовый калькулятор",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/ndfl",
+    canonical: "/income-tax",
   },
   robots: {
     index: true,
@@ -36,26 +39,26 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор НДФЛ: расчет налога онлайн",
+    title: "Калькулятор налога на доход | BoxCalculators",
     description:
-      "Калькулятор НДФЛ онлайн: расчет налога по разным ставкам (9%, 13%, 15%, 30%, 35%) за 2022-2024 годы. Получите точные результаты моментально!",
-    url: "/ndfl",
+      "Инструмент для быстрого расчёта налога на доход по разным ставкам. Применяется для НДФЛ и других видов налоговых обязательств физических лиц.",
+    url: "/income-tax",
     type: "website",
     images: [
       {
-        url: "/images/ndfl-calculator-og.jpg",
+        url: "/images/income-tax-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор НДФЛ: расчет налога онлайн",
+        alt: "Калькулятор налога на доход от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор НДФЛ: расчет налога онлайн",
+    title: "Калькулятор налога на доход | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета НДФЛ по ставкам 9%, 13%, 15%, 30%, 35%. Точные результаты за 2022-2024 годы. Простой и удобный интерфейс.",
-    images: ["/images/ndfl-calculator-twitter.jpg"],
+      "Универсальный инструмент для расчёта налога на личные доходы по ставкам 9%, 13%, 15%, 30% и 35%. Идеально подходит для НДФЛ и прочих аналогичных налогов.",
+    images: ["/images/income-tax-calculator-twitter.jpg"],
   },
 };
 
@@ -65,9 +68,9 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
         {/* Добавление структурированных данных Schema.org */}
@@ -75,31 +78,32 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
-              name: "Калькулятор НДФЛ",
-              url: "http://calcoffee.ru/ndfl",
+              name: "Калькулятор налога на доход",
+              url: "https://boxcalculators.ru/income-tax ",
               description:
-                "Онлайн инструмент для расчета НДФЛ по ставкам 9%, 13%, 15%, 30%, 35%. Точные результаты за 2022-2024 годы. Простой и удобный интерфейс.",
+                "Онлайн инструмент для расчёта налога на доход по разным ставкам. Подходит для НДФЛ и других видов налогов на личные доходы за 2022–2024 годы.",
               applicationCategory: "FinanceApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет НДФЛ по разным ставкам",
+                "Расчёт налога по разным ставкам",
                 "Поддержка актуальных ставок (9%, 13%, 15%, 30%, 35%)",
                 "Мгновенный результат",
-                "Простой интерфейс",
+                "Простой и понятный интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/ndfl-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/income-tax-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -109,12 +113,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

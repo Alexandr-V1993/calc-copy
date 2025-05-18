@@ -8,19 +8,20 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор объема куба | Расчет",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор объема куба | Точный онлайн расчет",
   description:
-    "Рассчитайте объем куба быстро и точно с помощью нашего онлайн калькулятора. Просто введите длину стороны куба, чтобы получить мгновенные результаты. Полезен для инженеров, студентов и всех, кому нужны точные вычисления объема. Удобный инструмент для работы и учебы!",
+    "Онлайн калькулятор для точного расчёта объема куба по длине его стороны. Простой и удобный инструмент для учебы, строительства и производства.",
   keywords: [
     "калькулятор объема куба",
     "расчет объема куба",
-    "онлайн калькулятор куба",
-    "инженерные расчеты",
     "объем куба",
+    "онлайн калькулятор",
+    "геометрия",
+    "инженерные расчеты",
   ],
   alternates: {
-    canonical: "/cube-volume-calculator",
+    canonical: "/cube-volume",
   },
   robots: {
     index: true,
@@ -32,25 +33,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор объема куба - Точный и быстрый расчет",
+    title: "Калькулятор объема куба онлайн | BoxCalculators",
     description:
-      "Рассчитайте объем куба быстро и точно с помощью нашего онлайн калькулятора. Просто введите длину стороны куба, чтобы получить мгновенные результаты. Полезен для инженеров, студентов и всех, кому нужны точные вычисления объема. Удобный инструмент для работы и учебы!",
-    url: "/cube-volume-calculator",
+      "Онлайн инструмент для расчёта объема куба по длине его стороны. Простой и удобный интерфейс для точных вычислений в любое время.",
+    url: "/cube-volume",
     type: "website",
     images: [
       {
         url: "/images/cube-volume-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор объема куба - Точный и быстрый расчет",
+        alt: "Калькулятор объема куба онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор объема куба - Точный и быстрый расчет",
+    title: "Калькулятор объема куба онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета объема куба. Просто введите длину стороны, чтобы получить точный результат. Идеально подходит для учебы и работы.",
+      "Простой онлайн-инструмент для расчёта объема куба. Введите длину стороны и получите мгновенный результат.",
     images: ["/images/cube-volume-calculator-twitter.jpg"],
   },
 };
@@ -61,22 +62,22 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор объема куба",
-              url: "http://calcoffee.ru/cube-volume-calculator",
+              url: "https://boxcalculators.ru/cube-volume ",
               description:
-                "Онлайн инструмент для расчета объема куба. Просто введите длину стороны, чтобы получить точный результат. Идеально подходит для учебы и работы.",
+                "Онлайн инструмент для расчёта объема куба по длине его стороны. Просто введите размер и получите точный результат за секунду.",
               applicationCategory: "MathematicalApplication",
               operatingSystem: "Web",
               featureList: [
@@ -85,16 +86,17 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/cube-volume-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/cube-volume-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -104,12 +106,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

@@ -8,16 +8,20 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
+  metadataBase: new URL("https://boxcalculators.ru"),
   title: "Генератор паролей онлайн | Бесплатно и безопасно",
   description:
-    "Быстро создавайте безопасные пароли онлайн. Наш бесплатный генератор паролей предлагает надежные и уникальные варианты для защиты ваших данных.",
+    "Создавайте надежные пароли за секунды. Наш бесплатный онлайн генератор паролей поможет защитить ваши аккаунты от взлома.",
   keywords: [
     "генератор паролей",
-    "онлайн генератор",
+    "онлайн генератор паролей",
     "безопасные пароли",
     "уникальные пароли",
     "бесплатный генератор паролей",
+    "менеджер паролей",
+    "цифровая безопасность",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
     canonical: "/password-generator",
@@ -32,9 +36,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Генератор паролей онлайн | Бесплатно и безопасно",
+    title: "Генератор паролей онлайн | BoxCalculators",
     description:
-      "Быстро создавайте безопасные пароли онлайн. Наш бесплатный генератор паролей предлагает надежные и уникальные варианты для защиты ваших данных.",
+      "Бесплатный инструмент для создания сложных и уникальных паролей. Защитите свои учетные записи от несанкционированного доступа.",
     url: "/password-generator",
     type: "website",
     images: [
@@ -42,15 +46,15 @@ export const metadata = {
         url: "/images/password-generator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Генератор паролей онлайн | Бесплатно и безопасно",
+        alt: "Генератор паролей онлайн от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Генератор паролей онлайн | Бесплатно и безопасно",
+    title: "Генератор паролей онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для генерации безопасных и уникальных паролей. Защитите свои данные с помощью надежных комбинаций.",
+      "Онлайн генератор безопасных паролей. Создавайте уникальные и устойчивые к взлому комбинации за считанные секунды.",
     images: ["/images/password-generator-twitter.jpg"],
   },
 };
@@ -61,20 +65,20 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Генератор паролей",
-              url: "http://calcoffee.ru/password-generator",
+              url: "https://boxcalculators.ru/password-generator ",
               description:
                 "Онлайн инструмент для генерации безопасных и уникальных паролей. Защитите свои данные с помощью надежных комбинаций.",
               applicationCategory: "SecurityApplication",
@@ -86,16 +90,17 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/password-generator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/password-generator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -105,12 +110,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

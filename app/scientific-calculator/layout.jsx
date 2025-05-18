@@ -8,19 +8,23 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Онлайн калькулятор: Быстрые и точные расчеты",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Онлайн калькулятор | Точный расчет процентов, корней и выражений",
   description:
-    "Многофункциональный онлайн калькулятор для выполнения арифметических операций: сложение, вычитание, умножение, деление и процентные расчеты. Подходит для работы с положительными и отрицательными числами.",
+    "Бесплатный онлайн калькулятор от BoxCalculators. Выполняйте сложение, вычитание, умножение, деление, проценты и сложные выражения за секунды.",
   keywords: [
     "онлайн калькулятор",
-    "арифметический калькулятор",
-    "расчеты онлайн",
-    "калькулятор с процентами",
-    "калькулятор для чисел",
+    "научный калькулятор",
+    "арифметические операции",
+    "расчет процентов",
+    "извлечение квадратного корня",
+    "калькулятор с памятью",
+    "точные вычисления онлайн",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/regular-calculator",
+    canonical: "/scientific-calculator",
   },
   robots: {
     index: true,
@@ -32,25 +36,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Онлайн калькулятор: Быстрые и точные расчеты",
+    title: "Научный онлайн калькулятор | BoxCalculators",
     description:
-      "Многофункциональный онлайн калькулятор для выполнения арифметических операций: сложение, вычитание, умножение, деление и процентные расчеты. Подходит для работы с положительными и отрицательными числами.",
-    url: "/regular-calculator",
+      "Выполняйте точные математические расчёты: сложение, вычитание, умножение, деление, проценты и извлечение корня. Простой и удобный интерфейс для всех задач.",
+    url: "/scientific-calculator",
     type: "website",
     images: [
       {
         url: "/images/regular-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Онлайн калькулятор: Быстрые и точные расчеты",
+        alt: "Научный онлайн калькулятор от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Онлайн калькулятор: Быстрые и точные расчеты",
+    title: "Научный онлайн калькулятор | BoxCalculators",
     description:
-      "Онлайн инструмент для выполнения арифметических операций: сложение, вычитание, умножение, деление и процентные расчеты. Простой интерфейс для быстрых и точных вычислений.",
+      "Инструмент для выполнения арифметических и математических операций. Подходит для студентов, школьников, бухгалтеров и всех, кто работает с числами.",
     images: ["/images/regular-calculator-twitter.jpg"],
   },
 };
@@ -61,42 +65,48 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <link
+          rel="canonical"
+          href="https://boxcalculators.ru/scientific-calculator "
+        />
+
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
-              name: "Онлайн калькулятор",
-              url: "http://calcoffee.ru/regular-calculator",
+              name: "Научный калькулятор",
+              url: "https://boxcalculators.ru/scientific-calculator ",
               description:
-                "Онлайн инструмент для выполнения арифметических операций: сложение, вычитание, умножение, деление и процентные расчеты. Простой интерфейс для быстрых и точных вычислений.",
+                "Онлайн инструмент для выполнения арифметических операций, процентных расчётов и других математических функций. Подходит как для работы, так и для учебных целей.",
               applicationCategory: "MathematicalApplication",
               operatingSystem: "Web",
               featureList: [
-                "Сложение, вычитание, умножение, деление",
-                "Расчет процентов",
-                "Поддержка положительных и отрицательных чисел",
+                "Сложение и вычитание",
+                "Умножение и деление",
+                "Расчёт процентов",
+                "Извлечение квадратного корня",
+                "Поддержка скобок и сложных формул",
                 "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/regular-calculator-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -104,14 +114,14 @@ export default function RootLayout({ children }) {
                 ratingValue: "4.9",
                 reviewCount: "200",
               },
+              image:
+                "https://boxcalculators.ru/images/regular-calculator-og.jpg ",
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

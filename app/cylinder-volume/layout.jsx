@@ -8,10 +8,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
+  metadataBase: new URL("https://boxcalculators.ru"),
   title: "Калькулятор объема цилиндра | Онлайн расчет",
   description:
-    "Быстрый и удобный калькулятор для расчета объема цилиндра. Введите радиус и высоту, чтобы мгновенно получить результат. Подходит для студентов, инженеров и любителей математики.",
+    "Быстрый и удобный калькулятор для расчёта объема цилиндра по радиусу и высоте. Подходит для студентов, инженеров и всех, кто работает с геометрическими формами.",
   keywords: [
     "калькулятор объема цилиндра",
     "объем цилиндра",
@@ -20,7 +20,7 @@ export const metadata = {
     "инженерные расчеты",
   ],
   alternates: {
-    canonical: "/cylinder-volume-calculator",
+    canonical: "/cylinder-volume",
   },
   robots: {
     index: true,
@@ -32,25 +32,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор объема цилиндра | Онлайн расчет",
+    title: "Калькулятор объема цилиндра онлайн | BoxCalculators",
     description:
-      "Быстрый и удобный калькулятор для расчета объема цилиндра. Введите радиус и высоту, чтобы мгновенно получить результат. Подходит для студентов, инженеров и любителей математики.",
-    url: "/cylinder-volume-calculator",
+      "Онлайн инструмент для расчёта объема цилиндра по радиусу и высоте. Простой и быстрый способ получить точный результат без формул и ручных вычислений.",
+    url: "/cylinder-volume",
     type: "website",
     images: [
       {
         url: "/images/cylinder-volume-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор объема цилиндра | Онлайн расчет",
+        alt: "Калькулятор объема цилиндра онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор объема цилиндра | Онлайн расчет",
+    title: "Калькулятор объема цилиндра онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета объема цилиндра. Просто введите радиус и высоту, чтобы получить точный результат. Идеально подходит для учебы, работы и хобби.",
+      "Удобный онлайн-инструмент для расчёта объема цилиндра. Введите радиус и высоту и получите мгновенный результат.",
     images: ["/images/cylinder-volume-calculator-twitter.jpg"],
   },
 };
@@ -61,22 +61,22 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор объема цилиндра",
-              url: "http://calcoffee.ru/cylinder-volume-calculator",
+              url: "https://boxcalculators.ru/cylinder-volume ",
               description:
-                "Онлайн инструмент для расчета объема цилиндра. Просто введите радиус и высоту, чтобы получить точный результат. Идеально подходит для учебы, работы и хобби.",
+                "Онлайн инструмент для расчёта объема цилиндра по радиусу и высоте. Просто введите данные и получите точный результат за секунду.",
               applicationCategory: "MathematicalApplication",
               operatingSystem: "Web",
               featureList: [
@@ -85,16 +85,17 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/cylinder-volume-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/cylinder-volume-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -104,12 +105,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

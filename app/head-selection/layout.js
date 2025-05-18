@@ -8,16 +8,16 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор отбора голов: Оптимизация дистилляции",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор отбора голов | Точный расчет дистилляции",
   description:
-    "Определите объем чистого спирта и вредных компонентов в дистилляте с нашим калькулятором отбора голов. Быстро и точно вычислите параметры для качественного отбора и улучшите процесс дистилляции.",
+    "Онлайн-инструмент для расчёта объема чистого спирта, вредных примесей и оптимального отбора голов при дистилляции. Улучшите качество вашего самогоноварения с помощью точных данных.",
   keywords: [
     "калькулятор отбора голов",
-    "оптимизация дистилляции",
-    "расчет спирта",
-    "вредные компоненты",
-    "калькулятор дистиллята",
+    "отбор фракций самогонки",
+    "расчет головы тела хвостов",
+    "дистилляция спирта",
+    "самогон крепость",
   ],
   alternates: {
     canonical: "/head-selection",
@@ -32,9 +32,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор отбора голов: Оптимизация дистилляции",
+    title: "Калькулятор отбора голов онлайн | BoxCalculators",
     description:
-      "Определите объем чистого спирта и вредных компонентов в дистилляте с нашим калькулятором отбора голов. Быстро и точно вычислите параметры для качественного отбора и улучшите процесс дистилляции.",
+      "Рассчитайте объем «голов», «тела» и «хвостов» в вашем дистилляте. Повысьте качество напитка с помощью интуитивно понятного калькулятора.",
     url: "/head-selection",
     type: "website",
     images: [
@@ -42,15 +42,15 @@ export const metadata = {
         url: "/images/head-selection-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор отбора голов: Оптимизация дистилляции",
+        alt: "Калькулятор отбора голов онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор отбора голов: Оптимизация дистилляции",
+    title: "Калькулятор отбора голов онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета объема чистого спирта и вредных компонентов в дистилляте. Улучшите качество отбора и оптимизируйте процесс дистилляции.",
+      "Определите, сколько нужно отобрать «голов» и «хвостов» для получения качественного алкогольного продукта. Онлайн-инструмент для самогонщиков и виноделов.",
     images: ["/images/head-selection-twitter.jpg"],
   },
 };
@@ -61,41 +61,42 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор отбора голов",
-              url: "http://calcoffee.ru/head-selection",
+              url: "https://boxcalculators.ru/head-selection ",
               description:
-                "Онлайн инструмент для расчета объема чистого спирта и вредных компонентов в дистилляте. Улучшите качество отбора и оптимизируйте процесс дистилляции.",
+                "Инструмент для расчёта объема голов, тела и хвостов при дистилляции. Подходит для самогоноварения, перегонки и контроля качества спирта.",
               applicationCategory: "DistillationApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет объема чистого спирта",
-                "Определение вредных компонентов",
+                "Расчёт объема чистого спирта",
+                "Учет вредных компонентов",
                 "Мгновенный результат",
                 "Простой интерфейс",
+                "Таблицы и советы по дистилляции",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/head-selection-og.jpg",
+              image: "https://boxcalculators.ru/images/head-selection-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -105,12 +106,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

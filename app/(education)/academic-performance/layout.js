@@ -8,20 +8,23 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор СОУ: расчет успеваемости и качества знаний",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор СОУ онлайн | Расчет успеваемости и качества знаний",
   description:
-    "Онлайн калькулятор СОУ для расчета успеваемости, качества знаний и среднего балла. Идеально подходит для учителей и преподавателей, чтобы оценить уровень обучения.",
+    "Рассчитайте степень обученности (СОУ), качество знаний (КЗ), успеваемость и средний балл за считанные секунды. Бесплатный инструмент для учителей, родителей и школьников.",
   keywords: [
     "калькулятор СОУ",
-    "расчет успеваемости",
-    "качество знаний",
-    "средний балл",
-    "инструмент для учителей",
-    "оценка уровня обучения",
+    "расчет степени обученности",
+    "качества знаний",
+    "успеваемость учащихся",
+    "средний балл по формуле",
+    "инструмент для учителя",
+    "образовательный калькулятор",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/sou-calculator",
+    canonical: "/academic-performance",
   },
   robots: {
     index: true,
@@ -33,25 +36,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор СОУ: расчет успеваемости и качества знаний",
+    title: "Калькулятор СОУ | BoxCalculators",
     description:
-      "Онлайн калькулятор СОУ для расчета успеваемости, качества знаний и среднего балла. Идеально подходит для учителей и преподавателей, чтобы оценить уровень обучения.",
-    url: "/sou-calculator",
+      "Онлайн инструмент расчета степени обученности (СОУ), качества знаний (КЗ) и успеваемости учащихся. Простой и точный калькулятор для образовательных задач.",
+    url: "/academic-performance",
     type: "website",
     images: [
       {
         url: "/images/sou-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор СОУ: расчет успеваемости и качества знаний",
+        alt: "Калькулятор СОУ от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор СОУ: расчет успеваемости и качества знаний",
+    title: "Калькулятор СОУ | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета показателей успеваемости, качества знаний и среднего балла. Помогает учителям оценить уровень обучения учеников.",
+      "Инструмент для расчёта показателей успеваемости, СОУ и качества знаний. Подходит учителям, родителям и школьникам для анализа учебного процесса.",
     images: ["/images/sou-calculator-twitter.jpg"],
   },
 };
@@ -62,41 +65,47 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <link
+          rel="canonical"
+          href="https://boxcalculators.ru/academic-performance "
+        />
+
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор СОУ",
-              url: "http://calcoffee.ru/sou-calculator",
+              url: "https://boxcalculators.ru/academic-performance ",
               description:
-                "Онлайн инструмент для расчета показателей успеваемости, качества знаний и среднего балла. Помогает учителям оценить уровень обучения учеников.",
+                "Онлайн инструмент для расчета степени обученности (СОУ), качества знаний (КЗ), успеваемости и среднего балла. Помогает учителям и родителям анализировать учебные результаты учащихся.",
               applicationCategory: "EducationalApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет показателя успеваемости",
-                "Расчет качества знаний",
-                "Определение среднего балла",
-                "Простой интерфейс для учителей",
+                "Расчёт степени обученности (СОУ)",
+                "Анализ качества знаний (КЗ)",
+                "Определение уровня успеваемости",
+                "Мгновенный результат",
+                "Простой интерфейс для преподавателей",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/sou-calculator-og.jpg",
+              image: "https://boxcalculators.ru/images/sou-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -106,12 +115,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

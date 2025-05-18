@@ -8,10 +8,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Конвертер величин",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Конвертер величин | Онлайн перевод единиц измерения",
   description:
-    "Онлайн-конвертер для перевода различных единиц измерения: длины, веса, объема, температуры и других. Быстро и точно преобразуйте значения между различными системами измерений.",
+    "Онлайн-конвертер для перевода различных единиц измерения длины, веса, объема, температуры и других параметров. Быстро и точно преобразуйте значения между различными системами измерений.",
   keywords: [
     "конвертер величин",
     "онлайн конвертер",
@@ -36,9 +36,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Конвертер величин: онлайн перевод единиц измерения",
+    title: "Конвертер величин онлайн | BoxCalculators",
     description:
-      "Онлайн-конвертер для перевода различных единиц измерения: длины, веса, объема, температуры и других. Быстро и точно преобразуйте значения между различными системами измерений.",
+      "Онлайн-инструмент для быстрого и точного перевода единиц измерения: длина, вес, объем, температура и другие. Удобно и бесплатно.",
     url: "/unit-converter",
     type: "website",
     images: [
@@ -46,15 +46,15 @@ export const metadata = {
         url: "/images/unit-converter-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Конвертер величин: онлайн перевод единиц измерения",
+        alt: "Конвертер величин онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Конвертер величин: онлайн перевод единиц измерения",
+    title: "Конвертер величин онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для быстрого и точного перевода единиц измерения: длины, веса, объема, температуры и других. Удобный интерфейс для работы с различными системами измерений.",
+      "Быстрый и удобный инструмент для перевода единиц измерения. Работает с длиной, массой, объемом, температурой и другими величинами.",
     images: ["/images/unit-converter-twitter.jpg"],
   },
 };
@@ -65,20 +65,20 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Конвертер величин",
-              url: "http://calcoffee.ru/unit-converter",
+              url: "https://boxcalculators.ru/unit-converter ",
               description:
                 "Онлайн инструмент для быстрого и точного перевода единиц измерения: длины, веса, объема, температуры и других. Удобный интерфейс для работы с различными системами измерений.",
               applicationCategory: "UtilityApplication",
@@ -92,16 +92,16 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/unit-converter-og.jpg",
+              image: "https://boxcalculators.ru/images/unit-converter-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -111,12 +111,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

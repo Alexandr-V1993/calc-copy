@@ -8,10 +8,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор Площади Комнаты - Точный Расчет",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор площади комнаты | Точный расчет в квадратных метрах",
   description:
-    "Калькулятор расчета площади комнаты в квадратных метрах: введите длину и ширину, чтобы быстро и точно узнать площадь вашего помещения. Удобно и просто!",
+    "Онлайн-калькулятор для точного расчёта площади помещения в квадратных метрах. Просто введите длину и ширину комнаты, чтобы получить результат за считанные секунды.",
   keywords: [
     "калькулятор площади комнаты",
     "расчет площади комнаты",
@@ -20,7 +20,7 @@ export const metadata = {
     "измерение площади комнаты",
   ],
   alternates: {
-    canonical: "/calculator-room-area",
+    canonical: "/room-area",
   },
   robots: {
     index: true,
@@ -32,23 +32,23 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор Площади Комнаты Онлайн - Точный Расчет в Квадратных Метрах",
+    title: "Калькулятор площади комнаты онлайн | BoxCalculators",
     description:
-      "Калькулятор расчета площади комнаты в квадратных метрах: введите длину и ширину, чтобы быстро и точно узнать площадь вашего помещения. Удобно и просто!",
-    url: "/calculator-room-area",
+      "Онлайн-калькулятор для точного расчёта площади помещения в квадратных метрах. Простой и удобный инструмент для ремонта и дизайна интерьера.",
+    url: "/room-area",
     type: "website",
     images: [
       {
         url: "/images/calculator-room-area-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор Площади Комнаты Онлайн - Точный Расчет в Квадратных Метрах",
+        alt: "Калькулятор площади комнаты онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор Площади Комнаты Онлайн - Точный Расчет в Квадратных Метрах",
+    title: "Калькулятор площади комнаты онлайн | BoxCalculators",
     description:
       "Онлайн инструмент для точного расчета площади комнаты в квадратных метрах. Просто введите длину и ширину, чтобы получить результат.",
     images: ["/images/calculator-room-area-twitter.jpg"],
@@ -61,20 +61,20 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
-              name: "Калькулятор Площади Комнаты",
-              url: "http://calcoffee.ru/calculator-room-area",
+              name: "Калькулятор площади комнаты",
+              url: "https://boxcalculators.ru/room-area ",
               description:
                 "Онлайн инструмент для точного расчета площади комнаты в квадратных метрах. Просто введите длину и ширину, чтобы получить результат.",
               applicationCategory: "ConstructionApplication",
@@ -86,16 +86,17 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/calculator-room-area-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/calculator-room-area-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -105,12 +106,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

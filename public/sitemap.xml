@@ -102,7 +102,7 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://boxcalculators.ru/event-countdown</loc>
+        <loc>https://boxcalculators.ru/until-event-index</loc>
         <lastmod>2024-02-12T21:12:03+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -535,6 +535,26 @@
     </url>
     <url>
         <loc>https://boxcalculators.ru/until-event-summer</loc>
+        <lastmod>2024-02-12T21:12:03+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+
+
+    <url>
+        <loc>https://boxcalculators.ru/areometer-correction</loc>
+        <lastmod>2024-02-12T21:12:03+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://boxcalculators.ru/diluting-alcohol</loc>
+        <lastmod>2024-02-12T21:12:03+00:00</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://boxcalculators.ru/fraction-calculator</loc>
         <lastmod>2024-02-12T21:12:03+00:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.7</priority>

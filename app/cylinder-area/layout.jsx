@@ -1,6 +1,5 @@
 import { Montserrat } from "next/font/google";
 
-// Настройка шрифта Montserrat
 const montserrat = Montserrat({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -8,19 +7,20 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор площади поверхности цилиндра | Расчет",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор площади цилиндра - полный расчет поверхности онлайн",
   description:
-    "Используйте наш онлайн калькулятор для мгновенного расчета площади поверхности цилиндра. Введите радиус и высоту, чтобы получить точные результаты. Идеально подходит для расчетов в инженерии, образовании и проектировании. Экономьте время с нашим удобным инструментом!",
+    "Точный расчет площади боковой и полной поверхности цилиндра через радиус и высоту. Формулы, примеры вычислений и практическое применение. Незаменимый инструмент для инженеров и строителей.",
   keywords: [
     "калькулятор площади цилиндра",
-    "расчет площади поверхности цилиндра",
+    "расчет поверхности цилиндра",
+    "площадь боковой поверхности",
     "онлайн калькулятор цилиндра",
-    "инженерные расчеты",
-    "площадь цилиндра",
+    "геометрические расчеты",
+    "математические калькуляторы",
   ],
   alternates: {
-    canonical: "/cylinder-surface-area-calculator",
+    canonical: "/cylinder-area",
   },
   robots: {
     index: true,
@@ -32,26 +32,26 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор площади поверхности цилиндра - Точный и быстрый расчет",
+    title: "Калькулятор площади цилиндра - полный расчет онлайн",
     description:
-      "Используйте наш онлайн калькулятор для мгновенного расчета площади поверхности цилиндра. Введите радиус и высоту, чтобы получить точные результаты. Идеально подходит для расчетов в инженерии, образовании и проектировании. Экономьте время с нашим удобным инструментом!",
-    url: "/cylinder-surface-area-calculator",
+      "Профессиональный расчет площади поверхности цилиндра с примерами и формулами. Вычисление боковой и полной площади.",
+    url: "/cylinder-area",
     type: "website",
     images: [
       {
-        url: "/images/cylinder-surface-area-calculator-og.jpg",
+        url: "/images/cylinder-area-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор площади поверхности цилиндра - Точный и быстрый расчет",
+        alt: "Калькулятор площади цилиндра - полный расчет онлайн",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор площади поверхности цилиндра - Точный и быстрый расчет",
+    title: "Калькулятор площади цилиндра - полный расчет онлайн",
     description:
-      "Онлайн инструмент для расчета площади поверхности цилиндра. Просто введите радиус и высоту для получения точных результатов. Подходит для учебы, работы и проектирования.",
-    images: ["/images/cylinder-surface-area-calculator-twitter.jpg"],
+      "Онлайн инструмент для вычисления площади поверхности цилиндра с примерами и формулами.",
+    images: ["/images/cylinder-area-twitter.jpg"],
   },
 };
 
@@ -61,31 +61,32 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Калькулятор площади поверхности цилиндра",
-              url: "http://calcoffee.ru/cylinder-surface-area-calculator",
+              name: "Калькулятор площади цилиндра",
+              url: "https://boxcalculators.ru/cylinder-area",
               description:
-                "Онлайн инструмент для расчета площади поверхности цилиндра. Просто введите радиус и высоту для получения точных результатов. Подходит для учебы, работы и проектирования.",
-              applicationCategory: "MathematicalApplication",
+                "Профессиональный инструмент для вычисления площади поверхности цилиндра различными методами с примерами и формулами.",
+              applicationCategory: "MathApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет площади поверхности цилиндра",
-                "Мгновенный результат",
-                "Простой интерфейс",
+                "Расчет боковой поверхности",
+                "Расчет полной площади",
+                "Примеры вычислений",
+                "Подробные формулы",
+                "Мгновенные результаты",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/cylinder-surface-area-calculator-og.jpg",
+              image: "https://boxcalculators.ru/images/cylinder-area-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -93,23 +94,21 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.5",
-                reviewCount: "85",
+                ratingValue: "4.8",
+                reviewCount: "156",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

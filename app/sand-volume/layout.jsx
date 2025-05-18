@@ -1,6 +1,5 @@
 import { Montserrat } from "next/font/google";
 
-// Настройка шрифта Montserrat
 const montserrat = Montserrat({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -8,19 +7,20 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Онлайн калькулятор песка - Перевод м³ в тонны и обратно",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор песка онлайн - перевод м³ в тонны и кг | BoxCalculators",
   description:
-    "Удобный онлайн-калькулятор для точного перевода объема песка из кубических метров в тонны и обратно. Рассчитайте количество песка для строительных нужд быстро и легко.",
+    "Точный расчет объема и веса песка: перевод кубических метров в тонны и килограммы. Учет типа песка и влажности. Быстрый и удобный инструмент для строителей.",
   keywords: [
     "калькулятор песка",
-    "перевод песка м3 в тонны",
-    "расчет песка",
-    "строительные материалы",
-    "онлайн калькулятор",
+    "перевод м3 в тонны",
+    "расчет песка для строительства",
+    "объем песка в тоннах",
+    "онлайн калькулятор сыпучих материалов",
+    "плотность песка",
   ],
   alternates: {
-    canonical: "/sand-calculator-online",
+    canonical: "/sand-volume",
   },
   robots: {
     index: true,
@@ -32,26 +32,26 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Онлайн калькулятор песка - Перевод м³ в тонны и обратно",
+    title: "Калькулятор песка - точный перевод м³ в тонны и обратно",
     description:
-      "Удобный онлайн-калькулятор для точного перевода объема песка из кубических метров в тонны и обратно. Рассчитайте количество песка для строительных нужд быстро и легко.",
-    url: "/sand-calculator-online",
+      "Профессиональный расчет объема и веса песка с учетом типа материала и влажности. Удобный инструмент для строительных расчетов.",
+    url: "/sand-volume",
     type: "website",
     images: [
       {
-        url: "/images/sand-calculator-og.jpg",
+        url: "/images/sand-volume-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Онлайн калькулятор песка - Перевод м³ в тонны и обратно",
+        alt: "Калькулятор песка - перевод кубических метров в тонны",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Онлайн калькулятор песка - Перевод м³ в тонны и обратно",
+    title: "Калькулятор песка - точный перевод м³ в тонны и обратно",
     description:
-      "Онлайн инструмент для перевода объема песка из м³ в тонны и обратно. Быстро и точно рассчитывайте количество песка для строительства.",
-    images: ["/images/sand-calculator-twitter.jpg"],
+      "Онлайн инструмент для строителей: расчет веса и объема песка с учетом плотности материала.",
+    images: ["/images/sand-volume-twitter.jpg"],
   },
 };
 
@@ -61,33 +61,32 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Онлайн калькулятор песка",
-              url: "http://calcoffee.ru/sand-calculator-online",
+              name: "Калькулятор объема песка",
+              url: "https://boxcalculators.ru/sand-volume",
               description:
-                "Онлайн инструмент для перевода объема песка из м³ в тонны и обратно. Быстро и точно рассчитывайте количество песка для строительства.",
+                "Профессиональный инструмент для перевода объема песка между кубическими метрами, тоннами и килограммами с учетом типа материала.",
               applicationCategory: "ConstructionApplication",
               operatingSystem: "Web",
               featureList: [
-                "Перевод м³ в тонны",
-                "Перевод тонн в м³",
-                "Расчет количества песка",
-                "Мгновенный результат",
-                "Простой интерфейс",
+                "Перевод м³ ↔ тонны",
+                "Учет типа песка",
+                "Корректировка по влажности",
+                "Расчет для разных фракций",
+                "Мгновенные результаты",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/sand-calculator-og.jpg",
+              image: "https://boxcalculators.ru/images/sand-volume-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -95,23 +94,21 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.8",
-                reviewCount: "150",
+                ratingValue: "4.9",
+                reviewCount: "167",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

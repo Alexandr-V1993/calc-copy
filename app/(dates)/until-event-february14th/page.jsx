@@ -93,8 +93,8 @@ const CountdownTimerToValentinesDay = () => {
           <div className="label-row">
             <div className="row-vans-bottom">
               <span className="top-adress">
-                <a href="https://calcoffee.ru/">Calcoffee.ru</a> / Сколько
-                времени до 14 февраля
+                <a href="https://boxcalculators.ru/">boxcalculators.ru</a> /
+                Сколько времени до 14 февраля
               </span>
               <div className="d-flex align-items-start mb-4 calc-form">
                 <div className="calc-frow">

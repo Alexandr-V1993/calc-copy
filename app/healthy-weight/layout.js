@@ -8,20 +8,20 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор идеального веса | расчет для (мужчин/женщин)",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор идеального веса | Расчёт для мужчин и женщин",
   description:
-    "Узнайте свой идеальный вес с помощью нашего калькулятора! Введите свой рост и получите оптимальный вес для поддержания здоровья и хорошего самочувствия.",
+    "Узнайте свой идеальный вес с помощью онлайн-калькулятора! Введите рост, пол и возраст, чтобы определить оптимальный вес для здоровья и самочувствия.",
   keywords: [
     "калькулятор идеального веса",
     "расчет веса",
     "идеальный вес для мужчин",
     "идеальный вес для женщин",
-    "здоровье",
-    "правильный вес",
+    "здоровый вес",
+    "индекс массы тела",
   ],
   alternates: {
-    canonical: "/ideal-weight",
+    canonical: "/healthy-weight",
   },
   robots: {
     index: true,
@@ -33,25 +33,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор идеального веса | расчет для (мужчин/женщин)",
+    title: "Калькулятор идеального веса | BoxCalculators",
     description:
-      "Узнайте свой идеальный вес с помощью нашего калькулятора! Введите свой рост и получите оптимальный вес для поддержания здоровья и хорошего самочувствия.",
-    url: "/ideal-weight",
+      "Онлайн калькулятор для расчёта идеального веса на основе роста, возраста и пола. Удобный инструмент для контроля за здоровьем и уровнем физической формы.",
+    url: "/healthy-weight",
     type: "website",
     images: [
       {
         url: "/images/ideal-weight-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор идеального веса | расчет для (мужчин/женщин)",
+        alt: "Калькулятор идеального веса | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор идеального веса | расчет для (мужчин/женщин)",
+    title: "Калькулятор идеального веса | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета идеального веса на основе роста. Получите оптимальный вес для поддержания здоровья и хорошего самочувствия.",
+      "Онлайн инструмент для расчета идеального веса на основе роста, пола и возраста. Получите оптимальный вес для поддержания здоровья и хорошего самочувствия.",
     images: ["/images/ideal-weight-twitter.jpg"],
   },
 };
@@ -62,22 +62,22 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор идеального веса",
-              url: "http://calcoffee.ru/ideal-weight",
+              url: "https://boxcalculators.ru/healthy-weight ",
               description:
-                "Онлайн инструмент для расчета идеального веса на основе роста. Получите оптимальный вес для поддержания здоровья и хорошего самочувствия.",
+                "Онлайн инструмент для расчета идеального веса на основе роста, пола и возраста. Получите оптимальный вес для поддержания здоровья и хорошего самочувствия.",
               applicationCategory: "HealthApplication",
               operatingSystem: "Web",
               featureList: [
@@ -87,16 +87,16 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/ideal-weight-og.jpg",
+              image: "https://boxcalculators.ru/images/ideal-weight-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -106,12 +106,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

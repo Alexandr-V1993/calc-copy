@@ -8,12 +8,12 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор калорий по Харрису-Бенедикту | точный расчет",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор калорий по Харрису-Бенедикту | Точный расчет онлайн",
   description:
-    "Рассчитайте суточную потребность в калориях по классической формуле Харриса-Бенедикта. Подходит для мужчин и женщин, с учётом уровня физической активности и целей.",
+    "Онлайн инструмент для расчёта суточной нормы калорий по формуле Харриса-Бенедикта. Введите свои параметры, чтобы узнать точное значение энергозатрат.",
   keywords: [
-    "калькулятор харриса-бенедикт",
+    "калькулятор харриса-бенедикта",
     "формула харриса-бенедикта",
     "расчет калорий онлайн",
     "суточная норма калорий",
@@ -22,7 +22,7 @@ export const metadata = {
     "онлайн калькулятор вес",
   ],
   alternates: {
-    canonical: "/calculator-harris-benedict",
+    canonical: "/harris-calories",
   },
   robots: {
     index: true,
@@ -34,25 +34,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор Харриса-Бенедикта | CalCoffee",
+    title: "Калькулятор калорий по Харрису-Бенедикту | BoxCalculators",
     description:
-      "Онлайн-калькулятор расчёта калорий по формуле Харриса-Бенедикта. Точный результат для мужчин и женщин на основе возраста, роста, веса и активности.",
-    url: "/calculator-harris-benedict",
+      "Рассчитайте свою ежедневную потребность в калориях по классической формуле Харриса-Бенедикта. Простой и удобный интерфейс для мужчин и женщин.",
+    url: "/harris-calories",
     type: "website",
     images: [
       {
         url: "/images/harris-benedict-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор Харриса-Бенедикта | CalCoffee",
+        alt: "Калькулятор калорий по Харрису-Бенедикту | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор Харриса-Бенедикта | CalCoffee",
+    title: "Калькулятор калорий по Харрису-Бенедикту | BoxCalculators",
     description:
-      "Используйте классическую формулу Харриса-Бенедикта для расчёта ежедневной потребности в калориях и макронутриентах.",
+      "Узнайте свою суточную норму калорий с помощью онлайн-инструмента, основанного на формуле Харриса-Бенедикта. Подходит для мужчин и женщин всех возрастов.",
     images: ["/images/harris-benedict-calculator-twitter.jpg"],
   },
 };
@@ -63,42 +63,43 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор Харриса-Бенедикта",
-              url: "http://calcoffee.ru/calculator-harris-benedict",
+              url: "https://boxcalculators.ru/harris-calories ",
               description:
-                "Инструмент для расчёта дневной нормы калорий по формуле Харриса-Бенедикта. Введите свои параметры и получите точные данные о калориях и БЖУ.",
+                "Инструмент для расчёта дневной нормы калорий по формуле Харриса-Бенедикта. Введите свои данные и получите точные значения BMR и активности.",
               applicationCategory: "HealthApplication",
               operatingSystem: "Web",
               featureList: [
                 "Расчёт по формуле Харриса-Бенедикта",
                 "Поддержка обоих полов",
                 "Выбор уровня активности",
-                "Цель: потеря веса, сохранение или набор массы",
+                "Цель: похудение, сохранение, набор массы",
                 "Выдача КБЖУ",
               ],
-              softwareVersion: "1.0.0",
-              image: "http://calcoffee.ru/images/harris-benedict-calculator-og.jpg",
+              softwareVersion: "1.0",
+              image:
+                "https://boxcalculators.ru/images/harris-benedict-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -111,9 +112,7 @@ export default function RootLayout({ children }) {
           suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

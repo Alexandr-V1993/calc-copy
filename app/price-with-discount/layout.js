@@ -8,19 +8,21 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Онлайн калькулятор скидок | Расчет цены и экономии",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор скидок онлайн | Расчет цены и экономии",
   description:
-    "Онлайн калькулятор для определения окончательной цены после скидки или первоначальной цены до скидки при покупке с учетом сэкономленной суммы.",
+    "Онлайн калькулятор скидок от BoxCalculators. Рассчитайте финальную цену после скидки или первоначальную цену до скидки, а также узнайте сумму экономии.",
   keywords: [
     "калькулятор скидок",
-    "расчет скидки",
     "расчет цены со скидкой",
-    "цена со скидкой",
-    "экономия на скидке",
+    "цена до скидки",
+    "экономия при покупке",
+    "онлайн калькулятор для покупок",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/discount-calculator",
+    canonical: "/price-with-discount",
   },
   robots: {
     index: true,
@@ -32,25 +34,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Онлайн калькулятор скидок: расчет цены и экономии",
+    title: "Калькулятор скидок онлайн | BoxCalculators",
     description:
-      "Онлайн калькулятор для определения окончательной цены после скидки или первоначальной цены до скидки при покупке с учетом сэкономленной суммы.",
-    url: "/discount-calculator",
+      "Бесплатный инструмент для расчёта цены после скидки, начальной стоимости товара и суммы, которую вы сэкономите. Простой и удобный интерфейс для быстрого подсчета.",
+    url: "/price-with-discount",
     type: "website",
     images: [
       {
         url: "/images/discount-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Онлайн калькулятор скидок: расчет цены и экономии",
+        alt: "Калькулятор скидок онлайн от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Онлайн калькулятор скидок: расчет цены и экономии",
+    title: "Калькулятор скидок онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета цены со скидкой, первоначальной цены и суммы экономии. Простой и удобный интерфейс для быстрого подсчета.",
+      "Рассчитывайте цены и экономию за секунды. Удобный онлайн-инструмент для покупателей, маркетологов и бизнеса.",
     images: ["/images/discount-calculator-twitter.jpg"],
   },
 };
@@ -61,41 +63,42 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
-              name: "Онлайн калькулятор скидок",
-              url: "http://calcoffee.ru/discount-calculator",
+              name: "Калькулятор скидок",
+              url: "https://boxcalculators.ru/price-with-discount ",
               description:
-                "Онлайн инструмент для расчета цены со скидкой, первоначальной цены и суммы экономии. Простой и удобный интерфейс для быстрого подсчета.",
+                "Онлайн инструмент для расчёта цены после скидки, начальной стоимости товара и суммы экономии. Простой и удобный интерфейс для быстрого подсчета.",
               applicationCategory: "FinanceApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет цены со скидкой",
+                "Расчёт цены со скидкой",
                 "Определение первоначальной цены",
                 "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/discount-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/discount-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -105,12 +108,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

@@ -8,20 +8,20 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор возраста кошки | Перевод кошачьих лет в человеческие",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор возраста кошки | Перевод в человеческие годы",
   description:
-    "Узнайте реальный возраст вашей кошки в пересчете на человеческие годы. Наш калькулятор учитывает все этапы жизни питомца для точного расчета.",
+    "Узнайте, сколько лет вашей кошке по человеческим меркам. Точный расчет с учетом всех этапов жизни питомца.",
   keywords: [
     "калькулятор возраста кошки",
     "возраст кошки в человеческих годах",
-    "как посчитать возраст кота",
+    "как определить возраст кота",
     "таблица возраста кошек",
     "сравнение возраста кошки и человека",
-    "определение возраста кота",
+    "перевод кошачьего возраста",
   ],
   alternates: {
-    canonical: "/cat-age-calculator",
+    canonical: "/pet-age",
   },
   robots: {
     index: true,
@@ -33,25 +33,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор возраста кошки - Перевод кошачьих лет в человеческие",
+    title: "Калькулятор возраста кошки онлайн | BoxCalculators",
     description:
-      "Точный расчет возраста вашей кошки в человеческих годах. Узнайте, сколько лет вашему питомцу по человеческим меркам!",
-    url: "/cat-age-calculator",
+      "Онлайн инструмент для перевода возраста вашего питомца в человеческие годы. Простой и удобный интерфейс для владельцев кошек.",
+    url: "/pet-age",
     type: "website",
     images: [
       {
         url: "/images/cat-age-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор возраста кошки - Узнайте возраст вашего питомца",
+        alt: "Калькулятор возраста кошки онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор возраста кошки - Перевод кошачьих лет в человеческие",
+    title: "Калькулятор возраста кошки онлайн | BoxCalculators",
     description:
-      "Рассчитайте, сколько лет вашей кошке по человеческим меркам. Простой и точный расчет возраста питомца!",
+      "Рассчитайте возраст вашей кошки по человеческим годам за секунды. Подходит для понимания физического состояния и ухода за животным.",
     images: ["/images/cat-age-calculator-twitter.jpg"],
   },
 };
@@ -62,42 +62,43 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Структурированные данные для калькулятора возраста кошки */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор возраста кошки",
-              url: "http://calcoffee.ru/cat-age-calculator",
+              url: "https://boxcalculators.ru/pet-age ",
               description:
-                "Онлайн инструмент для перевода кошачьего возраста в человеческие годы с учетом всех этапов жизни животного.",
+                "Инструмент для перевода кошачьего возраста в человеческие годы. Учитывает все основные этапы жизни животного.",
               applicationCategory: "PetApplication",
               operatingSystem: "Web",
               featureList: [
-                "Точный расчет возраста кошки",
                 "Перевод кошачьих лет в человеческие",
-                "Учет разных этапов жизни питомца",
-                "Простая и удобная форма расчета",
-                "Наглядные результаты",
+                "Учет фаз развития кошки",
+                "Мгновенный результат",
+                "Простой интерфейс",
+                "Полезная информация о возрасте питомца",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/cat-age-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/cat-age-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {

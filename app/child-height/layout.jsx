@@ -8,10 +8,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор роста будущего ребенка - Точный и быстрый расчет",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор роста ребенка онлайн | Точный прогноз по родителям",
   description:
-    "Калькулятор для предсказания роста ребенка на основе роста родителей. Узнайте, каким может быть рост вашего ребенка во взрослом возрасте.",
+    "Узнайте, каким может быть рост вашего ребенка во взрослом возрасте. Используйте наш калькулятор на основе данных о росте мамы и папы.",
   keywords: [
     "калькулятор роста ребенка",
     "прогноз роста ребенка",
@@ -20,7 +20,7 @@ export const metadata = {
     "рост будущего ребенка",
   ],
   alternates: {
-    canonical: "/child-height-predictor-calculator",
+    canonical: "/child-height",
   },
   robots: {
     index: true,
@@ -32,25 +32,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор роста будущего ребенка - Точный и быстрый расчет",
+    title: "Калькулятор роста ребенка онлайн | BoxCalculators",
     description:
-      "Калькулятор для предсказания роста ребенка на основе роста родителей. Узнайте, каким может быть рост вашего ребенка во взрослом возрасте.",
-    url: "/child-height-predictor-calculator",
+      "Онлайн инструмент для прогнозирования роста ребенка на основе данных о росте родителей. Простой и удобный интерфейс для точных расчетов.",
+    url: "/child-height",
     type: "website",
     images: [
       {
         url: "/images/child-height-predictor-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор роста будущего ребенка - Точный и быстрый расчет",
+        alt: "Калькулятор роста ребенка онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор роста будущего ребенка - Точный и быстрый расчет",
+    title: "Калькулятор роста ребенка онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для прогнозирования роста ребенка на основе данных о росте родителей. Простой и удобный интерфейс для точных расчетов.",
+      "Простой онлайн-инструмент для прогнозирования роста ребенка. Введите рост родителей и узнайте приблизительный рост малыша в будущем.",
     images: ["/images/child-height-predictor-twitter.jpg"],
   },
 };
@@ -61,20 +61,20 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор роста будущего ребенка",
-              url: "http://calcoffee.ru/child-height-predictor-calculator",
+              url: "https://boxcalculators.ru/child-height",
               description:
                 "Онлайн инструмент для прогнозирования роста ребенка на основе данных о росте родителей. Простой и удобный интерфейс для точных расчетов.",
               applicationCategory: "HealthApplication",
@@ -86,16 +86,17 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/child-height-predictor-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/child-height-predictor-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -105,12 +106,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

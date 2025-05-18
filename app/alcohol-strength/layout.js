@@ -8,19 +8,22 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор самогонщика: расчет крепости и объема",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор самогонщика | Расчет крепости и объема алкоголя",
   description:
-    "Онлайн калькулятор самогонщика для расчета крепости самогона, разведения спирта, определения пропорций браги и расчета выхода готового продукта.",
+    "Онлайн калькулятор для самогонщиков. Рассчитайте крепость самогона, разведение спирта, пропорции браги и выход готового продукта. Простой и точный инструмент для домашнего производства.",
   keywords: [
     "калькулятор самогонщика",
     "расчет крепости самогона",
     "разведение спирта",
     "расчет браги",
-    "самогоноварение",
+    "домашнее самогоноварение",
+    "алкогольный калькулятор",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/alcohol-calculator",
+    canonical: "/alcohol-strength",
   },
   robots: {
     index: true,
@@ -32,25 +35,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор самогонщика: расчет крепости и объема",
+    title: "Калькулятор самогонщика | BoxCalculators",
     description:
-      "Онлайн калькулятор самогонщика для расчета крепости самогона, разведения спирта, определения пропорций браги и расчета выхода готового продукта.",
-    url: "/alcohol-calculator",
+      "Инструмент для расчёта крепости самогона, разведения спирта, составления пропорций браги и определения выхода готового алкоголя. Подходит для начинающих и опытных самогонщиков.",
+    url: "/alcohol-strength",
     type: "website",
     images: [
       {
         url: "/images/alcohol-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор самогонщика: расчет крепости и объема",
+        alt: "Калькулятор самогонщика от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор самогонщика: расчет крепости и объема",
+    title: "Калькулятор самогонщика | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета крепости самогона, разведения спирта, пропорций браги и выхода готового продукта. Простой и удобный интерфейс.",
+      "Удобный онлайн-инструмент для самогоноварения. Рассчитывайте крепость, объем, пропорции браги и многое другое быстро и точно.",
     images: ["/images/alcohol-calculator-twitter.jpg"],
   },
 };
@@ -61,41 +64,42 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор самогонщика",
-              url: "http://calcoffee.ru/alcohol-calculator",
+              url: "https://boxcalculators.ru/alcohol-strength ",
               description:
-                "Онлайн инструмент для расчета крепости самогона, разведения спирта, пропорций браги и выхода готового продукта. Простой и удобный интерфейс.",
+                "Онлайн инструмент для расчёта крепости самогона, разведения спирта, пропорций браги и выхода готового продукта. Простой и удобный интерфейс.",
               applicationCategory: "LifestyleApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет крепости самогона",
-                "Разведение спирта до нужной крепости",
+                "Расчёт крепости самогона",
+                "Разведение спирта до нужной концентрации",
                 "Определение пропорций браги",
                 "Мгновенный результат",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/alcohol-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/alcohol-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -105,12 +109,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

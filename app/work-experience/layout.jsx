@@ -8,30 +8,23 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://calcoffee.ru"),
-  title: "Калькулятор трудового стажа | Расчет страхового стажа для пенсии",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор трудового стажа | Онлайн расчет для пенсии",
   description:
-    "Бесплатный онлайн калькулятор стажа для точного расчета трудового и страхового стажа по трудовой книжке. Узнайте сколько лет стажа для пенсии, конвертируйте периоды работы в стаж, учитывайте больничные и декретные. Подходит для пенсионного фонда и бухгалтерии.",
+    "Онлайн калькулятор трудового и страхового стажа. Рассчитайте опыт работы по трудовой книжке или для оформления пенсии, больничного листа, отпуска или социальных выплат.",
   keywords: [
     "калькулятор стажа онлайн",
     "расчет трудового стажа",
     "страховой стаж для пенсии",
     "подсчет стажа по трудовой книжке",
-    "калькулятор пенсионного стажа",
     "как рассчитать стаж работы",
-    "стаж для больничного листа",
-    "конвертер стажа",
-    "учет стажа для пенсии",
-    "пенсионный калькулятор",
-    "расчет стажа для отпуска",
-    "трудовой стаж онлайн",
-    "калькулятор северного стажа",
     "стаж для выхода на пенсию",
-    "калькулятор педагогического стажа",
-    "медицинский стаж расчет",
+    "учет стажа для больничного",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/seniority-calculator",
+    canonical: "/work-experience",
   },
   robots: {
     index: true,
@@ -43,25 +36,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор трудового стажа | Расчет страхового стажа для пенсии",
+    title: "Калькулятор трудового стажа | BoxCalculators",
     description:
-      "Точный расчет трудового и страхового стажа по трудовой книжке. Учитывает все периоды для пенсии, больничных и отпусков. Бесплатный онлайн инструмент.",
-    url: "/seniority-calculator",
+      "Рассчитайте ваш трудовой и страховой стаж быстро и точно. Подходит для пенсионного фонда, бухгалтерии и личных целей.",
+    url: "/work-experience",
     type: "website",
     images: [
       {
         url: "/images/seniority-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор трудового стажа | Расчет страхового стажа для пенсии",
+        alt: "Калькулятор трудового стажа от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор трудового стажа | Расчет страхового стажа для пенсии",
+    title: "Калькулятор трудового стажа | BoxCalculators",
     description:
-      "Бесплатный онлайн инструмент для точного расчета всех видов стажа по трудовой книжке",
+      "Бесплатный инструмент для расчёта стажа по трудовой книжке, страховых периодов и других оснований для пенсии, больничного или отпуска.",
     images: ["/images/seniority-calculator-twitter.jpg"],
   },
 };
@@ -72,47 +65,48 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
-        <meta name="rating" content="general" />
-        <meta
-          name="google-site-verification"
-          content="ueaW9-Ty2f1CJX6Fz60Robte2vEZ1nHWGdjXxaq09Fs"
+        <link
+          rel="canonical"
+          href="https://boxcalculators.ru/work-experience "
         />
-        <meta name="yandex-verification" content="8e171312279be75a" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
+        <meta name="rating" content="general" />
+
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор трудового стажа",
-              url: "https://calcoffee.ru/seniority-calculator",
+              url: "https://boxcalculators.ru/work-experience ",
               description:
-                "Онлайн калькулятор для расчета трудового и страхового стажа по трудовой книжке",
+                "Онлайн калькулятор для расчёта трудового и страхового стажа по трудовой книжке и другим документам. Позволяет учитывать декрет, армию, больничные и другие официальные периоды.",
               applicationCategory: "BusinessApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет трудового стажа",
-                "Расчет страхового стажа",
-                "Учет больничных и декретных",
+                "Расчёт трудового стажа",
+                "Расчёт страхового стажа",
+                "Учет декретных, больничных и военной службы",
                 "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "https://calcoffee.ru/images/seniority-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/seniority-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "https://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -122,12 +116,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

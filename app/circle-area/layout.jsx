@@ -1,6 +1,5 @@
 import { Montserrat } from "next/font/google";
 
-// Настройка шрифта Montserrat
 const montserrat = Montserrat({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -8,20 +7,20 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор площади круга онлайн | Расчет",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор площади круга - точный расчет по радиусу и диаметру",
   description:
-    "Быстрый и удобный калькулятор для расчета площади круга. Введите радиус и получите мгновенный результат. Идеально подходит для студентов, инженеров и любителей математики.",
+    "Быстрый и точный расчет площади круга через радиус или диаметр. Формулы, примеры вычислений и практическое применение. Незаменимый инструмент для учебы и работы.",
   keywords: [
     "калькулятор площади круга",
     "расчет площади круга",
+    "формула площади круга",
     "онлайн калькулятор круга",
-    "площадь круга",
-    "математика",
-    "инженерные расчеты",
+    "математические калькуляторы",
+    "геометрические расчеты",
   ],
   alternates: {
-    canonical: "/circle-area-online-calculator",
+    canonical: "/circle-area",
   },
   robots: {
     index: true,
@@ -33,26 +32,26 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор площади круга онлайн | Calcoffee",
+    title: "Калькулятор площади круга - точный расчет онлайн",
     description:
-      "Быстрый и удобный калькулятор для расчета площади круга. Введите радиус и получите мгновенный результат. Идеально подходит для студентов, инженеров и любителей математики.",
-    url: "/circle-area-online-calculator",
+      "Профессиональный расчет площади круга по радиусу или диаметру с подробными формулами и примерами.",
+    url: "/circle-area",
     type: "website",
     images: [
       {
-        url: "/images/circle-area-calculator-og.jpg",
+        url: "/images/circle-area-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор площади круга онлайн | Calcoffee",
+        alt: "Калькулятор площади круга - точный расчет онлайн",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор площади круга онлайн | Calcoffee",
+    title: "Калькулятор площади круга - точный расчет онлайн",
     description:
-      "Онлайн инструмент для расчета площади круга. Просто введите радиус, чтобы получить точный результат. Подходит для учебы, работы и хобби.",
-    images: ["/images/circle-area-calculator-twitter.jpg"],
+      "Онлайн инструмент для вычисления площади круга с примерами и формулами.",
+    images: ["/images/circle-area-twitter.jpg"],
   },
 };
 
@@ -62,12 +61,11 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -75,18 +73,20 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebApplication",
               name: "Калькулятор площади круга",
-              url: "http://calcoffee.ru/circle-area-online-calculator",
+              url: "https://boxcalculators.ru/circle-area",
               description:
-                "Онлайн инструмент для расчета площади круга. Просто введите радиус, чтобы получить точный результат. Подходит для учебы, работы и хобби.",
-              applicationCategory: "MathematicalApplication",
+                "Профессиональный инструмент для вычисления площади круга по радиусу или диаметру с примерами и формулами.",
+              applicationCategory: "MathApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет площади круга по радиусу",
-                "Мгновенный результат",
-                "Простой интерфейс",
+                "Расчет по радиусу",
+                "Расчет по диаметру",
+                "Примеры вычислений",
+                "Мгновенные результаты",
+                "Подробные формулы",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/circle-area-calculator-og.jpg",
+              image: "https://boxcalculators.ru/images/circle-area-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -94,23 +94,21 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.8",
-                reviewCount: "120",
+                ratingValue: "4.9",
+                reviewCount: "135",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

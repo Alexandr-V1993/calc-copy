@@ -8,10 +8,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор кирпича | Точный расчет для кладки",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор кирпича | Точный расчет кладки онлайн",
   description:
-    "Используйте наш онлайн калькулятор кирпича для точного расчета количества кирпичей и необходимых материалов для кладки. Удобный инструмент для планирования строительных работ, подходящий как для профессионалов, так и для новичков. Экономьте время и деньги с нашим простым и быстрым расчетом.",
+    "Онлайн-калькулятор расчёта кирпича помогает точно определить необходимое количество кирпичей и сопутствующих материалов для строительства стен. Учитывает тип кирпича, толщину швов, площадь кладки и дополнительные параметры.",
   keywords: [
     "калькулятор кирпича",
     "расчет кирпича",
@@ -21,7 +21,7 @@ export const metadata = {
     "материалы для кладки",
   ],
   alternates: {
-    canonical: "/brick-calculator",
+    canonical: "/brickwork-calculator",
   },
   robots: {
     index: true,
@@ -33,26 +33,28 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор кирпича онлайн - Точный расчет количества кирпича и материалов для кладки",
+    title:
+      "Калькулятор кирпича онлайн - Точный расчет количества кирпичей для кладки",
     description:
-      "Используйте наш онлайн калькулятор кирпича для точного расчета количества кирпичей и необходимых материалов для кладки. Удобный инструмент для планирования строительных работ, подходящий как для профессионалов, так и для новичков. Экономьте время и деньги с нашим простым и быстрым расчетом.",
-    url: "/brick-calculator",
+      "Онлайн инструмент для точного расчета количества кирпичей и материалов для кладки. Простой и удобный интерфейс для профессионалов и новичков.",
+    url: "/brickwork-calculator",
     type: "website",
     images: [
       {
-        url: "/images/brick-calculator-og.jpg",
+        url: "/images/brickwork-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор кирпича онлайн - Точный расчет количества кирпича и материалов для кладки",
+        alt: "Калькулятор кирпича онлайн - Расчёт кладки",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор кирпича онлайн - Точный расчет количества кирпича и материалов для кладки",
+    title:
+      "Калькулятор кирпича онлайн - Точный расчет количества кирпичей для кладки",
     description:
       "Онлайн инструмент для точного расчета количества кирпичей и материалов для кладки. Простой и удобный интерфейс для профессионалов и новичков.",
-    images: ["/images/brick-calculator-twitter.jpg"],
+    images: ["/images/brickwork-calculator-twitter.jpg"],
   },
 };
 
@@ -62,20 +64,20 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Structured Data (Schema.org) */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор кирпича",
-              url: "http://calcoffee.ru/brick-calculator",
+              url: "https://boxcalculators.ru/brickwork-calculator ",
               description:
                 "Онлайн инструмент для точного расчета количества кирпичей и материалов для кладки. Простой и удобный интерфейс для профессионалов и новичков.",
               applicationCategory: "ConstructionApplication",
@@ -87,31 +89,30 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/brick-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/brickwork-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.6",
-                reviewCount: "95",
+                ratingValue: "4.7",
+                reviewCount: "120",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

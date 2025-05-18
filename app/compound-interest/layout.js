@@ -8,19 +8,22 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор сложных процентов онлайн | Расчет прибыли",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор сложных процентов | Рассчитайте рост инвестиций онлайн",
   description:
-    "Используйте наш калькулятор сложных процентов для вычисления роста вашего капитала. Быстро и просто рассчитайте, как ваши инвестиции увеличиваются со временем.",
+    "Рассчитайте рост капитала по формуле сложных процентов. Бесплатный калькулятор для планирования инвестиций или банковских вкладов с реинвестированием.",
   keywords: [
     "калькулятор сложных процентов",
-    "расчет сложных процентов",
-    "инвестиции",
+    "расчет сложного процента",
     "рост капитала",
-    "онлайн калькулятор",
+    "инвестиции онлайн",
+    "финансовое планирование",
+    "начисление процентов",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/compound-interest-calculator",
+    canonical: "/compound-interest",
   },
   robots: {
     index: true,
@@ -32,25 +35,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор сложных процентов онлайн | Расчет прибыли",
+    title: "Калькулятор сложных процентов | BoxCalculators",
     description:
-      "Используйте наш калькулятор сложных процентов для вычисления роста вашего капитала. Быстро и просто рассчитайте, как ваши инвестиции увеличиваются со временем.",
-    url: "/compound-interest-calculator",
+      "Онлайн инструмент для расчёта сложных процентов. Позволяет прогнозировать рост капитала от инвестиций или вклада за определённый период с учётом реинвестирования.",
+    url: "/compound-interest",
     type: "website",
     images: [
       {
         url: "/images/compound-interest-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор сложных процентов онлайн | Расчет прибыли",
+        alt: "Калькулятор сложных процентов от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор сложных процентов онлайн | Расчет прибыли",
+    title: "Калькулятор сложных процентов | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета сложных процентов и роста капитала. Просто введите данные для мгновенного результата. Идеально подходит для планирования инвестиций.",
+      "Бесплатный калькулятор сложных процентов. Узнайте, как ваши инвестиции будут расти со временем с учетом реинвестирования.",
     images: ["/images/compound-interest-calculator-twitter.jpg"],
   },
 };
@@ -61,9 +64,14 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <link
+          rel="canonical"
+          href="https://boxcalculators.ru/compound-interest "
+        />
+
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
         {/* Добавление структурированных данных Schema.org */}
@@ -71,31 +79,32 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор сложных процентов",
-              url: "http://calcoffee.ru/compound-interest-calculator",
+              url: "https://boxcalculators.ru/compound-interest ",
               description:
-                "Онлайн инструмент для расчета сложных процентов и роста капитала. Просто введите данные для мгновенного результата. Идеально подходит для планирования инвестиций.",
+                "Онлайн инструмент для расчёта сложных процентов. Позволяет прогнозировать рост капитала от инвестиций или банковского вклада.",
               applicationCategory: "FinanceApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет сложных процентов",
+                "Расчёт сложных процентов",
                 "Прогноз роста капитала",
+                "Поддержка реинвестирования",
                 "Мгновенный результат",
-                "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/compound-interest-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/compound-interest-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -105,12 +114,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

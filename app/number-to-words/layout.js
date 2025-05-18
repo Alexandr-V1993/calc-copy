@@ -8,30 +8,31 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://calcoffee.ru"),
-  title: "Сумма прописью онлайн | Конвертер чисел в слова",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Конвертер чисел в слова | Сумма прописью онлайн",
   description:
-    "Быстро и точно преобразуйте числа в текст! Наш бесплатный онлайн-конвертер суммы прописью идеален для договоров, счетов, финансовых документов. Поддержка русского языка, разных валют и точное соответствие требованиям бухгалтерских документов.",
+    "Бесплатный онлайн-инструмент для преобразования чисел в текстовые значения. Подходит для юридических документов, счетов, договоров и финансовых форм. Точное соответствие требованиям бухгалтерии.",
   keywords: [
+    "конвертер чисел в слова",
     "сумма прописью онлайн",
-    "конвертер чисел в текст",
-    "сумма словами",
     "число прописью",
-    "бесплатный конвертер",
-    "бухгалтерские документы",
-    "финансовые документы",
+    "сумма словами",
+    "генератор сумм прописью",
     "договора",
     "счета-фактуры",
+    "бухгалтерские документы",
+    "финансовые документы",
     "рубли прописью",
     "доллары прописью",
     "евро прописью",
     "как писать сумму прописью",
     "правильное написание сумм",
-    "генератор сумм прописью",
     "онлайн инструмент для бизнеса",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/summapro",
+    canonical: "/number-to-words",
   },
   robots: {
     index: true,
@@ -43,26 +44,26 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Сумма прописью онлайн | Конвертер чисел в слова",
+    title: "Конвертер чисел в слова | BoxCalculators",
     description:
-      "Быстро преобразуйте числа в текст для договоров и финансовых документов. Точный и бесплатный конвертер сумм прописью с поддержкой разных валют.",
-    url: "/summapro",
+      "Онлайн-инструмент для перевода чисел в текст. Преобразуйте цифры в слова для использования в договорах, счетах, финансовых и юридических документах.",
+    url: "/number-to-words",
     type: "website",
     images: [
       {
-        url: "/images/summapro-og.jpg",
+        url: "/images/number-to-words-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Сумма прописью онлайн | Конвертер чисел в слова",
+        alt: "Конвертер чисел в слова | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Сумма прописью онлайн | Конвертер чисел в слова",
+    title: "Конвертер чисел в слова | BoxCalculators",
     description:
-      "Бесплатный онлайн-инструмент для преобразования числовых значений в текстовый формат для юридических и финансовых документов.",
-    images: ["/images/summapro-twitter.jpg"],
+      "Преобразуйте числа в текст за секунды. Идеально подходит для заполнения договоров, счетов и других официальных документов.",
+    images: ["/images/number-to-words-twitter.jpg"],
   },
 };
 
@@ -72,25 +73,20 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
-        <meta
-          name="google-site-verification"
-          content="ueaW9-Ty2f1CJX6Fz60Robte2vEZ1nHWGdjXxaq09Fs"
-        />
-        <meta name="yandex-verification" content="8e171312279be75a" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
-              name: "Конвертер суммы прописью",
-              url: "https://calcoffee.ru/summapro",
+              name: "Конвертер чисел в слова",
+              url: "https://boxcalculators.ru/number-to-words ",
               description:
                 "Бесплатный онлайн-инструмент для преобразования числовых значений в текстовый формат для юридических и финансовых документов.",
               applicationCategory: "BusinessApplication",
@@ -103,16 +99,16 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "https://calcoffee.ru/images/summapro-og.jpg",
+              image: "https://boxcalculators.ru/images/number-to-words-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "https://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -122,12 +118,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

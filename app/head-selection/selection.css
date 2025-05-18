@@ -121,3 +121,9 @@ p.resultstring > span {
     margin-top: 0;
   }
 }
+.alcohol-list {
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+  align-items: center;
+}

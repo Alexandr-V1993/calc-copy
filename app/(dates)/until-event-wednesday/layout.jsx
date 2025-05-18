@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="ru">
       <link
         rel="canonical"
-        href={"http://calcoffee.ru/until-event-wednesday"}
+        href={"http://boxcalculators.ru/until-event-wednesday"}
       />
 
       <body className={montserrat.className}>{children}</body>

@@ -67,8 +67,8 @@ const JanuaryCountdownTimer = () => {
           <div className="label-row">
             <div className="row-vans-bottom">
               <span className="top-adress">
-                <a href="https://calcoffee.ru/">Calcoffee.ru</a> / Сколько дней
-                осталось до января
+                <a href="https://boxcalculators.ru/">boxcalculators.ru</a> /
+                Сколько дней осталось до января
               </span>
               <div className="d-flex align-items-start mb-4 calc-form">
                 <div className="calc-frow">

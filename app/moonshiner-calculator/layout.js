@@ -8,16 +8,17 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор смешивания спиртов | Определите крепость",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор смешивания спиртов | Рассчитайте крепость после смешения",
   description:
-    "Используйте наш калькулятор для точного расчета крепости при смешивании спиртов разной концентрации. Упростите процесс смешивания и получите нужный результат быстро.",
+    "Онлайн-калькулятор для точного определения крепости алкоголя после смешивания двух растворов с разной концентрацией. Узнайте, какой градус получится в результате без формул и расчетов.",
   keywords: [
     "калькулятор смешивания спиртов",
-    "расчет крепости спиртов",
+    "расчет крепости после смешивания",
     "смешивание алкоголя",
-    "калькулятор самогона",
+    "домашнее самогоноварение",
     "спиртовой калькулятор",
+    "онлайн калькулятор алкоголя",
   ],
   alternates: {
     canonical: "/moonshiner-calculator",
@@ -32,9 +33,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор смешивания спиртов | Определите крепость",
+    title: "Калькулятор смешивания спиртов онлайн | BoxCalculators",
     description:
-      "Используйте наш калькулятор для точного расчета крепости при смешивании спиртов разной концентрации. Упростите процесс смешивания и получите нужный результат быстро.",
+      "Узнайте крепость вашего алкогольного напитка после смешивания. Простой инструмент для самогонщиков и любителей домашних напитков.",
     url: "/moonshiner-calculator",
     type: "website",
     images: [
@@ -42,15 +43,15 @@ export const metadata = {
         url: "/images/moonshiner-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор смешивания спиртов | Определите крепость",
+        alt: "Калькулятор смешивания спиртов онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор смешивания спиртов | Определите крепость",
+    title: "Калькулятор смешивания спиртов онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета крепости при смешивании спиртов разной концентрации. Быстро и точно определите результат.",
+      "Рассчитайте крепость алкоголя после смешивания двух разных по концентрации растворов. Быстро, точно и удобно для самогонщиков и виноделов.",
     images: ["/images/moonshiner-calculator-twitter.jpg"],
   },
 };
@@ -61,41 +62,42 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор смешивания спиртов",
-              url: "http://calcoffee.ru/moonshiner-calculator",
+              url: "https://boxcalculators.ru/moonshiner-calculator ",
               description:
-                "Онлайн инструмент для расчета крепости при смешивании спиртов разной концентрации. Быстро и точно определите результат.",
+                "Инструмент для расчёта крепости после смешивания двух спиртовых растворов. Позволяет избежать ошибок при создании домашних напитков.",
               applicationCategory: "AlcoholManagementApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет крепости при смешивании",
-                "Поддержка разных концентраций",
+                "Расчёт крепости после смешивания",
+                "Поддержка разных объемов и концентраций",
                 "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/moonshiner-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/moonshiner-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -105,12 +107,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

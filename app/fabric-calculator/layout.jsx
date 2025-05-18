@@ -8,10 +8,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
+  metadataBase: new URL("https://boxcalculators.ru"),
   title: "Калькулятор расчета ткани | Расчет онлайн",
   description:
-    "Онлайн калькулятор для расчета ткани и для пошива постельного белья и одежды. Этот инструмент поможет точно определить необходимое количество ткани и рассчитать стоимость, а также предложит оптимальные материалы для вашего проекта.",
+    "Онлайн калькулятор для точного расчета количества ткани при пошиве одежды, постельного белья, штор и других изделий. Удобный инструмент для начинающих и опытных мастеров.",
   keywords: [
     "калькулятор ткани",
     "расчет ткани",
@@ -20,7 +20,7 @@ export const metadata = {
     "расчет ткани для постельного белья",
   ],
   alternates: {
-    canonical: "/fabric-online-calculator",
+    canonical: "/fabric-calculator",
   },
   robots: {
     index: true,
@@ -32,25 +32,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор расчета ткани | Calcoffee ✔️",
+    title: "Калькулятор расчета ткани | BoxCalculators",
     description:
-      "Онлайн калькулятор для расчета ткани и для пошива постельного белья и одежды. Этот инструмент поможет точно определить необходимое количество ткани и рассчитать стоимость, а также предложит оптимальные материалы для вашего проекта.",
-    url: "/fabric-online-calculator",
+      "Онлайн калькулятор для точного расчета количества ткани при пошиве одежды, постельного белья и других текстильных изделий.",
+    url: "/fabric-calculator",
     type: "website",
     images: [
       {
         url: "/images/fabric-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор расчета ткани | Calcoffee ✔️",
+        alt: "Калькулятор расчета ткани | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор расчета ткани | Calcoffee ✔️",
+    title: "Калькулятор расчета ткани | BoxCalculators",
     description:
-      "Онлайн инструмент для точного расчета количества ткани для пошива одежды и постельного белья. Простой и удобный интерфейс для планирования проектов.",
+      "Удобный онлайн-инструмент для расчёта необходимого количества ткани. Подходит для пошива одежды, постельного белья, штор и других проектов.",
     images: ["/images/fabric-calculator-twitter.jpg"],
   },
 };
@@ -61,22 +61,22 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор расчета ткани",
-              url: "http://calcoffee.ru/fabric-online-calculator",
+              url: "https://boxcalculators.ru/fabric-calculator ",
               description:
-                "Онлайн инструмент для точного расчета количества ткани для пошива одежды и постельного белья. Простой и удобный интерфейс для планирования проектов.",
+                "Удобный онлайн-инструмент для расчёта необходимого количества ткани. Подходит для пошива одежды, постельного белья, штор и других проектов.",
               applicationCategory: "TextileApplication",
               operatingSystem: "Web",
               featureList: [
@@ -86,16 +86,17 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/fabric-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/fabric-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -105,12 +106,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

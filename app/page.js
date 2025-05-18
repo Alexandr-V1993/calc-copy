@@ -53,7 +53,7 @@ function Home() {
     },
     {
       id: 5,
-      name: "Финансовый процентный калькулятор",
+      name: "Процентный калькулятор",
       category: "finance",
       description: "Расчет процентов по вкладам и кредитам",
       url: "/financial-percent/",
@@ -151,7 +151,7 @@ function Home() {
     },
     {
       id: 19,
-      name: "Научный калькулятор",
+      name: "Обычный калькулятор",
       category: "conversion",
       description: "Выполнение сложных математических операций",
       url: "/scientific-calculator",

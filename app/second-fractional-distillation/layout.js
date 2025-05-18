@@ -8,16 +8,16 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор перегонки спирта | Оптимизация дробной перегонки",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор перегонки спирта | Точный расчет дробной дистилляции",
   description:
-    "Оптимизируйте процесс перегонки спирта с нашим калькулятором для разделения голов и хвостов. Точные расчеты для вторичной перегонки спирта.",
+    "Онлайн-инструмент для разделения фракций при вторичной перегонке спирта. Рассчитайте объем голов, тела и хвостов с учетом крепости и объема исходного продукта.",
   keywords: [
     "калькулятор перегонки спирта",
-    "оптимизация дробной перегонки",
+    "дробная дистилляция",
     "отделение голов и хвостов",
     "вторичная перегонка спирта",
-    "калькулятор спиртовых фракций",
+    "расчет фракций спирта",
   ],
   alternates: {
     canonical: "/second-fractional-distillation",
@@ -32,9 +32,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор перегонки спирта | Оптимизация дробной перегонки",
+    title: "Калькулятор дробной перегонки спирта онлайн | BoxCalculators",
     description:
-      "Оптимизируйте процесс перегонки спирта с нашим калькулятором для разделения голов и хвостов. Точные расчеты для вторичной перегонки спирта.",
+      "Рассчитайте точное соотношение голов, тела и хвостов при повторной перегонке. Простой и понятный интерфейс для самогонщиков и виноделов.",
     url: "/second-fractional-distillation",
     type: "website",
     images: [
@@ -42,15 +42,15 @@ export const metadata = {
         url: "/images/spirit-distillation-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор перегонки спирта | Оптимизация дробной перегонки",
+        alt: "Калькулятор дробной перегонки спирта онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор перегонки спирта | Оптимизация дробной перегонки",
+    title: "Калькулятор дробной перегонки спирта онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для оптимизации процесса перегонки спирта. Разделение голов и хвостов, точные расчеты для вторичной перегонки.",
+      "Определите объем голов, тела и хвостов при вторичной перегонке спирта. Быстро, точно и удобно для получения чистого алкоголя.",
     images: ["/images/spirit-distillation-twitter.jpg"],
   },
 };
@@ -61,42 +61,43 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
-              name: "Калькулятор перегонки спирта",
-              url: "http://calcoffee.ru/second-fractional-distillation",
+              name: "Калькулятор дробной перегонки спирта",
+              url: "https://boxcalculators.ru/second-fractional-distillation ",
               description:
-                "Онлайн инструмент для оптимизации процесса перегонки спирта. Разделение голов и хвостов, точные расчеты для вторичной перегонки.",
+                "Инструмент для расчёта фракций при второй перегонке спирта. Указывает объем голов, тела и хвостов на основе начальной крепости и желаемых параметров.",
               applicationCategory: "DistillationApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет объема голов и хвостов",
-                "Оптимизация дробной перегонки",
-                "Точные результаты для вторичной перегонки",
+                "Расчёт объема голов и хвостов",
+                "Уточнение крепости тела после перегонки",
                 "Мгновенный результат",
                 "Простой интерфейс",
+                "Таблицы поправок и советы по дистилляции",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/spirit-distillation-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/spirit-distillation-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -106,12 +107,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

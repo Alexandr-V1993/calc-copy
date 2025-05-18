@@ -8,10 +8,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
+  metadataBase: new URL("https://boxcalculators.ru"),
   title: "Онлайн калькулятор расчета бруса | Точный расчет",
   description:
-    "Точный онлайн калькулятор расчета объема, площади и количества бруса в кубических метрах. Удобный инструмент для строительства и планирования. Рассчитайте необходимое количество бруса для вашего проекта с минимальными усилиями.",
+    "Точный онлайн калькулятор расчета объема, площади и количества бруса в кубических метрах. Удобный инструмент для строительства и планирования.",
   keywords: [
     "калькулятор бруса",
     "расчет объема бруса",
@@ -33,9 +33,10 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Онлайн калькулятор расчета бруса - Точный расчет объема и количества",
+    title:
+      "Онлайн калькулятор расчета бруса - Точный расчет объема и количества",
     description:
-      "Точный онлайн калькулятор расчета объема, площади и количества бруса в кубических метрах. Удобный инструмент для строительства и планирования. Рассчитайте необходимое количество бруса для вашего проекта с минимальными усилиями.",
+      "Онлайн инструмент для точного расчета объема, площади и количества бруса. Удобное решение для строительства и планирования.",
     url: "/timber-calculator",
     type: "website",
     images: [
@@ -43,15 +44,15 @@ export const metadata = {
         url: "/images/timber-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Онлайн калькулятор расчета бруса - Точный расчет объема и количества",
+        alt: "Калькулятор расчета бруса",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Онлайн калькулятор расчета бруса - Точный расчет объема и количества",
+    title: "Калькулятор расчета бруса - Точный расчет объема и количества",
     description:
-      "Онлайн инструмент для точного расчета объема, площади и количества бруса. Удобное решение для строительства и планирования.",
+      "Онлайн инструмент для точного расчета объема, площади и количества бруса.",
     images: ["/images/timber-calculator-twitter.jpg"],
   },
 };
@@ -62,22 +63,22 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор расчета бруса",
-              url: "http://calcoffee.ru/timber-calculator",
+              url: "https://boxcalculators.ru/timber-calculator ",
               description:
-                "Онлайн инструмент для точного расчета объема, площади и количества бруса. Удобное решение для строительства и планирования.",
+                "Онлайн инструмент для точного расчета объема, площади и количества бруса.",
               applicationCategory: "ConstructionApplication",
               operatingSystem: "Web",
               featureList: [
@@ -88,16 +89,17 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/timber-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/timber-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -107,12 +109,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

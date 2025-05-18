@@ -8,16 +8,16 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор сахарной браги: Оптимальные пропорции",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор сахарной браги | Точный расчет пропорций",
   description:
-    "Рассчитайте идеальные пропорции алкоголя, воды и сахара для сахарной браги с нашим онлайн калькулятором. Простой инструмент для приготовления напитков.",
+    "Онлайн-инструмент для расчёта оптимальных пропорций воды, сахара и дрожжей при приготовлении сахарной браги. Быстро и точно рассчитайте объемы для ферментации.",
   keywords: [
     "калькулятор сахарной браги",
-    "расчёт пропорций браги",
+    "расчет пропорций браги",
     "сахарная брага онлайн",
-    "приготовление браги",
-    "калькулятор напитков",
+    "рецепты самогонки",
+    "домашнее самогоноварение",
   ],
   alternates: {
     canonical: "/sugar-braga",
@@ -32,9 +32,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор сахарной браги: Оптимальные пропорции",
+    title: "Калькулятор сахарной браги онлайн | BoxCalculators",
     description:
-      "Рассчитайте идеальные пропорции алкоголя, воды и сахара для сахарной браги с нашим онлайн калькулятором. Простой инструмент для приготовления напитков.",
+      "Рассчитайте точные пропорции сахара, воды и дрожжей для идеальной ферментации. Простой и понятный инструмент для самогонщиков и виноделов.",
     url: "/sugar-braga",
     type: "website",
     images: [
@@ -42,15 +42,15 @@ export const metadata = {
         url: "/images/sugar-braga-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор сахарной браги: Оптимальные пропорции",
+        alt: "Калькулятор сахарной браги онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор сахарной браги: Оптимальные пропорции",
+    title: "Калькулятор сахарной браги онлайн | BoxCalculators",
     description:
-      "Онлайн калькулятор для расчета пропорций алкоголя, воды и сахара. Идеальный инструмент для приготовления сахарной браги.",
+      "Определите нужное количество сахара, воды и дрожжей для вашей браги. Онлайн-калькулятор для точного контроля над процессом ферментации.",
     images: ["/images/sugar-braga-twitter.jpg"],
   },
 };
@@ -61,42 +61,42 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор сахарной браги",
-              url: "http://calcoffee.ru/sugar-braga",
+              url: "https://boxcalculators.ru/sugar-braga ",
               description:
-                "Онлайн калькулятор для расчета пропорций алкоголя, воды и сахара. Идеальный инструмент для приготовления сахарной браги.",
-              applicationCategory: "FoodApplication",
+                "Инструмент для расчёта пропорций воды, сахара и дрожжей при создании сахарной браги. Подходит для начинающих и опытных самогонщиков.",
+              applicationCategory: "AlcoholManagementApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет пропорций алкоголя",
-                "Расчет объема воды",
-                "Расчет количества сахара",
+                "Расчёт объема воды",
+                "Рассчитать количество сахара",
                 "Мгновенный результат",
                 "Простой интерфейс",
+                "Таблицы и советы по ферментации",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/sugar-braga-og.jpg",
+              image: "https://boxcalculators.ru/images/sugar-braga-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -106,12 +106,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

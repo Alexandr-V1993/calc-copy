@@ -8,10 +8,10 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор сна",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор сна | Онлайн расчет фаз сна",
   description:
-    "Онлайн-калькулятор сна: рассчитайте оптимальное время для пробуждения или засыпания, чтобы чувствовать себя бодрым и отдохнувшим. Узнайте, сколько нужно спать для здорового сна.",
+    "Онлайн калькулятор сна помогает рассчитать оптимальное время для засыпания или пробуждения, учитывая циклы и фазы сна. Удобный инструмент для здорового образа жизни.",
   keywords: [
     "калькулятор сна",
     "рассчитать время сна",
@@ -22,7 +22,7 @@ export const metadata = {
     "сколько нужно спать",
   ],
   alternates: {
-    canonical: "/sleep-calculator",
+    canonical: "/sleep-phases",
   },
   robots: {
     index: true,
@@ -34,25 +34,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор сна: рассчитайте оптимальное время для сна",
+    title: "Калькулятор сна онлайн | BoxCalculators",
     description:
-      "Онлайн-калькулятор сна: рассчитайте оптимальное время для пробуждения или засыпания, чтобы чувствовать себя бодрым и отдохнувшим. Узнайте, сколько нужно спать для здорового сна.",
-    url: "/sleep-calculator",
+      "Онлайн-инструмент для расчёта времени засыпания и пробуждения на основе фаз сна. Подходит для планирования режима и улучшения качества отдыха.",
+    url: "/sleep-phases",
     type: "website",
     images: [
       {
         url: "/images/sleep-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор сна: рассчитайте оптимальное время для сна",
+        alt: "Калькулятор сна онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор сна: рассчитайте оптимальное время для сна",
+    title: "Калькулятор сна онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета времени сна и пробуждения. Оптимизируйте фазы сна и улучшите качество отдыха.",
+      "Удобный инструмент для расчета оптимального времени сна и пробуждения. Просыпайтесь бодрыми и выспавшимися!",
     images: ["/images/sleep-calculator-twitter.jpg"],
   },
 };
@@ -63,42 +63,43 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор сна",
-              url: "http://calcoffee.ru/sleep-calculator",
+              url: "https://boxcalculators.ru/sleep-phases ",
               description:
                 "Онлайн инструмент для расчета времени сна и пробуждения. Оптимизируйте фазы сна и улучшите качество отдыха.",
               applicationCategory: "HealthApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет оптимального времени засыпания",
+                "Расчет времени засыпания",
                 "Расчет времени пробуждения",
-                "Учет фаз сна",
+                "Учет циклов сна",
                 "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/sleep-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/sleep-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -108,12 +109,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

@@ -8,20 +8,20 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор суточного потребления воды",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор суточного потребления воды | Точный расчет нормы",
   description:
-    "Калькулятор для расчета рекомендуемого суточного потребления воды. Узнайте, сколько воды вам нужно пить каждый день для поддержания здоровья.",
+    "Онлайн калькулятор для расчёта рекомендуемого суточного потребления воды. Узнайте, сколько воды вам нужно пить каждый день для здоровья.",
   keywords: [
     "калькулятор воды",
     "суточное потребление воды",
-    "расчет воды",
-    "онлайн калькулятор",
-    "сколько воды пить",
-    "норма воды в день",
+    "расчет воды в день",
+    "сколько пить воды",
+    "водный баланс",
+    "здоровье",
   ],
   alternates: {
-    canonical: "/water-intake-calculator",
+    canonical: "/water-balance",
   },
   robots: {
     index: true,
@@ -33,25 +33,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор суточного потребления воды - Рассчитайте свою норму",
+    title: "Калькулятор суточного потребления воды онлайн | BoxCalculators",
     description:
-      "Калькулятор для расчета рекомендуемого суточного потребления воды. Узнайте, сколько воды вам нужно пить каждый день для поддержания здоровья.",
-    url: "/water-intake-calculator",
+      "Онлайн инструмент для точного расчёта суточной нормы воды с учетом веса, пола и уровня активности. Простой и удобный интерфейс для поддержания водного баланса.",
+    url: "/water-balance",
     type: "website",
     images: [
       {
         url: "/images/water-intake-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор суточного потребления воды - Рассчитайте свою норму",
+        alt: "Калькулятор суточного потребления воды онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор суточного потребления воды - Рассчитайте свою норму",
+    title: "Калькулятор суточного потребления воды онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета суточного потребления воды. Узнайте, сколько воды вам нужно пить ежедневно для поддержания здоровья.",
+      "Простой онлайн-инструмент для расчёта количества воды, необходимой вам ежедневно. Подходит для мужчин и женщин разного возраста и образа жизни.",
     images: ["/images/water-intake-calculator-twitter.jpg"],
   },
 };
@@ -62,42 +62,43 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор суточного потребления воды",
-              url: "http://calcoffee.ru/water-intake-calculator",
+              url: "https://boxcalculators.ru/water-balance ",
               description:
-                "Онлайн инструмент для расчета суточного потребления воды. Узнайте, сколько воды вам нужно пить ежедневно для поддержания здоровья.",
+                "Онлайн инструмент для расчёта количества воды, необходимой вам ежедневно. Подходит для мужчин и женщин разного возраста и образа жизни.",
               applicationCategory: "HealthApplication",
               operatingSystem: "Web",
               featureList: [
                 "Расчет суточной нормы воды",
-                "Учет веса и активности",
+                "Учет веса и физической активности",
                 "Мгновенный результат",
                 "Простой интерфейс",
-                "Рекомендации по здоровью",
+                "Советы по здоровому образу жизни",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/water-intake-calculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/water-intake-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -107,12 +108,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

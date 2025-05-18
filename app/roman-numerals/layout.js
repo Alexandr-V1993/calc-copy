@@ -8,19 +8,22 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Конвертер даты в римские цифры онлайн",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Конвертер римских чисел | Перевод даты и цифр онлайн",
   description:
-    "Конвертируйте дату в римские цифры с помощью нашего онлайн инструмента. Переведите день, месяц и год в римский формат быстро и легко.",
+    "Переведите число или дату в римские цифры онлайн. Бесплатный и точный инструмент для образования, дизайна и исторических задач.",
   keywords: [
-    "конвертер даты в римские цифры",
-    "римские цифры",
-    "перевод даты в римские цифры",
-    "римский формат даты",
-    "онлайн конвертер римских чисел",
+    "конвертер римских чисел",
+    "перевод в римские цифры",
+    "римские цифры онлайн",
+    "дата в римском формате",
+    "инструмент перевода чисел",
+    "римская система счисления",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/roman-date-converter",
+    canonical: "/roman-numerals",
   },
   robots: {
     index: true,
@@ -32,25 +35,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Конвертер даты в римские цифры онлайн",
+    title: "Конвертер римских чисел | BoxCalculators",
     description:
-      "Конвертируйте дату в римские цифры с помощью нашего онлайн инструмента. Переведите день, месяц и год в римский формат быстро и легко.",
-    url: "/roman-date-converter",
+      "Онлайн инструмент для перевода чисел и дат в римские цифры и обратно. Подходит как для учебных целей, так и для оформления документов, фильмов, игр и других проектов.",
+    url: "/roman-numerals",
     type: "website",
     images: [
       {
         url: "/images/roman-date-converter-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Конвертер даты в римские цифры онлайн",
+        alt: "Конвертер римских чисел от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Конвертер даты в римские цифры онлайн",
+    title: "Конвертер римских чисел | BoxCalculators",
     description:
-      "Онлайн инструмент для перевода даты в римские цифры. Быстро и легко конвертируйте день, месяц и год в римский формат.",
+      "Бесплатный калькулятор для перевода чисел и дат в римские цифры. Простой и удобный интерфейс для работы с числами от 1 до 5000.",
     images: ["/images/roman-date-converter-twitter.jpg"],
   },
 };
@@ -61,42 +64,47 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <link
+          rel="canonical"
+          href="https://boxcalculators.ru/roman-numerals "
+        />
+
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
-              name: "Конвертер даты в римские цифры",
-              url: "http://calcoffee.ru/roman-date-converter",
+              name: "Конвертер римских чисел",
+              url: "https://boxcalculators.ru/roman-numerals ",
               description:
-                "Онлайн инструмент для перевода даты в римские цифры. Быстро и легко конвертируйте день, месяц и год в римский формат.",
+                "Онлайн инструмент для перевода чисел и дат в римские цифры и обратно. Простой и быстрый калькулятор для всех пользовательских сценариев.",
               applicationCategory: "UtilityApplication",
               operatingSystem: "Web",
               featureList: [
-                "Перевод дня в римские цифры",
-                "Перевод месяца в римские цифры",
-                "Перевод года в римские цифры",
+                "Перевод чисел в римские цифры",
+                "Преобразование даты в римский формат",
                 "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/roman-date-converter-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/roman-date-converter-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -106,12 +114,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

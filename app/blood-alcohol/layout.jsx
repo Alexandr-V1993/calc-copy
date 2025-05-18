@@ -8,19 +8,22 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Алкокалькулятор | Расчет алкоголя в крови",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор алкоголя в крови | Онлайн расчет уровня опьянения",
   description:
-    "Онлайн калькулятор для водителей, позволяющий оценить содержание алкоголя в крови и выдыхаемом воздухе, а также прогнозировать время полного вывода алкоголя из организма.",
+    "Онлайн калькулятор уровня алкоголя в крови от BoxCalculators. Рассчитайте концентрацию этанола после употребления спиртного и узнайте время его вывода из организма.",
   keywords: [
-    "алкокалькулятор для водителей",
-    "расчет алкоголя в крови",
-    "содержание алкоголя в крови",
-    "калькулятор алкоголя",
-    "прогноз времени вывода алкоголя",
+    "калькулятор алкоголя в крови",
+    "уровень алкоголя онлайн",
+    "bac калькулятор",
+    "вывод алкоголя из организма",
+    "допустимая норма за рулем",
+    "алкокалькулятор",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/bac-calculator",
+    canonical: "/blood-alcohol",
   },
   robots: {
     index: true,
@@ -32,25 +35,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Алкокалькулятор | Расчет алкоголя в крови",
+    title: "Калькулятор алкоголя в крови | BoxCalculators",
     description:
-      "Онлайн калькулятор для водителей, позволяющий оценить содержание алкоголя в крови и выдыхаемом воздухе, а также прогнозировать время полного вывода алкоголя из организма.",
-    url: "/bac-calculator",
+      "Рассчитайте уровень алкоголя в крови и прогнозируемое время трезвения. Инструмент для водителей, студентов и всех, кто хочет понять влияние алкоголя на организм.",
+    url: "/blood-alcohol",
     type: "website",
     images: [
       {
         url: "/images/bac-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Алкокалькулятор | Расчет алкоголя в крови",
+        alt: "Калькулятор алкоголя в крови от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Алкокалькулятор | Расчет алкоголя в крови",
+    title: "Калькулятор алкоголя в крови | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета содержания алкоголя в крови и прогнозирования времени его полного вывода из организма. Простой и удобный интерфейс.",
+      "Узнайте, сколько алкоголя в вашей крови, и через какое время вы будете трезвы. Полезно для водителей и учебных целей.",
     images: ["/images/bac-calculator-twitter.jpg"],
   },
 };
@@ -61,41 +64,43 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <link rel="canonical" href="https://boxcalculators.ru/blood-alcohol " />
+
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
-              name: "Алкокалькулятор",
-              url: "http://calcoffee.ru/bac-calculator",
+              name: "Калькулятор алкоголя в крови",
+              url: "https://boxcalculators.ru/blood-alcohol ",
               description:
-                "Онлайн инструмент для расчета содержания алкоголя в крови и прогнозирования времени его полного вывода из организма. Простой и удобный интерфейс.",
+                "Онлайн инструмент для расчёта содержания алкоголя в крови и времени его вывода. Подходит для водителей и образовательных целей.",
               applicationCategory: "HealthApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет алкоголя в крови",
-                "Прогноз времени вывода алкоголя",
+                "Расчёт уровня алкоголя в крови (BAC)",
+                "Прогноз времени трезвения",
                 "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/bac-calculator-og.jpg",
+              image: "https://boxcalculators.ru/images/bac-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -105,12 +110,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

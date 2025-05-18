@@ -32,30 +32,30 @@ function Perccent() {
 
   let url;
   if (obj.condition === "type1") {
-    url = "https://calcoffee.ru/api/calculate/percent-of-number";
+    url = "https://boxcalculators.ru/api/calculate/percent-of-number";
   }
 
   if (obj.condition === "increase") {
-    url = "https://calcoffee.ru/api/calculate/percent-change";
+    url = "https://boxcalculators.ru/api/calculate/percent-change";
   }
   if (obj.condition === "decrease") {
-    url = "https://calcoffee.ru/api/calculate/percent-change";
+    url = "https://boxcalculators.ru/api/calculate/percent-change";
   }
   if (obj.condition === "type4") {
-    url = "https://calcoffee.ru/api/calculate/percent-100";
+    url = "https://boxcalculators.ru/api/calculate/percent-100";
   }
   if (obj.condition === "type5") {
-    url = "https://calcoffee.ru/api/calculate/percent-difference";
+    url = "https://boxcalculators.ru/api/calculate/percent-difference";
     delete obj.percent;
     obj.condition = "increase";
   }
   if (obj.condition === "type6") {
-    url = "https://calcoffee.ru/api/calculate/percent-difference";
+    url = "https://boxcalculators.ru/api/calculate/percent-difference";
     delete obj.percent;
     obj.condition = "decrease";
   }
   if (obj.condition === "type7") {
-    url = "https://calcoffee.ru/api/calculate/percent-of";
+    url = "https://boxcalculators.ru/api/calculate/percent-of";
     delete obj.percent;
     delete obj.condition;
   }
@@ -67,7 +67,7 @@ function Perccent() {
       <TopForm
         title={"Калькулятор"}
         description={
-          "Рассчитайте онлайн процент от числа, на сколько процентов одно число больше или меньше другого, или сколько процентов составляет одно число от другого числа, а также прибавьте или вычтете процент к числу."
+          "Онлайн калькулятор процентов: рассчитайте процент от числа, на сколько одно число больше или меньше другого, процентное соотношение между числами, а также прибавьте или вычтете процент."
         }
         span={"процентов"}
       >

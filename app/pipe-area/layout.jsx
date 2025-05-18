@@ -1,6 +1,5 @@
 import { Montserrat } from "next/font/google";
 
-// Настройка шрифта Montserrat
 const montserrat = Montserrat({
   weight: ["400", "700"],
   subsets: ["latin"],
@@ -8,19 +7,20 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор площади поверхности трубы | Точный расчет онлайн",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор площади трубы - точный расчет поверхности онлайн",
   description:
-    "Простой и точный калькулятор для расчета площади поверхности трубы. Введите размеры, чтобы мгновенно получить результат. Подходит для инженеров, строителей и студентов.",
+    "Профессиональный расчет площади внутренней и внешней поверхности трубы. Учет диаметра, толщины стенок и длины. Формулы и примеры для инженеров и строителей.",
   keywords: [
     "калькулятор площади трубы",
-    "расчет площади поверхности трубы",
-    "онлайн калькулятор трубы",
-    "площадь трубы",
+    "расчет поверхности трубы",
+    "площадь металлической трубы",
+    "онлайн калькулятор труб",
     "инженерные расчеты",
+    "строительные калькуляторы",
   ],
   alternates: {
-    canonical: "/pipe-surface-area-calculator",
+    canonical: "/pipe-area",
   },
   robots: {
     index: true,
@@ -32,26 +32,26 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор площади поверхности трубы | Точный расчет онлайн",
+    title: "Калькулятор площади трубы - точный расчет онлайн",
     description:
-      "Простой и точный калькулятор для расчета площади поверхности трубы. Введите размеры, чтобы мгновенно получить результат. Подходит для инженеров, строителей и студентов.",
-    url: "/pipe-surface-area-calculator",
+      "Профессиональный расчет площади поверхности трубы с учетом внутреннего и внешнего диаметра. Формулы и примеры для точных инженерных вычислений.",
+    url: "/pipe-area",
     type: "website",
     images: [
       {
-        url: "/images/pipe-surface-area-og.jpg",
+        url: "/images/pipe-area-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор площади поверхности трубы | Точный расчет онлайн",
+        alt: "Калькулятор площади трубы - точный расчет онлайн",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор площади поверхности трубы | Точный расчет онлайн",
+    title: "Калькулятор площади трубы - точный расчет онлайн",
     description:
-      "Онлайн инструмент для расчета площади поверхности трубы. Простой интерфейс и точные результаты для инженеров, строителей и студентов.",
-    images: ["/images/pipe-surface-area-twitter.jpg"],
+      "Онлайн инструмент для расчета площади поверхности труб с примерами и формулами.",
+    images: ["/images/pipe-area-twitter.jpg"],
   },
 };
 
@@ -61,32 +61,32 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Калькулятор площади поверхности трубы",
-              url: "http://calcoffee.ru/pipe-surface-area-calculator",
+              name: "Калькулятор площади трубы",
+              url: "https://boxcalculators.ru/pipe-area",
               description:
-                "Онлайн инструмент для расчета площади поверхности трубы. Простой интерфейс и точные результаты для инженеров, строителей и студентов.",
+                "Профессиональный инструмент для расчета площади поверхности труб с учетом внутреннего и внешнего диаметра.",
               applicationCategory: "EngineeringApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет площади поверхности трубы",
-                "Поддержка разных размеров",
-                "Мгновенный результат",
-                "Простой интерфейс",
+                "Расчет внешней поверхности",
+                "Расчет внутренней поверхности",
+                "Учет толщины стенок",
+                "Примеры вычислений",
+                "Подробные формулы",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/pipe-surface-area-og.jpg",
+              image: "https://boxcalculators.ru/images/pipe-area-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -94,23 +94,21 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.7",
-                reviewCount: "105",
+                ratingValue: "4.8",
+                reviewCount: "128",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

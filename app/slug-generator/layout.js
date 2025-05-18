@@ -8,19 +8,22 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Генератор URL: Создание читаемых ссылок онлайн",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Генератор URL онлайн | Создание SEO-дружественных слагов",
   description:
-    "Используйте наш генератор URL для создания понятных и SEO-дружественных ссылок. Улучшите пользовательский опыт и видимость в поисковых системах с помощью удобного инструмента для генерации ЧПУ-адресов.",
+    "Создавайте понятные и оптимизированные URL-слаги за секунды. Бесплатный инструмент создания человекопонятных адресов для улучшения пользовательского опыта и повышения ранжирования в поисковых системах.",
   keywords: [
     "генератор URL",
-    "создание ЧПУ ссылок",
-    "генератор ссылок онлайн",
+    "создание ЧПУ",
+    "seo-оптимизация ссылок",
+    "человекопонятный URL",
+    "онлайн генератор слагов",
     "улучшение SEO",
-    "удобные URL",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
-    canonical: "/slugify",
+    canonical: "/slug-generator",
   },
   robots: {
     index: true,
@@ -32,25 +35,25 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Генератор URL: Создание читаемых ссылок онлайн",
+    title: "Генератор URL онлайн | BoxCalculators",
     description:
-      "Используйте наш генератор URL для создания понятных и SEO-дружественных ссылок. Улучшите пользовательский опыт и видимость в поисковых системах с помощью удобного инструмента для генерации ЧПУ-адресов.",
-    url: "/slugify",
+      "Инструмент для создания дружественных к поисковым системам URL-адресов. Повышает удобство навигации и улучшает SEO вашего сайта или приложения.",
+    url: "/slug-generator",
     type: "website",
     images: [
       {
         url: "/images/slugify-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Генератор URL: Создание читаемых ссылок онлайн",
+        alt: "Генератор URL от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Генератор URL: Создание читаемых ссылок онлайн",
+    title: "Генератор URL онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для создания понятных и SEO-оптимизированных URL. Улучшите пользовательский опыт и видимость в поисковых системах.",
+      "Создавайте читабельные и SEO-оптимизированные URL-адреса. Простой и быстрый инструмент для маркетологов, контент-мейкеров и веб-разработчиков.",
     images: ["/images/slugify-twitter.jpg"],
   },
 };
@@ -61,42 +64,47 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <link
+          rel="canonical"
+          href="https://boxcalculators.ru/slug-generator "
+        />
+
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Генератор URL",
-              url: "http://calcoffee.ru/slugify",
+              url: "https://boxcalculators.ru/slug-generator ",
               description:
-                "Онлайн инструмент для создания понятных и SEO-оптимизированных URL. Улучшите пользовательский опыт и видимость в поисковых системах.",
+                "Онлайн инструмент для создания человекопонятных и SEO-дружественных URL-адресов. Подходит для сайтов, блогов и веб-приложений.",
               applicationCategory: "SEOApplication",
               operatingSystem: "Web",
               featureList: [
                 "Генерация читаемых URL",
-                "Создание SEO-дружественных ссылок",
-                "Поддержка различных символов",
+                "Создание SEO-дружественных слагов",
                 "Мгновенный результат",
                 "Простой интерфейс",
+                "Автоматическое преобразование строки",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/slugify-og.jpg",
+              image: "https://boxcalculators.ru/images/slugify-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -106,12 +114,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

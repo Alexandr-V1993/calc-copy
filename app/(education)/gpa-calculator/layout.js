@@ -8,17 +8,19 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор оценок: расчет среднего балла и оценок",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор среднего балла | Онлайн расчет успеваемости",
   description:
-    "Используйте онлайн калькулятор оценок для быстрого расчета среднего балла и рекомендованных оценок. Идеально подходит для определения успеваемости ученика.",
+    "Рассчитайте средний балл зачета, успеваемости или GPA за секунды. Подходит для школьников, студентов и преподавателей. Простой и удобный инструмент.",
   keywords: [
-    "калькулятор оценок",
-    "расчет среднего балла",
-    "онлайн калькулятор успеваемости",
+    "калькулятор среднего балла",
+    "расчет успеваемости онлайн",
     "оценка успеваемости",
-    "средний балл",
-    "рекомендации по оценкам",
+    "GPA калькулятор",
+    "средний балл по оценкам",
+    "онлайн калькулятор оценок",
+    "boxcalculators",
+    "boxcalculators.ru",
   ],
   alternates: {
     canonical: "/gpa-calculator",
@@ -33,9 +35,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор оценок: расчет среднего балла и оценок",
+    title: "Калькулятор среднего балла | BoxCalculators",
     description:
-      "Используйте онлайн калькулятор оценок для быстрого расчета среднего балла и рекомендованных оценок. Идеально подходит для определения успеваемости ученика.",
+      "Онлайн инструмент для расчёта средней оценки, GPA и других показателей успеваемости. Бесплатный и точный калькулятор для учеников, студентов и педагогов.",
     url: "/gpa-calculator",
     type: "website",
     images: [
@@ -43,15 +45,15 @@ export const metadata = {
         url: "/images/gpa-calculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор оценок: расчет среднего балла и оценок",
+        alt: "Калькулятор среднего балла от BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор оценок: расчет среднего балла и оценок",
+    title: "Калькулятор среднего балла | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета среднего балла и рекомендованных оценок. Помогает определить успеваемость ученика.",
+      "Рассчитывайте успеваемость быстро и точно. Инструмент для школьников, студентов и преподавателей. Простой интерфейс и мгновенный результат.",
     images: ["/images/gpa-calculator-twitter.jpg"],
   },
 };
@@ -62,41 +64,46 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <link
+          rel="canonical"
+          href="https://boxcalculators.ru/gpa-calculator "
+        />
+
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
-              name: "Калькулятор оценок",
-              url: "http://calcoffee.ru/gpa-calculator",
+              name: "Калькулятор среднего балла",
+              url: "https://boxcalculators.ru/gpa-calculator ",
               description:
-                "Онлайн инструмент для расчета среднего балла и рекомендованных оценок. Помогает определить успеваемость ученика.",
+                "Онлайн инструмент для расчёта среднего балла, успеваемости и рекомендаций по оценкам. Помогает определить успеваемость ученика или студента.",
               applicationCategory: "EducationalApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет среднего балла",
-                "Рекомендации по оценкам",
-                "Онлайн-расчет",
+                "Расчёт среднего балла",
+                "Поддержка российской и международной систем оценок",
+                "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/gpa-calculator-og.jpg",
+              image: "https://boxcalculators.ru/images/gpa-calculator-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
               },
               aggregateRating: {
@@ -106,12 +113,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }
