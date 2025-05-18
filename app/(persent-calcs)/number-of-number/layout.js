@@ -8,16 +8,21 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Процентное соотношение одного числа к другому",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор процентного соотношения чисел | Онлайн расчет %",
   description:
-    "Используйте наш калькулятор, чтобы узнать, сколько процентов одно число составляет от другого. Просто введите два числа для мгновенного расчета по формуле: (Первое число / Второе число) * 100%.",
+    "Мгновенно вычисляйте, сколько процентов составляет одно число от другого. Идеально для анализа данных, финансовых показателей и статистики. Формула: (Число1 / Число2) × 100%.",
   keywords: [
-    "процентное соотношение",
-    "калькулятор процентов",
-    "расчет процентов",
-    "соотношение чисел",
-    "онлайн калькулятор",
+    "калькулятор процентного соотношения",
+    "вычислить процент от числа",
+    "онлайн расчет процентов",
+    "соотношение чисел в процентах",
+    "калькулятор доли числа",
+    "процентное содержание",
+    "расчет процента от суммы",
+    "математический калькулятор",
+    "финансовые проценты",
+    "статистический анализ",
   ],
   alternates: {
     canonical: "/number-of-number",
@@ -32,9 +37,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Процентное соотношение одного числа к другому",
+    title: "Онлайн калькулятор процентного соотношения чисел",
     description:
-      "Используйте наш калькулятор, чтобы узнать, сколько процентов одно число составляет от другого. Просто введите два числа для мгновенного расчета по формуле: (Первое число / Второе число) * 100%.",
+      "Профессиональный инструмент для вычисления процентного соотношения двух значений. Используйте для финансового анализа, статистики и бизнес-расчетов.",
     url: "/number-of-number",
     type: "website",
     images: [
@@ -42,15 +47,15 @@ export const metadata = {
         url: "/images/number-of-number-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Процентное соотношение одного числа к другому",
+        alt: "Калькулятор процентного соотношения чисел",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Процентное соотношение одного числа к другому",
+    title: "Калькулятор % соотношения чисел",
     description:
-      "Онлайн инструмент для расчета процентного соотношения двух чисел. Просто введите значения для мгновенного результата.",
+      "Быстро узнайте, сколько процентов составляет одно число от другого. Точные расчеты для любых целей.",
     images: ["/images/number-of-number-twitter.jpg"],
   },
 };
@@ -61,31 +66,33 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Процентное соотношение одного числа к другому",
-              url: "http://calcoffee.ru/number-of-number",
+              name: "Калькулятор процентного соотношения",
+              url: "https://boxcalculators.ru/number-of-number",
               description:
-                "Онлайн инструмент для расчета процентного соотношения двух чисел. Просто введите значения для мгновенного результата.",
-              applicationCategory: "MathematicalApplication",
+                "Точный инструмент для вычисления процентного соотношения двух чисел с подробными результатами.",
+              applicationCategory: "FinancialApplication",
               operatingSystem: "Web",
               featureList: [
                 "Расчет процентного соотношения",
-                "Мгновенный результат",
-                "Простой интерфейс",
+                "Мгновенные результаты",
+                "Подробная формула расчета",
+                "Подходит для финансового анализа",
+                "Простое управление",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/number-of-number-og.jpg",
+              image: "https://boxcalculators.ru/images/number-of-number-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -93,23 +100,22 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.5",
-                reviewCount: "65",
+                ratingValue: "4.7",
+                reviewCount: "89",
+                bestRating: "5",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

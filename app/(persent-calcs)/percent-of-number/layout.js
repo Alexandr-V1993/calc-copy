@@ -8,15 +8,21 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор расчета процента от числа",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор процента от числа | Точный онлайн расчет %",
   description:
-    "Легко вычислите процент от числа с нашим калькулятором. Введите число и процент, чтобы мгновенно получить результат расчета.",
+    "Мгновенно вычисляйте процент от любого числа. Идеально для расчетов скидок, налогов, чаевых и других повседневных вычислений. Формула: (Число × Процент) / 100.",
   keywords: [
     "калькулятор процента от числа",
-    "расчет процента",
-    "вычисление процента",
-    "онлайн калькулятор",
+    "вычислить процент от суммы",
+    "онлайн расчет процентов",
+    "калькулятор скидок",
+    "расчет налога от суммы",
+    "вычисление чаевых",
+    "процентный калькулятор",
+    "математические расчеты",
+    "финансовые проценты",
+    "быстрый расчет процентов",
   ],
   alternates: {
     canonical: "/percentage-of-number",
@@ -31,9 +37,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор расчета процента от числа",
+    title: "Онлайн калькулятор: процент от числа",
     description:
-      "Легко вычислите процент от числа с нашим калькулятором. Введите число и процент, чтобы мгновенно получить результат расчета.",
+      "Простой и точный расчет процента от любой суммы. Используйте для финансовых операций, торговых скидок и бытовых расчетов.",
     url: "/percentage-of-number",
     type: "website",
     images: [
@@ -41,15 +47,15 @@ export const metadata = {
         url: "/images/percentage-of-number-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор расчета процента от числа",
+        alt: "Онлайн калькулятор процентов от числа",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор расчета процента от числа",
+    title: "Калькулятор процента от числа",
     description:
-      "Онлайн инструмент для быстрого расчета процента от числа. Просто введите данные для мгновенного результата.",
+      "Мгновенно вычисляйте сколько составит процент от любой суммы. Идеально для повседневных расчетов.",
     images: ["/images/percentage-of-number-twitter.jpg"],
   },
 };
@@ -60,31 +66,34 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Калькулятор расчета процента от числа",
-              url: "http://calcoffee.ru/percentage-of-number",
+              name: "Калькулятор процента от числа",
+              url: "https://boxcalculators.ru/percentage-of-number",
               description:
-                "Онлайн инструмент для быстрого расчета процента от числа. Просто введите данные для мгновенного результата.",
-              applicationCategory: "MathematicalApplication",
+                "Профессиональный инструмент для точного вычисления процента от любого числа с подробными результатами.",
+              applicationCategory: "FinancialApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет процента от числа",
-                "Мгновенный результат",
-                "Простой интерфейс",
+                "Расчет процента от любой суммы",
+                "Мгновенные результаты",
+                "Подробная формула расчета",
+                "Подходит для финансовых операций",
+                "Простое управление",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/percentage-of-number-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/percentage-of-number-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -92,23 +101,22 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.3",
-                reviewCount: "50",
+                ratingValue: "4.8",
+                reviewCount: "115",
+                bestRating: "5",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

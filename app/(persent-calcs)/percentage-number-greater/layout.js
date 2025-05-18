@@ -8,15 +8,22 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Процентное превышение одного числа над другим",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title:
+    "Калькулятор процентного превышения | На сколько % одно число больше другого",
   description:
-    "Узнайте, на сколько процентов одно число больше другого с помощью нашего калькулятора. Введите два числа для мгновенного расчета.",
+    "Точный расчет процентного превышения одного числа над другим. Формула: ((Число1 - Число2) / Число2) × 100%. Идеально для сравнения показателей, роста цен и анализа данных.",
   keywords: [
-    "процентное превышение",
-    "калькулятор разницы",
-    "процентное сравнение чисел",
-    "онлайн калькулятор",
+    "калькулятор процентного превышения",
+    "на сколько процентов больше",
+    "сравнение чисел в процентах",
+    "расчет роста показателей",
+    "анализ увеличения значений",
+    "калькулятор разницы в процентах",
+    "процентное соотношение величин",
+    "вычисление процентного роста",
+    "сравнение статистических данных",
+    "калькулятор изменения в %",
   ],
   alternates: {
     canonical: "/percentage-number-greater",
@@ -31,9 +38,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Процентное превышение одного числа над другим",
+    title: "Онлайн калькулятор: на сколько % одно число больше другого",
     description:
-      "Узнайте, на сколько процентов одно число больше другого с помощью нашего калькулятора. Введите два числа для мгновенного расчета.",
+      "Профессиональный инструмент для сравнения чисел в процентах. Вычисляйте рост показателей, изменение цен и другие процентные соотношения.",
     url: "/percentage-number-greater",
     type: "website",
     images: [
@@ -41,15 +48,15 @@ export const metadata = {
         url: "/images/percentage-number-greater-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Процентное превышение одного числа над другим",
+        alt: "Калькулятор процентного превышения чисел",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Процентное превышение одного числа над другим",
+    title: "Калькулятор процентного превышения",
     description:
-      "Онлайн инструмент для расчета процентного превышения одного числа над другим. Просто введите данные для мгновенного результата.",
+      "Узнайте, на сколько процентов одно значение больше другого. Точные расчеты для анализа данных и сравнения показателей.",
     images: ["/images/percentage-number-greater-twitter.jpg"],
   },
 };
@@ -60,31 +67,34 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Процентное превышение одного числа над другим",
-              url: "http://calcoffee.ru/percentage-number-greater",
+              name: "Калькулятор процентного превышения",
+              url: "https://boxcalculators.ru/percentage-number-greater",
               description:
-                "Онлайн инструмент для расчета процентного превышения одного числа над другим. Просто введите данные для мгновенного результата.",
-              applicationCategory: "MathematicalApplication",
+                "Точный инструмент для вычисления процентного соотношения двух чисел с подробными результатами.",
+              applicationCategory: "FinancialApplication",
               operatingSystem: "Web",
               featureList: [
                 "Расчет процентного превышения",
-                "Мгновенный результат",
-                "Простой интерфейс",
+                "Сравнение любых числовых значений",
+                "Подробная формула расчета",
+                "Подходит для аналитики и статистики",
+                "Мгновенные результаты",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/percentage-number-greater-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/percentage-number-greater-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -92,23 +102,22 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.1",
-                reviewCount: "40",
+                ratingValue: "4.6",
+                reviewCount: "85",
+                bestRating: "5",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

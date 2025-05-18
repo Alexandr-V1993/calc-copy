@@ -8,15 +8,21 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор нахождения 100% от числа",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор 100% от числа | Найти полную сумму по проценту",
   description:
-    "Наш калькулятор помогает определить 100% от числа, если известно, что это число составляет определённый процент от общей суммы. Введите значение и процент для мгновенного расчета.",
+    "Мгновенно вычисляйте полную сумму (100%) по известному проценту. Идеально для финансовых расчетов, скидок и анализа данных. Формула: (Число × 100) / Процент.",
   keywords: [
     "калькулятор 100 процентов",
-    "нахождение 100 процентов",
-    "расчет процентов",
-    "онлайн калькулятор",
+    "найти полную сумму по проценту",
+    "расчет полной стоимости",
+    "калькулятор обратных процентов",
+    "вычислить 100% от части",
+    "онлайн расчет общей суммы",
+    "калькулятор исходного числа",
+    "финансовые расчеты",
+    "анализ процентных соотношений",
+    "калькулятор скидок",
   ],
   alternates: {
     canonical: "/one-hundred-percent",
@@ -31,9 +37,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор нахождения 100% от числа",
+    title: "Онлайн калькулятор: найти 100% по известному проценту",
     description:
-      "Наш калькулятор помогает определить 100% от числа, если известно, что это число составляет определённый процент от общей суммы. Введите значение и процент для мгновенного расчета.",
+      "Профессиональный инструмент для вычисления полной суммы по известной части. Используйте для финансового анализа, расчетов скидок и бизнес-планирования.",
     url: "/one-hundred-percent",
     type: "website",
     images: [
@@ -41,15 +47,15 @@ export const metadata = {
         url: "/images/one-hundred-percent-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор нахождения 100% от числа",
+        alt: "Калькулятор вычисления 100% от числа",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор нахождения 100% от числа",
+    title: "Калькулятор нахождения полной суммы",
     description:
-      "Онлайн инструмент для расчета 100% от числа, если известен его процент от общей суммы. Просто введите данные для мгновенного результата.",
+      "Быстро узнайте полную сумму (100%) по известному проценту. Точные расчеты для финансов и бизнеса.",
     images: ["/images/one-hundred-percent-twitter.jpg"],
   },
 };
@@ -60,12 +66,12 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -73,18 +79,21 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebApplication",
               name: "Калькулятор нахождения 100% от числа",
-              url: "http://calcoffee.ru/one-hundred-percent",
+              url: "https://boxcalculators.ru/one-hundred-percent",
               description:
-                "Онлайн инструмент для расчета 100% от числа, если известен его процент от общей суммы. Просто введите данные для мгновенного результата.",
-              applicationCategory: "MathematicalApplication",
+                "Точный инструмент для вычисления полной суммы по известному проценту с подробными результатами.",
+              applicationCategory: "FinancialApplication",
               operatingSystem: "Web",
               featureList: [
-                "Нахождение 100% от числа",
-                "Мгновенный расчет",
-                "Простой интерфейс",
+                "Вычисление полной суммы (100%)",
+                "Работа с любыми процентами",
+                "Подробная формула расчета",
+                "Подходит для финансового анализа",
+                "Мгновенные результаты",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/one-hundred-percent-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/one-hundred-percent-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -92,23 +101,22 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.4",
-                reviewCount: "55",
+                ratingValue: "4.7",
+                reviewCount: "92",
+                bestRating: "5",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

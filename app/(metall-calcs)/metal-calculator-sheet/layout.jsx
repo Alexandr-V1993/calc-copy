@@ -8,16 +8,18 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор веса листового металла",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор веса листового металла | Точный расчет по ГОСТ 19903",
   description:
-    "Рассчитайте вес стального листа по ГОСТ 19903 с помощью нашего калькулятора. Введите размеры листа для получения точного веса.",
+    "Мгновенный расчет веса стального листа по ГОСТ 19903. Введите длину, ширину и толщину листа для получения точного результата в килограммах.",
   keywords: [
-    "калькулятор веса листового металла",
-    "вес стального листа",
-    "ГОСТ 19903",
-    "расчет веса листа",
-    "онлайн калькулятор",
+    "калькулятор листового металла",
+    "расчет веса стального листа",
+    "вес металлопроката",
+    "ГОСТ 19903 калькулятор",
+    "онлайн расчет металлического листа",
+    "масса стального листа",
+    "металлокалькулятор онлайн",
   ],
   alternates: {
     canonical: "/metal-calculator-sheet",
@@ -32,9 +34,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор веса листового металла",
+    title: "Онлайн калькулятор веса листового металла",
     description:
-      "Рассчитайте вес стального листа по ГОСТ 19903 с помощью нашего калькулятора. Введите размеры листа для получения точного веса.",
+      "Точный расчет веса стальных листов по ГОСТ 19903. Укажите параметры листа и получите результат в кг.",
     url: "/metal-calculator-sheet",
     type: "website",
     images: [
@@ -42,15 +44,15 @@ export const metadata = {
         url: "/images/metal-calculator-sheet-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор веса листового металла",
+        alt: "Калькулятор веса стального листа",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор веса листового металла",
+    title: "Калькулятор листового металла",
     description:
-      "Онлайн инструмент для расчета веса стального листа по ГОСТ 19903. Введите размеры листа для получения точного веса.",
+      "Рассчитайте вес стального листа за секунды. Точные результаты по ГОСТ 19903 для металлопроката.",
     images: ["/images/metal-calculator-sheet-twitter.jpg"],
   },
 };
@@ -61,12 +63,12 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -74,19 +76,21 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebApplication",
               name: "Калькулятор веса листового металла",
-              url: "http://calcoffee.ru/metal-calculator-sheet",
+              url: "https://boxcalculators.ru/metal-calculator-sheet",
               description:
-                "Онлайн инструмент для расчета веса стального листа по ГОСТ 19903. Введите размеры листа для получения точного веса.",
+                "Профессиональный инструмент для расчета веса стальных листов по ГОСТ 19903.",
               applicationCategory: "EngineeringApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет веса листового металла",
+                "Расчет для стальных листов",
                 "Поддержка ГОСТ 19903",
-                "Онлайн-расчет",
-                "Простой интерфейс",
+                "Мгновенные результаты",
+                "Точные вычисления",
+                "Удобный ввод параметров",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/metal-calculator-sheet-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/metal-calculator-sheet-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -94,18 +98,16 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

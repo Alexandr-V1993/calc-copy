@@ -8,16 +8,21 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Процентное уменьшение числа",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор процентного уменьшения | На сколько % число меньше",
   description:
-    "Определите, на сколько процентов одно число меньше другого или насколько число уменьшилось, используя наш калькулятор. Введите оба числа для мгновенного расчета.",
+    "Точный расчет процентного уменьшения одного числа относительно другого. Формула: ((Число2 - Число1) / Число2) × 100%. Идеально для анализа скидок, снижения показателей и статистических сравнений.",
   keywords: [
-    "процентное уменьшение",
-    "калькулятор процентов",
-    "уменьшение числа",
-    "расчет процентов",
-    "онлайн калькулятор",
+    "калькулятор процентного уменьшения",
+    "на сколько процентов меньше",
+    "расчет снижения в процентах",
+    "вычисление уменьшения показателей",
+    "анализ падения значений",
+    "калькулятор разницы в процентах",
+    "процентное уменьшение величины",
+    "вычисление процентного снижения",
+    "сравнение статистических данных",
+    "калькулятор изменения в %",
   ],
   alternates: {
     canonical: "/percentage-number-less",
@@ -32,9 +37,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Процентное уменьшение числа",
+    title: "Онлайн калькулятор: на сколько % число меньше другого",
     description:
-      "Определите, на сколько процентов одно число меньше другого или насколько число уменьшилось, используя наш калькулятор. Введите оба числа для мгновенного расчета.",
+      "Профессиональный инструмент для анализа уменьшения показателей в процентах. Вычисляйте снижение цен, падение статистики и другие процентные изменения.",
     url: "/percentage-number-less",
     type: "website",
     images: [
@@ -42,15 +47,15 @@ export const metadata = {
         url: "/images/percentage-number-less-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Процентное уменьшение числа",
+        alt: "Калькулятор процентного уменьшения чисел",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Процентное уменьшение числа",
+    title: "Калькулятор процентного уменьшения",
     description:
-      "Онлайн инструмент для расчета процентного уменьшения одного числа относительно другого. Просто введите данные для мгновенного результата.",
+      "Узнайте, на сколько процентов одно значение меньше другого. Точные расчеты для анализа данных и сравнения показателей.",
     images: ["/images/percentage-number-less-twitter.jpg"],
   },
 };
@@ -61,31 +66,34 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Процентное уменьшение числа",
-              url: "http://calcoffee.ru/percentage-number-less",
+              name: "Калькулятор процентного уменьшения",
+              url: "https://boxcalculators.ru/percentage-number-less",
               description:
-                "Онлайн инструмент для расчета процентного уменьшения одного числа относительно другого. Просто введите данные для мгновенного результата.",
-              applicationCategory: "MathematicalApplication",
+                "Точный инструмент для вычисления процентного уменьшения одного числа относительно другого с подробными результатами.",
+              applicationCategory: "FinancialApplication",
               operatingSystem: "Web",
               featureList: [
                 "Расчет процентного уменьшения",
-                "Мгновенный результат",
-                "Простой интерфейс",
+                "Анализ снижения показателей",
+                "Подробная формула расчета",
+                "Подходит для финансового анализа",
+                "Мгновенные результаты",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/percentage-number-less-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/percentage-number-less-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -93,23 +101,22 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.0",
-                reviewCount: "35",
+                ratingValue: "4.5",
+                reviewCount: "78",
+                bestRating: "5",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

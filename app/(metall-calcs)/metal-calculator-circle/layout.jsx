@@ -8,7 +8,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
+  metadataBase: new URL("https://boxcalculators.ru"),
   title: "Калькулятор веса стального круга",
   description:
     "Рассчитайте вес стального круга по его диаметру с помощью нашего калькулятора. Введите диаметр, чтобы получить теоретический вес изделия.",
@@ -60,9 +60,9 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
         {/* Добавление структурированных данных Schema.org */}
@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebApplication",
               name: "Калькулятор веса стального круга",
-              url: "http://calcoffee.ru/metal-calculator-circle",
+              url: "https://boxcalculators.ru/metal-calculator-circle",
               description:
                 "Онлайн инструмент для расчета веса стального круга по его диаметру. Получите теоретический вес изделия.",
               applicationCategory: "EngineeringApplication",
@@ -84,7 +84,8 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/metal-calculator-circle-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/metal-calculator-circle-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -92,18 +93,16 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

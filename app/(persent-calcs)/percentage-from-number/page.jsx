@@ -51,7 +51,7 @@ function PercentageFromNum() {
       >
         <PercentageFromForm
           obj={obj}
-          url={"https://calcoffee.ru/api/calculate/percent-change"}
+          url={"https://boxcalculators.ru/api/calculate/percent-change"}
         >
           <div className="label-row">
             <div className="row-vans-bottom">

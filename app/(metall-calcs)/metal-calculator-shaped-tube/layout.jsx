@@ -8,16 +8,18 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор веса профильной трубы",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор веса профильной трубы | Точный расчет по ГОСТ",
   description:
-    "Рассчитайте вес 1 метра профильных труб (квадратных и прямоугольных) по ГОСТ. Введите длину, высоту и толщину стенки для точного расчета.",
+    "Онлайн расчет веса квадратных и прямоугольных профильных труб. Укажите размеры и толщину стенки для мгновенного получения точного результата по ГОСТ.",
   keywords: [
-    "калькулятор веса профильной трубы",
+    "калькулятор профильной трубы",
     "вес квадратной трубы",
-    "вес прямоугольной трубы",
-    "расчет массы профиля",
-    "ГОСТ профильная труба",
+    "расчет прямоугольной трубы",
+    "масса профиля онлайн",
+    "ГОСТ 8645-68",
+    "ГОСТ 8639-82",
+    "металлокалькулятор",
   ],
   alternates: {
     canonical: "/metal-calculator-shaped-tube",
@@ -32,9 +34,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор веса профильной трубы",
+    title: "Калькулятор веса профильных труб квадратных и прямоугольных",
     description:
-      "Рассчитайте вес 1 метра профильных труб (квадратных и прямоугольных) по ГОСТ. Введите длину, высоту и толщину стенки для точного расчета.",
+      "Точный расчет веса 1 погонного метра профильных труб по ГОСТ. Введите параметры и получите результат мгновенно.",
     url: "/metal-calculator-shaped-tube",
     type: "website",
     images: [
@@ -42,15 +44,15 @@ export const metadata = {
         url: "/images/metal-calculator-shaped-tube-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор веса профильной трубы",
+        alt: "Онлайн калькулятор веса профильных труб",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор веса профильной трубы",
+    title: "Калькулятор профильных труб",
     description:
-      "Онлайн инструмент для расчета веса 1 метра профильных труб (квадратных и прямоугольных). Укажите длину, высоту и толщину стенки для точного расчета по ГОСТ.",
+      "Рассчитайте вес квадратных и прямоугольных труб за секунды. Точные результаты по ГОСТ для строительства и металлоконструкций.",
     images: ["/images/metal-calculator-shaped-tube-twitter.jpg"],
   },
 };
@@ -61,32 +63,34 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Калькулятор веса профильной трубы",
-              url: "http://calcoffee.ru/metal-calculator-shaped-tube",
+              name: "Калькулятор профильных труб",
+              url: "https://boxcalculators.ru/metal-calculator-shaped-tube",
               description:
-                "Онлайн инструмент для расчета веса 1 метра профильных труб (квадратных и прямоугольных). Укажите длину, высоту и толщину стенки для точного расчета по ГОСТ.",
+                "Профессиональный инструмент для расчета веса квадратных и прямоугольных профильных труб по ГОСТ.",
               applicationCategory: "EngineeringApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет веса профильных труб",
-                "Поддержка ГОСТ",
-                "Онлайн-расчет",
-                "Простой интерфейс",
+                "Расчет для квадратных и прямоугольных труб",
+                "Поддержка ГОСТ 8645-68 и 8639-82",
+                "Мгновенные результаты",
+                "Точные вычисления",
+                "Удобный интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/metal-calculator-shaped-tube-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/metal-calculator-shaped-tube-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -94,18 +98,16 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

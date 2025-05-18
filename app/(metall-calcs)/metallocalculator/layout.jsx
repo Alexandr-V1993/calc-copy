@@ -8,16 +8,22 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Металлокалькулятор: расчет веса металла онлайн",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title:
+    "Металлокалькулятор онлайн | Точный расчет веса металлопроката по ГОСТ",
   description:
-    "Рассчитайте вес изделий металлопроката по ГОСТ, используя наш онлайн калькулятор. Введите параметры и получите точный расчет.",
+    "Профессиональный расчет веса всех видов металлопроката: трубы, листы, уголки, швеллеры. Мгновенные результаты по ГОСТ с учетом марки стали.",
   keywords: [
-    "металлокалькулятор",
+    "металлокалькулятор онлайн",
     "расчет веса металла",
-    "ГОСТ",
     "калькулятор металлопроката",
-    "онлайн калькулятор веса",
+    "вес стали по ГОСТ",
+    "онлайн расчет металлоконструкций",
+    "калькулятор веса труб",
+    "расчет массы профиля",
+    "металлический калькулятор",
+    "вес арматуры",
+    "расчет листового металла",
   ],
   alternates: {
     canonical: "/metallocalculator",
@@ -32,9 +38,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Металлокалькулятор: расчет веса металла онлайн",
+    title: "Онлайн металлокалькулятор для всех видов металлопроката",
     description:
-      "Рассчитайте вес изделий металлопроката по ГОСТ, используя наш онлайн калькулятор. Введите параметры и получите точный расчет.",
+      "Точный расчет веса труб, листов, профилей и других металлоизделий. Поддержка всех ГОСТ стандартов для точных результатов.",
     url: "/metallocalculator",
     type: "website",
     images: [
@@ -42,15 +48,15 @@ export const metadata = {
         url: "/images/metallocalculator-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Металлокалькулятор: расчет веса металла онлайн",
+        alt: "Онлайн калькулятор веса металлопроката",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Металлокалькулятор: расчет веса металла онлайн",
+    title: "Полный металлокалькулятор онлайн",
     description:
-      "Онлайн инструмент для расчета веса изделий металлопроката по ГОСТ. Введите параметры для точного расчета.",
+      "Рассчитайте вес любого металлопроката за секунды. Точные результаты для труб, листов, профилей и других изделий.",
     images: ["/images/metallocalculator-twitter.jpg"],
   },
 };
@@ -61,32 +67,35 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Металлокалькулятор: расчет веса металла онлайн",
-              url: "http://calcoffee.ru/metallocalculator",
+              name: "Металлокалькулятор онлайн",
+              url: "https://boxcalculators.ru/metallocalculator",
               description:
-                "Онлайн инструмент для расчета веса изделий металлопроката по ГОСТ. Введите параметры для точного расчета.",
+                "Комплексный инструмент для расчета веса всех видов металлопроката с учетом ГОСТ стандартов.",
               applicationCategory: "EngineeringApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет веса металлопроката",
-                "Поддержка ГОСТ",
-                "Онлайн-расчет",
-                "Простой интерфейс",
+                "Расчет для всех видов металлопроката",
+                "Поддержка актуальных ГОСТ",
+                "Мгновенные результаты",
+                "Точные вычисления массы",
+                "Учет марки стали",
+                "Расчет стоимости по весу",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/metallocalculator-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/metallocalculator-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -94,18 +103,16 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

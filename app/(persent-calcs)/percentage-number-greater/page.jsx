@@ -51,7 +51,7 @@ function PercentageNumGreater() {
       >
         <PercentageGreaterForm
           obj={obj}
-          url={"https://calcoffee.ru/api/calculate/percent-difference"}
+          url={"https://boxcalculators.ru/api/calculate/percent-difference"}
         >
           <div className="label-row">
             <div className="row-vans-bottom">

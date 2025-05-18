@@ -8,16 +8,20 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор веса стальной ленты",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор веса стальной ленты | Точный расчет полосового проката",
   description:
-    "Рассчитайте вес стальной ленты по ГОСТ или другим стандартам. Введите размеры полосы для получения точного веса.",
+    "Мгновенный расчет веса стальной полосы по ГОСТ 103-2006. Введите ширину, толщину и длину ленты для получения точного веса в килограммах.",
   keywords: [
-    "калькулятор веса стальной ленты",
-    "вес стальной полосы",
-    "ГОСТ стальная лента",
-    "расчет веса полосы",
-    "онлайн калькулятор",
+    "калькулятор стальной ленты",
+    "вес полосового проката",
+    "расчет веса металлической полосы",
+    "ГОСТ 103-2006 калькулятор",
+    "онлайн расчет стальной ленты",
+    "масса металлополосы",
+    "металлокалькулятор лента",
+    "вес горячекатаной полосы",
+    "расчет веса холоднокатаной ленты",
   ],
   alternates: {
     canonical: "/metal-calculator-strip",
@@ -32,9 +36,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор веса стальной ленты",
+    title: "Онлайн калькулятор веса стальной ленты",
     description:
-      "Рассчитайте вес стальной ленты по ГОСТ или другим стандартам. Введите размеры полосы для получения точного веса.",
+      "Точный расчет веса полосового проката по ГОСТ 103-2006. Укажите параметры ленты и получите результат в кг.",
     url: "/metal-calculator-strip",
     type: "website",
     images: [
@@ -42,15 +46,15 @@ export const metadata = {
         url: "/images/metal-calculator-strip-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор веса стальной ленты",
+        alt: "Калькулятор веса стальной ленты и полосы",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор веса стальной ленты",
+    title: "Калькулятор полосового проката",
     description:
-      "Онлайн инструмент для расчета веса стальной ленты. Поддержка ГОСТ и других стандартов.",
+      "Рассчитайте вес стальной ленты за секунды. Точные результаты по ГОСТ 103-2006 для металлопроката.",
     images: ["/images/metal-calculator-strip-twitter.jpg"],
   },
 };
@@ -61,12 +65,12 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -74,19 +78,21 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebApplication",
               name: "Калькулятор веса стальной ленты",
-              url: "http://calcoffee.ru/metal-calculator-strip",
+              url: "https://boxcalculators.ru/metal-calculator-strip",
               description:
-                "Онлайн инструмент для расчета веса стальной ленты по ГОСТ или другим стандартам. Введите размеры полосы для получения точного веса.",
+                "Профессиональный инструмент для расчета веса полосового проката по ГОСТ 103-2006.",
               applicationCategory: "EngineeringApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет веса стальной ленты",
-                "Поддержка ГОСТ",
-                "Онлайн-расчет",
-                "Простой интерфейс",
+                "Расчет для горячекатаных и холоднокатаных лент",
+                "Поддержка ГОСТ 103-2006",
+                "Мгновенные результаты",
+                "Точные вычисления массы",
+                "Учет длины проката",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/metal-calculator-strip-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/metal-calculator-strip-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -94,18 +100,16 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

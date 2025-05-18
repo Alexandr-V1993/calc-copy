@@ -50,7 +50,7 @@ function PercentNum() {
       >
         <PercentNumForm
           obj={obj}
-          url={"https://calcoffee.ru/api/calculate/percent-of-number"}
+          url={"https://boxcalculators.ru/api/calculate/percent-of-number"}
         >
           <div className="label-row">
             <div className="row-vans-bottom">

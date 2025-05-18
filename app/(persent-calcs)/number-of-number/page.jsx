@@ -49,7 +49,7 @@ function PercentageNumOfNum() {
       >
         <PercentageNamOfNumForm
           obj={obj}
-          url={"https://calcoffee.ru/api/calculate/percent-of"}
+          url={"https://boxcalculators.ru/api/calculate/percent-of"}
         >
           <div className="label-row">
             <div className="row-vans-bottom">

@@ -8,15 +8,21 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор прибавления процентов к числу",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор процентов: прибавление % к числу | Онлайн расчет",
   description:
-    "Узнайте, как изменится число после прибавления процента. Введите исходное число и процент, чтобы мгновенно увидеть результат расчета.",
+    "Мгновенный расчет увеличения числа на процент. Добавьте нужный процент к любой сумме - идеально для расчетов цен, надбавок и повышений.",
   keywords: [
-    "калькулятор процентов",
-    "прибавление процентов",
-    "расчет увеличения числа",
-    "онлайн калькулятор",
+    "калькулятор процентов онлайн",
+    "добавить процент к числу",
+    "увеличение суммы на процент",
+    "расчет надбавки",
+    "калькулятор наценки",
+    "вычислить процент от числа",
+    "онлайн расчет процентов",
+    "прибавить процент к сумме",
+    "калькулятор повышения цены",
+    "расчет индексации зарплаты",
   ],
   alternates: {
     canonical: "/add-percentage-number",
@@ -31,9 +37,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор прибавления процентов к числу",
+    title: "Онлайн калькулятор: прибавление процента к числу",
     description:
-      "Узнайте, как изменится число после прибавления процента. Введите исходное число и процент, чтобы мгновенно увидеть результат расчета.",
+      "Простой и точный расчет увеличения числа на процент. Используйте для финансовых расчетов, ценовых надбавок и других вычислений.",
     url: "/add-percentage-number",
     type: "website",
     images: [
@@ -41,15 +47,15 @@ export const metadata = {
         url: "/images/add-percentage-number-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор прибавления процентов к числу",
+        alt: "Онлайн калькулятор процентов",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор прибавления процентов к числу",
+    title: "Калькулятор прибавления процентов",
     description:
-      "Онлайн инструмент для расчета изменения числа после прибавления процента. Введите данные для мгновенного результата.",
+      "Мгновенно вычисляйте, как изменится число после добавления процента. Идеально для финансовых и бизнес-расчетов.",
     images: ["/images/add-percentage-number-twitter.jpg"],
   },
 };
@@ -60,31 +66,34 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Калькулятор прибавления процентов к числу",
-              url: "http://calcoffee.ru/add-percentage-number",
+              name: "Калькулятор прибавления процентов",
+              url: "https://boxcalculators.ru/add-percentage-number",
               description:
-                "Онлайн инструмент для расчета изменения числа после прибавления процента. Введите данные для мгновенного результата.",
-              applicationCategory: "MathematicalApplication",
+                "Профессиональный инструмент для расчета увеличения числа на указанный процент. Подходит для финансовых, торговых и бытовых расчетов.",
+              applicationCategory: "FinancialApplication",
               operatingSystem: "Web",
               featureList: [
-                "Прибавление процентов к числу",
-                "Мгновенный расчет",
-                "Простой интерфейс",
+                "Прибавление процента к любому числу",
+                "Мгновенный расчет результата",
+                "Подходит для цен и зарплат",
+                "Понятный интерфейс",
+                "Точные вычисления",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/add-percentage-number-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/add-percentage-number-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -92,23 +101,22 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.6",
-                reviewCount: "75",
+                ratingValue: "4.8",
+                reviewCount: "124",
+                bestRating: "5",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

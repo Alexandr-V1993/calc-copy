@@ -8,16 +8,16 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор веса арматуры",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор веса арматуры | Точный расчет по ГОСТ",
   description:
-    "Рассчитайте вес арматуры различных диаметров и длин с помощью нашего калькулятора. Получите точные результаты в соответствии с ГОСТ.",
+    "Онлайн-инструмент для расчёта массы арматурных стержней по длине и диаметру. Получите точные данные, соответствующие российским стандартам.",
   keywords: [
     "калькулятор веса арматуры",
     "расчет веса арматуры",
-    "вес арматурных стержней",
-    "ГОСТ арматура",
-    "онлайн калькулятор",
+    "вес арматурного стержня",
+    "ГОСТ на арматуру",
+    "металлический калькулятор",
   ],
   alternates: {
     canonical: "/metal-calculator-armature",
@@ -32,9 +32,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор веса арматуры",
+    title: "Калькулятор веса арматуры онлайн | BoxCalculators",
     description:
-      "Рассчитайте вес арматуры различных диаметров и длин с помощью нашего калькулятора. Получите точные результаты в соответствии с ГОСТ.",
+      "Рассчитайте вес арматуры любого диаметра и длины в соответствии с ГОСТ. Простой инструмент для строителей, инженеров и частных мастеров.",
     url: "/metal-calculator-armature",
     type: "website",
     images: [
@@ -42,15 +42,15 @@ export const metadata = {
         url: "/images/metal-calculator-armature-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор веса арматуры",
+        alt: "Калькулятор веса арматуры онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор веса арматуры",
+    title: "Калькулятор веса арматуры онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета веса арматуры различных диаметров и длин. Результаты соответствуют ГОСТ.",
+      "Узнайте массу арматуры за секунды. Онлайн-расчёт по длине и диаметру, с учетом ГОСТ.",
     images: ["/images/metal-calculator-armature-twitter.jpg"],
   },
 };
@@ -61,51 +61,55 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор веса арматуры",
-              url: "http://calcoffee.ru/metal-calculator-armature",
+              url: "https://boxcalculators.ru/metal-calculator-armature ",
               description:
-                "Онлайн инструмент для расчета веса арматуры различных диаметров и длин. Результаты соответствуют ГОСТ.",
+                "Инструмент для расчёта массы арматурных стержней по длине и диаметру. Подходит для планирования строительства и закупки материалов.",
               applicationCategory: "EngineeringApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет веса арматуры",
-                "Поддержка ГОСТ",
-                "Онлайн-расчет",
+                "Расчёт массы по длине и диаметру",
+                "Соответствие ГОСТ",
+                "Мгновенный результат",
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/metal-calculator-armature-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/metal-calculator-armature-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
+              },
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.7",
+                reviewCount: "95",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

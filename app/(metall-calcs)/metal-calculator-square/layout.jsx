@@ -8,16 +8,18 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор веса стальных квадратов",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор веса стального квадрата | ГОСТ 2591-2006 | Точный расчет",
   description:
-    "Рассчитайте вес стальных квадратов по ГОСТ 2591. Введите размеры квадрата для получения точного веса.",
+    "Мгновенный расчет веса стального квадратного проката по ГОСТ 2591-2006. Введите размер стороны квадрата и длину для получения точного веса в кг.",
   keywords: [
-    "калькулятор веса стальных квадратов",
-    "ГОСТ 2591",
-    "расчет веса квадрата",
-    "вес квадратных профилей",
-    "онлайн калькулятор",
+    "калькулятор квадрата",
+    "вес стального квадрата",
+    "расчет веса квадратного проката",
+    "ГОСТ 2591 калькулятор",
+    "онлайн расчет металлоквадрата",
+    "масса квадратного профиля",
+    "металлокалькулятор квадрат",
   ],
   alternates: {
     canonical: "/metal-calculator-square",
@@ -32,9 +34,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор веса стальных квадратов",
+    title: "Онлайн калькулятор веса стального квадрата",
     description:
-      "Рассчитайте вес стальных квадратов по ГОСТ 2591. Введите размеры квадрата для получения точного веса.",
+      "Точный расчет веса квадратного проката по ГОСТ 2591-2006. Укажите размер стороны и длину для мгновенного результата.",
     url: "/metal-calculator-square",
     type: "website",
     images: [
@@ -42,15 +44,15 @@ export const metadata = {
         url: "/images/metal-calculator-square-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор веса стальных квадратов",
+        alt: "Калькулятор веса стального квадрата",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор веса стальных квадратов",
+    title: "Калькулятор квадратного проката",
     description:
-      "Онлайн инструмент для расчета веса стальных квадратов по ГОСТ 2591. Введите размеры для точного результата.",
+      "Рассчитайте вес стального квадрата за секунды. Точные результаты по ГОСТ 2591-2006 для металлопроката.",
     images: ["/images/metal-calculator-square-twitter.jpg"],
   },
 };
@@ -61,32 +63,34 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Структурированные данные Schema.org */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebApplication",
-              name: "Калькулятор веса стальных квадратов",
-              url: "http://calcoffee.ru/metal-calculator-square",
+              name: "Калькулятор веса стального квадрата",
+              url: "https://boxcalculators.ru/metal-calculator-square",
               description:
-                "Онлайн инструмент для расчета веса стальных квадратов по ГОСТ 2591. Введите размеры квадрата для получения точного веса.",
+                "Профессиональный инструмент для расчета веса квадратного проката по ГОСТ 2591-2006.",
               applicationCategory: "EngineeringApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет веса стальных квадратов",
-                "Поддержка ГОСТ 2591",
-                "Онлайн-расчет",
-                "Простой интерфейс",
+                "Расчет для квадратного проката",
+                "Поддержка ГОСТ 2591-2006",
+                "Мгновенные результаты",
+                "Точные вычисления массы",
+                "Учет длины профиля",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/metal-calculator-square-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/metal-calculator-square-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -94,18 +98,16 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

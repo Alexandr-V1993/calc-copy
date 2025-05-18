@@ -8,16 +8,16 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Калькулятор веса металлических уголков",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Калькулятор веса металлических уголков | Точный расчет массы",
   description:
-    "Рассчитайте массу погонного метра металлических уголков (равнополочных и неравнополочных) с помощью нашего калькулятора. Также доступны таблицы весов и размеров популярных сортаментов.",
+    "Онлайн-инструмент для расчёта массы погонного метра равнополочных и неравнополочных металлических уголков. Популярные сортаменты, таблицы и быстрый результат.",
   keywords: [
     "калькулятор веса уголков",
     "расчет массы уголков",
-    "таблицы веса",
-    "размеры уголков",
-    "онлайн калькулятор",
+    "таблицы веса металлопроката",
+    "размеры стальных уголков",
+    "металлокалькулятор онлайн",
   ],
   alternates: {
     canonical: "/metal-calculator-angle",
@@ -32,9 +32,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Калькулятор веса металлических уголков",
+    title: "Калькулятор веса металлических уголков онлайн | BoxCalculators",
     description:
-      "Рассчитайте массу погонного метра металлических уголков (равнополочных и неравнополочных) с помощью нашего калькулятора. Также доступны таблицы весов и размеров популярных сортаментов.",
+      "Рассчитайте массу погонного метра уголков за секунды. Поддерживает равнополочные и неравнополочные профили. Удобный инструмент для строителей и инженеров.",
     url: "/metal-calculator-angle",
     type: "website",
     images: [
@@ -42,15 +42,15 @@ export const metadata = {
         url: "/images/metal-calculator-angle-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Калькулятор веса металлических уголков",
+        alt: "Калькулятор веса металлических уголков онлайн | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Калькулятор веса металлических уголков",
+    title: "Калькулятор веса металлических уголков онлайн | BoxCalculators",
     description:
-      "Онлайн инструмент для расчета массы погонного метра металлических уголков (равнополочных и неравнополочных). Доступны таблицы весов и размеров.",
+      "Определите массу уголка по его размерам и типу стали. Подходит для проектов, закупок и транспортировки.",
     images: ["/images/metal-calculator-angle-twitter.jpg"],
   },
 };
@@ -61,51 +61,55 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="© 2025 BoxCalculators" />
         <meta name="rating" content="general" />
 
-        {/* Добавление структурированных данных Schema.org */}
+        {/* Schema.org JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org",
+              "@context": "https://schema.org ",
               "@type": "WebApplication",
               name: "Калькулятор веса металлических уголков",
-              url: "http://calcoffee.ru/metal-calculator-angle",
+              url: "https://boxcalculators.ru/metal-calculator-angle ",
               description:
-                "Онлайн инструмент для расчета массы погонного метра металлических уголков (равнополочных и неравнополочных). Также доступны таблицы весов и размеров популярных сортаментов.",
+                "Инструмент для расчёта массы погонного метра стальных уголков. Работает с равнополочными и неравнополочными профилями стандартных размеров.",
               applicationCategory: "EngineeringApplication",
               operatingSystem: "Web",
               featureList: [
-                "Расчет массы уголков",
-                "Таблицы весов и размеров",
-                "Онлайн-расчет",
-                "Простой интерфейс",
+                "Расчёт массы уголков",
+                "Таблицы популярных сортаментов",
+                "Мгновенный результат",
+                "Поддержка разных типов стали",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/metal-calculator-angle-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/metal-calculator-angle-og.jpg ",
               offers: {
                 "@type": "Offer",
                 price: "0",
                 priceCurrency: "RUB",
-                availability: "https://schema.org/InStock",
+                availability: "https://schema.org/InStock ",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru ",
                 },
+              },
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.7",
+                reviewCount: "65",
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

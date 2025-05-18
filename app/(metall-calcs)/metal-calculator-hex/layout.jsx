@@ -8,7 +8,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
+  metadataBase: new URL("https://boxcalculators.ru"),
   title: "Калькулятор веса шестигранника",
   description:
     "Рассчитайте вес шестигранников из стали с помощью нашего калькулятора. Узнайте вес и прокат по ГОСТ 2879.",
@@ -61,9 +61,9 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
         {/* Добавление структурированных данных Schema.org */}
@@ -74,7 +74,7 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "WebApplication",
               name: "Калькулятор веса шестигранника",
-              url: "http://calcoffee.ru/metal-calculator-hex",
+              url: "https://boxcalculators.ru/metal-calculator-hex",
               description:
                 "Онлайн инструмент для расчета веса шестигранников из стали. Проверьте вес и соответствие ГОСТ 2879.",
               applicationCategory: "EngineeringApplication",
@@ -86,7 +86,8 @@ export default function RootLayout({ children }) {
                 "Простой интерфейс",
               ],
               softwareVersion: "1.0",
-              image: "http://calcoffee.ru/images/metal-calculator-hex-og.jpg",
+              image:
+                "https://boxcalculators.ru/images/metal-calculator-hex-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -94,18 +95,16 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }
