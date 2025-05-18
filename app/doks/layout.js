@@ -8,13 +8,13 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  metadataBase: new URL("http://calcoffee.ru"),
-  title: "Документы | CalCoffee",
+  metadataBase: new URL("https://boxcalculators.ru"),
+  title: "Документы | BoxCalculators",
   description:
-    "Официальная документация и информация о проекте CalCoffee. Здесь вы найдете все необходимые материалы, связанные с онлайн-калькуляторами и их использованием.",
+    "Официальная документация и информация о проекте BoxCalculators. Здесь вы найдете все необходимые материалы, связанные с онлайн-калькуляторами и их использованием.",
   keywords: [
     "документы",
-    "calcoffee",
+    "boxcalculators",
     "онлайн-калькуляторы",
     "александр владимирович",
     "инструкции",
@@ -33,9 +33,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Документы | CalCoffee",
+    title: "Документы | BoxCalculators",
     description:
-      "Официальная документация и информация о проекте CalCoffee. Здесь вы найдете все необходимые материалы, связанные с онлайн-калькуляторами и их использованием.",
+      "Официальная документация и информация о проекте BoxCalculators. Здесь вы найдете все необходимые материалы, связанные с онлайн-калькуляторами и их использованием.",
     url: "/doks",
     type: "website",
     images: [
@@ -43,15 +43,15 @@ export const metadata = {
         url: "/images/doks-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Документы | CalCoffee",
+        alt: "Документы | BoxCalculators",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Документы | CalCoffee",
+    title: "Документы | BoxCalculators",
     description:
-      "Официальная документация и информация о проекте CalCoffee. Все необходимые материалы для работы с онлайн-калькуляторами.",
+      "Официальная документация и информация о проекте BoxCalculators. Все необходимые материалы для работы с онлайн-калькуляторами.",
     images: ["/images/doks-twitter.jpg"],
   },
 };
@@ -62,9 +62,9 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="application-name" content="CalCoffee" />
-        <meta name="author" content="CalCoffee" />
-        <meta name="copyright" content="CalCoffee" />
+        <meta name="application-name" content="BoxCalculators" />
+        <meta name="author" content="BoxCalculators" />
+        <meta name="copyright" content="BoxCalculators" />
         <meta name="rating" content="general" />
 
         {/* Добавление структурированных данных Schema.org */}
@@ -74,16 +74,16 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebPage",
-              name: "Документы | CalCoffee",
-              url: "http://calcoffee.ru/doks",
+              name: "Документы | BoxCalculators",
+              url: "https://boxcalculators.ru/doks",
               description:
-                "Официальная документация и информация о проекте CalCoffee. Все необходимые материалы для работы с онлайн-калькуляторами.",
+                "Официальная документация и информация о проекте BoxCalculators. Все необходимые материалы для работы с онлайн-калькуляторами.",
               publisher: {
                 "@type": "Organization",
-                name: "CalCoffee",
-                url: "http://calcoffee.ru",
+                name: "BoxCalculators",
+                url: "https://boxcalculators.ru",
               },
-              image: "http://calcoffee.ru/images/doks-og.jpg",
+              image: "https://boxcalculators.ru/images/doks-og.jpg",
               offers: {
                 "@type": "Offer",
                 price: "0",
@@ -91,8 +91,8 @@ export default function RootLayout({ children }) {
                 availability: "https://schema.org/InStock",
                 seller: {
                   "@type": "Organization",
-                  name: "CalCoffee",
-                  url: "http://calcoffee.ru",
+                  name: "BoxCalculators",
+                  url: "https://boxcalculators.ru",
                 },
               },
               aggregateRating: {
@@ -102,12 +102,10 @@ export default function RootLayout({ children }) {
               },
             }),
           }}
-          suppressHydrationWarning // Подавление предупреждений о гидратации
+          suppressHydrationWarning
         />
       </head>
-      <body className={montserrat.className}>
-        {children}
-      </body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

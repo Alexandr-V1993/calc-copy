@@ -103,14 +103,11 @@ function Footer() {
     <footer>
       <div className="footer-wrapper">
         <div className="footer-menu">
-          <a className="footer-menu-item" href="/privacy">
+          <a className="footer-menu-item" href="/doks">
             Политика конфиденциальности
           </a>
           <a className="footer-menu-item" href="/contacts">
             Контакты
-          </a>
-          <a className="footer-menu-item" href="/feedback">
-            Обратная связь
           </a>
         </div>
         <div className="footer-brand">

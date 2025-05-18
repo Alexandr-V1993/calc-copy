@@ -11,7 +11,7 @@ function Contact() {
       <TopForm title={"Добро пожаловать на нашу "} span={"страницу контактов!"}>
         <Contents>
           <p>
-            На CALCOFFEE.RU мы посвящаем себя точности и качеству в нашем
+            На boxcalculators.ru мы посвящаем себя точности и качеству в нашем
             широком спектре калькуляторов, созданных для упрощения ваших задач.
             Мы понимаем, что иногда могут возникать ошибки, или у вас могут быть
             предложения для улучшения нашего сервиса. Ваш отзыв для нас
@@ -32,7 +32,9 @@ function Contact() {
           </p>
           <p>
             Для связи пишите на почту{" "}
-            <Link href="mailto:info@calcoffee.ru">info@calcoffee.ru</Link>
+            <Link href="mailto:info@boxcalculators.ru">
+              info@boxcalculators.ru
+            </Link>
           </p>
         </Contents>
       </TopForm>
