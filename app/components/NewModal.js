@@ -30,7 +30,7 @@ function NewModal() {
               <div className="topmenulink">
                 <a className="linkheader linknotanchor">
                   <span className="material-symbols-rounded">
-                    <img src="/finanse2.svg" alt="финансы" />
+                    <img src="/fin.svg" alt="финансы" />
                   </span>{" "}
                   Финансы
                 </a>
@@ -62,11 +62,7 @@ function NewModal() {
               <div className="topmenulink">
                 <a className="linkheader linknotanchor">
                   <span className="material-symbols-rounded">
-                    <img
-                      className="img-width"
-                      src="/heart.svg"
-                      alt="здоровье"
-                    />
+                    <img className="img-width" src="/zd.svg" alt="здоровье" />
                   </span>{" "}
                   Здоровье
                 </a>
@@ -112,7 +108,7 @@ function NewModal() {
                   <span className="material-symbols-rounded">
                     <img
                       className="img-width"
-                      src="/stroika2.svg"
+                      src="/st.svg"
                       alt="строительство"
                     />
                   </span>{" "}
@@ -160,7 +156,7 @@ function NewModal() {
                   <span className="material-symbols-rounded">
                     <img
                       className="img-width"
-                      src="/school.svg"
+                      src="/ob.svg"
                       alt="образование"
                     />
                   </span>{" "}
@@ -179,7 +175,7 @@ function NewModal() {
               <div className="topmenulink">
                 <a className="linkheader linknotanchor">
                   <span className="material-symbols-rounded">
-                    <img src="/finanse2.svg" alt="Конвертеры" />
+                    <img src="/catalytic.svg" alt="Конвертеры" />
                   </span>{" "}
                   Конвертеры
                 </a>
@@ -223,7 +219,7 @@ function NewModal() {
                   Генератор ЧПУ ссылок
                 </a>
                 <a href="/scientific-calculator" className="sublnk">
-                  Научный калькулятор
+                  Обычный калькулятор
                 </a>
               </div>
               <div className="topmenulink">
@@ -231,7 +227,7 @@ function NewModal() {
                   <span className="material-symbols-rounded">
                     <img
                       className="img-width"
-                      src="/dosug2.svg"
+                      src="/lf.svg"
                       alt="образ жизни"
                     />
                   </span>{" "}
@@ -246,7 +242,7 @@ function NewModal() {
                 <a href="/fuel-consumption" className="sublnk">
                   Калькулятор расхода топлива
                 </a>
-                <a href="/event-countdown" className="sublnk">
+                <a href="/until-event-index" className="sublnk">
                   Таймер до события
                 </a>
                 <a href="/zodiac-sign" className="sublnk">

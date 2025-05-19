@@ -376,3 +376,6 @@ h2 {
 .sidebars {
   margin-top: 20px;
 }
+span.sidebar-title {
+  color: #2980b9 !important;
+}
