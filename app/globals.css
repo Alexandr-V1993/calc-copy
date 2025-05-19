@@ -2321,3 +2321,19 @@ label span {
 div.d-flex {
   background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
 }
+.test-input > div.tabs > span.active {
+  border-bottom: 1px solid white !important;
+}
+.centre-flex span {
+  color: black !important;
+}
+.right-all-gap span.active {
+  border-bottom: 1px solid white !important;
+}
+.tabs span.color-grey {
+  color: black !important;
+}
+div.script-place div.title,
+.first {
+  color: black !important;
+}
