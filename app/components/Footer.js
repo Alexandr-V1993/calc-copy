@@ -31,7 +31,7 @@ function Footer() {
         "ym"
       );
 
-      ym(101561019, "init", {
+      ym(102058166, "init", {
         clickmap: true,
         trackLinks: true,
         accurateTrackBounce: true,

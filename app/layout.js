@@ -48,15 +48,12 @@ export const metadata = {
       { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
       { url: "/icon-512x512.png", sizes: "512x512", type: "image/png" },
     ],
-    apple: [
-      // Используем имеющуюся иконку 192x192 для apple-touch-icon
-      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
-    ],
+    apple: [{ url: "/icon-192x192.png", sizes: "192x192", type: "image/png" }],
   },
   manifest: "/manifest.json",
   verification: {
-    google: "ваш_google_verification_code",
-    yandex: "ваш_yandex_verification_code",
+    google: "JjUG-N2C4dxRolYAXKSUC1ceAHesZVyciCEgN0QbZCc",
+    yandex: "e78498a19f6c7fff",
   },
 };
 
@@ -70,19 +67,15 @@ export default function RootLayout({ children }) {
         <meta name="author" content="boxcalculators.ru" />
         <meta name="copyright" content="boxcalculators.ru" />
         <meta name="theme-color" content="#ffffff" />
-        {/* Замените на свои коды верификации */}
-        <meta
-          name="yandex-verification"
-          content="ваш_yandex_verification_code"
-        />
+        {/* Метатеги верификации */}
+        <meta name="yandex-verification" content="e78498a19f6c7fff" />
         <meta
           name="google-site-verification"
-          content="ваш_google_verification_code"
+          content="JjUG-N2C4dxRolYAXKSUC1ceAHesZVyciCEgN0QbZCc"
         />
 
         {/* Дополнительные link-теги для иконок */}
         <link rel="shortcut icon" href="/icon-32x32.png" />
-        {/* Используем имеющуюся иконку 192x192 для apple-touch-icon с версией для кеша */}
         <link
           rel="apple-touch-icon"
           href="/icon-192x192.png?v=2"
