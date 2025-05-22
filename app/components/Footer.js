@@ -59,6 +59,20 @@ function Footer() {
           platform: "touch",
         });
       });
+      window.yaContextCb.push(() => {
+        Ya.Context.AdvManager.render({
+          blockId: "R-A-15595973-4",
+          type: "floorAd",
+          platform: "desktop",
+        });
+      });
+      window.yaContextCb.push(() => {
+        Ya.Context.AdvManager.render({
+          blockId: "R-A-15595973-5",
+          type: "floorAd",
+          platform: "touch",
+        });
+      });
     }
   }, []);
 
