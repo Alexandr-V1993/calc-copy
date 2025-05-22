@@ -1004,7 +1004,7 @@ section.topform:before {
   position: absolute;
   left: 0;
   right: 0;
-  top: -100px;
+
   bottom: -100px;
   background-repeat: no-repeat;
   background-position: right center;
@@ -2336,4 +2336,7 @@ div.d-flex {
 div.script-place div.title,
 .first {
   color: black !important;
+}
+h1 {
+  text-align: center;
 }

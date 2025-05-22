@@ -1,6 +1,6 @@
 function TopForm({ title, description, children, span }) {
   return (
-    <section className="topform ">
+    <section className="topform">
       <div className="topformdesc">
         <h1>
           {title} <span>{span}</span>
