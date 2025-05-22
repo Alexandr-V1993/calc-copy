@@ -9,8 +9,8 @@ import PercentNumForm from "./PercentNumForm";
 import "./percent.css";
 
 function PercentNum() {
-  const [months, setMonths] = useState(0);
-  const [years, setYears] = useState(0);
+  const [months, setMonths] = useState("");
+  const [years, setYears] = useState("");
 
   const obj = {
     months: Number(months) || 0,
@@ -48,7 +48,6 @@ function PercentNum() {
                           onChange={(e) => setYears(e.target.value)}
                           min="0"
                           max="30"
-                          placeholder="0"
                         />
                       </label>
                       <label className="numrange">
@@ -61,7 +60,6 @@ function PercentNum() {
                           onChange={(e) => setMonths(e.target.value)}
                           min="0"
                           max="11"
-                          placeholder="0"
                         />
                       </label>
                     </div>
