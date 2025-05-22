@@ -110,7 +110,7 @@ export default function CalorieForm({ children, obj, url }) {
           </button>
           <div className="sidebars">
             <div className="sidebar-header">
-              <a href="/calculator-harris-benedict">
+              <a href="/harris-calories">
                 {" "}
                 <img
                   className="sidebar-logo"

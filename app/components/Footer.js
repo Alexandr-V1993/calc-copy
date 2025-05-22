@@ -41,42 +41,22 @@ function Footer() {
       window.yaContextCb = window.yaContextCb || [];
       window.yaContextCb.push(() => {
         Ya.Context.AdvManager.render({
-          blockId: "R-A-15325606-1",
-          renderTo: "yandex_rtb_R-A-15325606-1",
+          blockId: "R-A-15595973-1",
+          renderTo: "yandex_rtb_R-A-15595973-1",
         });
       });
       window.yaContextCb.push(() => {
         Ya.Context.AdvManager.render({
-          blockId: "R-A-15325606-2",
-          renderTo: "yandex_rtb_R-A-15325606-2",
-        });
-      });
-      // window.yaContextCb.push(() => {
-      //   Ya.Context.AdvManager.render({
-      //     blockId: "R-A-15325606-3",
-      //     type: "fullscreen",
-      //     platform: "touch",
-      //   });
-      // });
-      // window.yaContextCb.push(() => {
-      //   Ya.Context.AdvManager.render({
-      //     blockId: "R-A-15325606-4",
-      //     type: "fullscreen",
-      //     platform: "desktop",
-      //   });
-      // });
-      window.yaContextCb.push(() => {
-        Ya.Context.AdvManager.render({
-          blockId: "R-A-15325606-5",
-          type: "floorAd",
-          platform: "touch",
-        });
-      });
-      window.yaContextCb.push(() => {
-        Ya.Context.AdvManager.render({
-          blockId: "R-A-15325606-6",
-          type: "floorAd",
+          blockId: "R-A-15595973-2",
+          type: "fullscreen",
           platform: "desktop",
+        });
+      });
+      window.yaContextCb.push(() => {
+        Ya.Context.AdvManager.render({
+          blockId: "R-A-15595973-3",
+          type: "fullscreen",
+          platform: "touch",
         });
       });
     }

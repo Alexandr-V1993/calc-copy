@@ -2340,3 +2340,26 @@ div.script-place div.title,
 h1 {
   text-align: center;
 }
+.calculators-section {
+  padding-bottom: 50px;
+}
+.greys > span.resulthour {
+  color: black !important;
+}
+.greys:hover {
+  color: #10b981 !important;
+  cursor: pointer; /* Это добавит указатель мыши (руку) при наведении */
+}
+.password-end > .span-el {
+  color: black !important;
+}
+span.copy-message {
+  color: #10b981 !important;
+}
+span#resultimt {
+  color: black !important;
+}
+div.test-res span,
+.breakdown-item span {
+  color: black !important;
+}

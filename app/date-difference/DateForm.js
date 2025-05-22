@@ -106,15 +106,17 @@ function DateForm({ children, obj, url, mode }) {
                 <p className="rs-span">
                   <span className="right">
                     <span id="resultimt">
-                      <span className="colorite">{state.days}</span> календарных
-                      дней
+                      <span className="colorite">
+                        {state.days} календарных дней
+                      </span>
                     </span>
                   </span>
                   <span className="right">
                     <span id="resultimt">
                       {" "}
-                      <span className="colorite">{state.weekDays}</span> рабочих
-                      дней
+                      <span className="colorite">
+                        {state.weekDays} рабочих дней
+                      </span>
                     </span>
                   </span>
                 </p>

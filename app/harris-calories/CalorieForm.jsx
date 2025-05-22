@@ -110,7 +110,7 @@ export default function CalorieForm({ children, obj, url }) {
           </button>
           <div className="sidebars">
             <div className="sidebar-header">
-              <a href="/calculator-mifflin-st-jeor">
+              <a href="/mifflin-calories">
                 {" "}
                 <img
                   className="sidebar-logo"
